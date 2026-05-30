@@ -1,72 +1,124 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { images } from "@/lib/images";
 import { siteConfig } from "@/lib/site-data";
 
+const slides = [
+  {
+    image: images.heroKaaba,
+    alt: "Kaaba in Makkah at night",
+    title: "Your Sacred Umrah Journey Begins Here",
+    sub: "All-inclusive Umrah packages from Lodhran, Multan & Bahawalpur — visa, flights, hotels & guide.",
+  },
+  {
+    image: images.heroMadinah,
+    alt: "Masjid an-Nabawi in Madinah",
+    title: "Visit the City of the Prophet ﷺ",
+    sub: "Madinah hotels just steps from Masjid an-Nabawi, with 24/7 on-ground support.",
+  },
+  {
+    image: images.heroAqsa,
+    alt: "Dome of the Rock, Al-Aqsa, Jerusalem",
+    title: "From Makkah to Masjid al-Aqsa",
+    sub: "Guided ziyarat tours to the most blessed lands in Islam.",
+  },
+  {
+    image: images.heroKaabaDay,
+    alt: "Kaaba in daylight",
+    title: "Hajj 2026 — Reserve Your Place",
+    sub: "Ministry-approved Hajj packages with easy installment plans.",
+  },
+];
+
 export function Hero() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCurrent((c) => (c + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(id);
+  }, []);
+
   return (
-    <section className="gradient-brand-soft px-[5%] py-[70px] relative overflow-hidden">
-      <div className="absolute -right-12 -top-12 w-[300px] h-[300px] opacity-[0.06] pointer-events-none">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-          <polygon
-            points="100,10 130,70 195,70 145,110 165,175 100,135 35,175 55,110 5,70 70,70"
-            fill="#0a5c36"
-          />
-        </svg>
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-12 items-center max-w-[1200px] mx-auto">
-        <div>
-          <div className="inline-block bg-brand-100 text-brand px-3.5 py-1.5 rounded-full text-xs font-semibold mb-4">
-            ✦ Trusted Since 2010 ✦
-          </div>
-          <h1 className="text-[32px] md:text-[46px] font-extrabold text-brand leading-[1.15] mb-4">
-            Your Sacred Journey
-            <br />
-            Starts With{" "}
-            <span className="text-brand-light">Nusarat Madina</span>
-          </h1>
-          <p className="text-base text-gray-600 leading-[1.7] mb-7">
-            Lodhran, Multan aur Bahawalpur ki most trusted Hajj, Umrah aur travel
-            agency. Affordable packages, hassle-free visa, aur 24/7 support — sab
-            kuch ek hi jaga.
-          </p>
-          <div className="flex flex-wrap gap-3.5 mb-[30px]">
-            <Button size="lg" asChild>
-              <Link href="/umrah">Explore Packages →</Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}>
-                📞 Call Expert
-              </a>
-            </Button>
-          </div>
-          <div className="flex flex-wrap gap-6 sm:gap-[30px] pt-5 border-t border-gray-200">
-            <Stat num="15K+" label="Happy Pilgrims" />
-            <Stat num="14+" label="Years Experience" />
-            <Stat num="4.9★" label="Customer Rating" />
-          </div>
-        </div>
-
-        <div className="relative rounded-[20px] h-[400px] shadow-2xl shadow-brand/25 overflow-hidden">
+    <section className="relative h-[600px] md:h-[660px] overflow-hidden text-white">
+      {/* Background slideshow */}
+      {slides.map((s, i) => (
+        <div
+          key={s.image}
+          className={`absolute inset-0 transition-opacity duration-1000 ${
+            i === current ? "opacity-100" : "opacity-0"
+          }`}
+        >
           <Image
-            src={images.heroKaaba}
-            alt="Kaaba in Makkah at night"
+            src={s.image}
+            alt={s.alt}
             fill
-            priority
-            sizes="(max-width: 768px) 100vw, 600px"
+            priority={i === 0}
+            sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand/80 via-brand/20 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-7 text-white">
-            <div className="text-[28px] font-bold">Makkah · Madinah</div>
-            <div className="text-sm opacity-90 mt-1">Sacred Journey Awaits</div>
-          </div>
-          <div className="absolute top-5 right-5 bg-white text-brand px-3.5 py-2 rounded-full text-xs font-bold shadow-md">
-            ✦ IATA Certified
-          </div>
         </div>
+      ))}
+
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/35" />
+
+      {/* Content */}
+      <div className="relative h-full max-w-[1200px] mx-auto px-[5%] flex flex-col justify-center">
+        <div className="inline-block self-start bg-white/15 backdrop-blur-sm border border-white/25 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-5">
+          ✦ Trusted Since 2010 · Lodhran · Multan · Bahawalpur ✦
+        </div>
+
+        {/* Changing text (re-animates on slide change) */}
+        <div key={current} className="animate-in fade-in slide-in-from-bottom-4 duration-700 max-w-2xl">
+          <h1 className="text-[34px] md:text-[52px] font-extrabold leading-[1.1] drop-shadow-lg">
+            {slides[current].title}
+          </h1>
+          <p className="text-base md:text-lg mt-4 opacity-95 max-w-xl">
+            {slides[current].sub}
+          </p>
+        </div>
+
+        <div className="flex flex-wrap gap-3.5 mt-7">
+          <Button asChild size="lg" className="bg-white text-brand hover:bg-brand-50">
+            <Link href="/umrah">Explore Packages →</Link>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="bg-transparent border-white text-white hover:bg-white/10"
+          >
+            <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}>📞 Call Expert</a>
+          </Button>
+        </div>
+
+        {/* Stats */}
+        <div className="flex flex-wrap gap-6 sm:gap-10 mt-9 pt-6 border-t border-white/20">
+          <Stat num="15K+" label="Happy Pilgrims" />
+          <Stat num="14+" label="Years Experience" />
+          <Stat num="4.9★" label="Customer Rating" />
+        </div>
+      </div>
+
+      {/* Slide indicators */}
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2.5 z-10">
+        {slides.map((s, i) => (
+          <button
+            key={s.image}
+            type="button"
+            aria-label={`Go to slide ${i + 1}`}
+            onClick={() => setCurrent(i)}
+            className={`h-2.5 rounded-full transition-all ${
+              i === current ? "w-8 bg-white" : "w-2.5 bg-white/50 hover:bg-white/80"
+            }`}
+          />
+        ))}
       </div>
     </section>
   );
@@ -75,8 +127,8 @@ export function Hero() {
 function Stat({ num, label }: { num: string; label: string }) {
   return (
     <div>
-      <div className="text-2xl font-extrabold text-brand">{num}</div>
-      <div className="text-xs text-muted-foreground">{label}</div>
+      <div className="text-2xl font-extrabold">{num}</div>
+      <div className="text-xs opacity-80">{label}</div>
     </div>
   );
 }

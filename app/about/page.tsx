@@ -209,7 +209,7 @@ export default function AboutPage() {
             >
               <div className="relative w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 ring-4 ring-brand-100">
                 <Image
-                  src={avatar(m.name, { bg: "0a5c36" })}
+                  src={avatar(m.name, { bg: "171717" })}
                   alt={m.name}
                   fill
                   sizes="96px"

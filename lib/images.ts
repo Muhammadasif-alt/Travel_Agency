@@ -16,10 +16,14 @@ const u = (id: string, w = 1200, q = 80) =>
 //   1618773928121-c32242e63f39 → Hotel bed with throw pillows
 //   1509749837427-ac94a2553d0e → Passengers riding a bus
 //   1512453979798-5ea266f8880c → Dubai skyline (aerial)
+//   1633987045033-b2deb0e94676 → Dome of the Rock / Al-Aqsa, Jerusalem
 
 export const images = {
   // Hero / Home
   heroKaaba: u("1513072064285-240f87fa81e8", 1400, 85),
+  heroMadinah: u("1667456416191-43ba057635c1", 1600, 82),
+  heroAqsa: u("1633987045033-b2deb0e94676", 1600, 82),
+  heroKaabaDay: u("1710695198971-3abdf7fcc82e", 1600, 82),
 
   // Page banners
   hajjBanner: u("1667456416191-43ba057635c1", 1800, 80),
@@ -59,7 +63,7 @@ export const avatar = (
 ) => {
   const params = new URLSearchParams({
     name,
-    background: opts?.bg ?? "14a85a",
+    background: opts?.bg ?? "171717",
     color: opts?.fg ?? "ffffff",
     size: String(opts?.size ?? 128),
     bold: "true",

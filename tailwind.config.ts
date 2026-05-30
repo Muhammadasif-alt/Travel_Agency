@@ -20,12 +20,12 @@ const config: Config = {
       },
       colors: {
         brand: {
-          DEFAULT: "#0a5c36",
-          light: "#14a85a",
-          dark: "#0a3d24",
-          50: "#f0f9f4",
-          100: "#e8f5ee",
-          200: "#a3e0b9",
+          DEFAULT: "#171717",
+          light: "#525252",
+          dark: "#000000",
+          50: "#f6f6f6",
+          100: "#ededed",
+          200: "#d4d4d4",
         },
         gold: "#ffc107",
         coral: "#ff6b35",
