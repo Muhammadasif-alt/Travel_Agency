@@ -1321,3 +1321,52 @@ export const departments: DepartmentContact[] = [
     icon: "🛟",
   },
 ];
+
+/* ----------------------------------------- City landing pages (local SEO) */
+
+type ServiceCity = { city: string; nearby: string[]; airport: string };
+
+const serviceCities: ServiceCity[] = [
+  {
+    city: "Lodhran",
+    nearby: ["Kahror Pakka", "Dunyapur", "Jalla Arain", "Adda Bakhri"],
+    airport: "Multan International (MUX) — about 1 hour away",
+  },
+  {
+    city: "Multan",
+    nearby: ["Khanewal", "Shujabad", "Jalalpur Pirwala", "Vehari"],
+    airport: "Multan International Airport (MUX)",
+  },
+  {
+    city: "Bahawalpur",
+    nearby: ["Ahmedpur East", "Hasilpur", "Yazman", "Khairpur Tamewali"],
+    airport: "Bahawalpur Airport (BHV) or Multan (MUX)",
+  },
+];
+
+const landingServices = [
+  { key: "umrah" as const, label: "Umrah", href: "/umrah" },
+  { key: "hajj" as const, label: "Hajj", href: "/hajj" },
+];
+
+export type CityLanding = {
+  slug: string;
+  serviceKey: "umrah" | "hajj";
+  serviceLabel: string;
+  serviceHref: string;
+  city: string;
+  nearby: string[];
+  airport: string;
+};
+
+export const cityLandings: CityLanding[] = serviceCities.flatMap((c) =>
+  landingServices.map((s) => ({
+    slug: `${s.key}-${c.city.toLowerCase()}`,
+    serviceKey: s.key,
+    serviceLabel: s.label,
+    serviceHref: s.href,
+    city: c.city,
+    nearby: c.nearby,
+    airport: c.airport,
+  }))
+);

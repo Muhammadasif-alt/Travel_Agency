@@ -6,6 +6,7 @@ import { About } from "@/components/sections/about";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Faq } from "@/components/sections/faq";
 import { Contact } from "@/components/sections/contact";
+import { AreasServed } from "@/components/sections/areas-served";
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Packages />
       <About />
       <Testimonials />
+      <AreasServed />
       <Faq />
       <Contact />
     </>
