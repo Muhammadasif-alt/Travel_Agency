@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { siteConfig } from "@/lib/site-data";
 
 export function Footer() {
@@ -31,13 +32,22 @@ export function Footer() {
 
           <FooterCol
             title="Quick Links"
-            items={["About Us", "Packages", "Blog", "Contact"]}
-            asLinks
+            links={[
+              { label: "About Us", href: "/about" },
+              { label: "Contact", href: "/contact" },
+              { label: "Hajj Packages", href: "/hajj" },
+              { label: "Umrah Packages", href: "/umrah" },
+            ]}
           />
           <FooterCol
             title="Services"
-            items={["Hajj", "Umrah", "Flights", "Visa"]}
-            asLinks
+            links={[
+              { label: "Flights", href: "/flights" },
+              { label: "Visa", href: "/visa" },
+              { label: "Hotels", href: "/hotels" },
+              { label: "Transport", href: "/transport" },
+              { label: "Tours", href: "/tours" },
+            ]}
           />
           <FooterCol
             title="Contact"
@@ -59,31 +69,30 @@ export function Footer() {
 function FooterCol({
   title,
   items,
-  asLinks = false,
+  links,
 }: {
   title: string;
-  items: string[];
-  asLinks?: boolean;
+  items?: string[];
+  links?: { label: string; href: string }[];
 }) {
   return (
     <div>
       <h4 className="font-bold mb-3.5">{title}</h4>
       <div className="flex flex-col gap-2">
-        {items.map((item) =>
-          asLinks ? (
-            <a
-              key={item}
-              href="#"
-              className="text-[13px] opacity-80 hover:opacity-100 transition-opacity"
-            >
-              {item}
-            </a>
-          ) : (
-            <div key={item} className="text-[13px] opacity-80">
-              {item}
-            </div>
-          )
-        )}
+        {links?.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="text-[13px] opacity-80 hover:opacity-100 transition-opacity"
+          >
+            {link.label}
+          </Link>
+        ))}
+        {items?.map((item) => (
+          <div key={item} className="text-[13px] opacity-80">
+            {item}
+          </div>
+        ))}
       </div>
     </div>
   );

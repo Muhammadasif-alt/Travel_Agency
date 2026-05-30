@@ -124,7 +124,7 @@ export const services: Service[] = [
   },
   {
     slug: "hotel-booking",
-    href: "/contact",
+    href: "/hotels",
     icon: "🏨",
     image: images.serviceHotel,
     title: "Hotel Booking",
@@ -141,7 +141,7 @@ export const services: Service[] = [
   },
   {
     slug: "transport",
-    href: "/contact",
+    href: "/transport",
     icon: "🚐",
     image: images.serviceTransport,
     title: "Transport Services",
@@ -157,7 +157,7 @@ export const services: Service[] = [
   },
   {
     slug: "tours",
-    href: "/contact",
+    href: "/tours",
     icon: "🚌",
     image: images.serviceTours,
     title: "Group & Leisure Tours",
