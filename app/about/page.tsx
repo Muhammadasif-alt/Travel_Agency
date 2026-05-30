@@ -10,7 +10,8 @@ import { milestones, certifications, team, timeline, coreValues } from "@/lib/si
 export const metadata: Metadata = {
   title: "About Us — 14 Years of Trusted Hajj & Umrah Service",
   description:
-    "Nusarat Madina has guided over 15,000 pilgrims since 2010. Ministry-licensed, IATA certified.",
+    "Nusarat Madina, founded by Rao Shafeeq in Lodhran, has guided 15,000+ pilgrims since 2010 across Multan & Bahawalpur. Ministry-licensed, IATA certified.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
@@ -42,7 +43,7 @@ export default function AboutPage() {
               OUR STORY
             </div>
             <h2 className="text-2xl md:text-[34px] font-extrabold text-brand mb-4">
-              From a small office in Lahore to 15,000+ pilgrims served
+              From a small office in Lodhran to 15,000+ pilgrims served
             </h2>
             <p className="text-gray-600 text-[15px] leading-[1.8] mb-4">
               Rao Shafeeq founded the agency in 2010 with one belief — that
@@ -51,7 +52,7 @@ export default function AboutPage() {
             </p>
             <p className="text-gray-600 text-[15px] leading-[1.8]">
               Today, we&apos;re an IATA-certified, Ministry of Religious Affairs
-              licensed operator with offices in Lahore, Karachi, and Islamabad —
+              licensed operator with offices in Lodhran, Multan, and Bahawalpur —
               and on-ground support teams in Makkah & Madinah throughout the year.
             </p>
           </div>

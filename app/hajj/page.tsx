@@ -14,9 +14,10 @@ import {
 } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Hajj Packages 2026 — Economy, Standard & VIP",
+  title: "Hajj Packages 2026 — Lodhran, Multan & Bahawalpur",
   description:
-    "Affordable & VIP Hajj packages from Pakistan. Ministry-approved, IATA certified, easy installment plans.",
+    "Affordable & VIP Hajj 2026 packages for pilgrims from Lodhran, Multan, Bahawalpur & all Pakistan. Ministry-approved, IATA certified, easy installment plans.",
+  alternates: { canonical: "/hajj" },
 };
 
 export default function HajjPage() {

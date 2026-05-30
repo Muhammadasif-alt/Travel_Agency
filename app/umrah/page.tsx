@@ -15,9 +15,10 @@ import {
 } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Umrah Packages — Economy, Family & VIP",
+  title: "Umrah Packages — Lodhran, Multan & Bahawalpur",
   description:
-    "Affordable Umrah packages from Pakistan. Family deals, Ramadan Umrah, Haram-view hotels and fast visa.",
+    "Affordable Umrah packages from Lodhran, Multan & Bahawalpur. Family deals, Ramadan Umrah, Haram-view hotels & fast Umrah visa across Pakistan.",
+  alternates: { canonical: "/umrah" },
 };
 
 export default function UmrahPage() {

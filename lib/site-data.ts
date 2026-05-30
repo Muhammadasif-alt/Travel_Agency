@@ -7,8 +7,24 @@ export const siteConfig = {
   owner: "Rao Shafeeq",
   phone: "+92 308 2699997",
   email: "nusratemadina@gmail.com",
-  address: "Lahore, Pakistan",
+  address: "Lodhran, South Punjab, Pakistan",
+  city: "Lodhran",
+  region: "Punjab",
+  country: "Pakistan",
   whatsapp: "+92 308 2699997",
+  // ⚠️ Update this to your real domain once live (used for SEO canonical & sitemap).
+  url: "https://nusaratmadina.com",
+  // Cities served — used for local SEO keywords & structured data.
+  cities: [
+    "Lodhran",
+    "Multan",
+    "Bahawalpur",
+    "Khanewal",
+    "Vehari",
+    "Kahror Pakka",
+    "Dunyapur",
+    "Jahanian",
+  ],
 };
 
 export const navLinks = [
@@ -96,7 +112,7 @@ export const services: Service[] = [
     title: "Domestic Tickets",
     desc: "Pakistan-wide routes",
     long:
-      "Domestic flights across Pakistan — Karachi, Lahore, Islamabad, Peshawar, Quetta, Skardu and more. Instant booking on PIA, AirSial, SereneAir and Fly Jinnah at the best available fares.",
+      "Domestic flights across Pakistan — Multan, Karachi, Lahore, Islamabad, Peshawar, Quetta, Skardu and more. Instant booking on PIA, AirSial, SereneAir and Fly Jinnah at the best available fares.",
     points: [
       "All major Pakistani cities & airlines",
       "Same-day & last-minute bookings",
@@ -366,8 +382,8 @@ export type FlightDeal = {
 
 export const flightDeals: FlightDeal[] = [
   {
-    id: "khi-jed",
-    from: "Karachi",
+    id: "mux-jed",
+    from: "Multan",
     to: "JED",
     city: "Jeddah",
     country: "Saudi Arabia",
@@ -789,19 +805,19 @@ export const testimonials: Testimonial[] = [
   {
     initial: "A",
     name: "Ahmed Raza",
-    meta: "Lahore · Umrah 2025",
+    meta: "Multan · Umrah 2025",
     text: "Nusarat Madina ne hamari family ka Umrah trip bohat smooth banaya. Hotel Haram k bilkul saamne tha, transport perfect, aur staff bohat helpful.",
   },
   {
     initial: "F",
     name: "Fatima Khan",
-    meta: "Karachi · Hajj 2025",
+    meta: "Bahawalpur · Hajj 2025",
     text: "Hajj 2025 mein Nusarat Madina k saath gaye. Pricing bohat reasonable thi aur sab kuch waqt par hua. Highly recommended for first-timers.",
   },
   {
     initial: "M",
     name: "Muhammad Ali",
-    meta: "Islamabad · Business Travel",
+    meta: "Lodhran · Business Travel",
     text: "International tickets bhi inse ki, Dubai aur Turkey ka. Best rates mile aur visa bhi inhone karwa diya. Trustworthy agency.",
   },
 ];
@@ -946,7 +962,7 @@ export const hajjPreparation = [
   {
     icon: "📚",
     title: "Pre-Departure Workshop",
-    desc: "Free in-person sessions in Lahore, Karachi & Islamabad covering rituals, do's & don'ts.",
+    desc: "Free in-person sessions in Lodhran, Multan & Bahawalpur covering rituals, do's & don'ts.",
   },
   {
     icon: "💉",
@@ -1195,8 +1211,8 @@ export type TimelineEvent = {
 export const timeline: TimelineEvent[] = [
   {
     year: "2010",
-    title: "Founded in Lahore",
-    desc: "Rao Shafeeq opens a small Umrah office on Main Boulevard.",
+    title: "Founded in Lodhran",
+    desc: "Rao Shafeeq opens a small Umrah office in the heart of Lodhran city.",
   },
   {
     year: "2013",
@@ -1215,8 +1231,8 @@ export const timeline: TimelineEvent[] = [
   },
   {
     year: "2021",
-    title: "Karachi & Islamabad Offices",
-    desc: "Expanded with full-service branches in two more cities.",
+    title: "Multan & Bahawalpur Offices",
+    desc: "Expanded across South Punjab with full-service branches in Multan & Bahawalpur.",
   },
   {
     year: "2024",

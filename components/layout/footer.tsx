@@ -54,7 +54,7 @@ export function Footer() {
             items={[
               `📞 ${siteConfig.phone}`,
               `✉️ ${siteConfig.email}`,
-              `📍 Lahore, Pakistan`,
+              `📍 Lodhran · Multan · Bahawalpur`,
             ]}
           />
         </div>

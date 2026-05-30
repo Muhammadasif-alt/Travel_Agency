@@ -7,23 +7,24 @@ import { siteConfig, faqs, departments, businessHours } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Contact Us — Get a Free Travel Quote",
   description:
-    "Reach Nusarat Madina by phone, WhatsApp or email. Offices in Lahore, Karachi & Islamabad.",
+    "Reach Nusarat Madina by phone, WhatsApp or email. Hajj & Umrah offices in Lodhran, Multan & Bahawalpur, Pakistan.",
+  alternates: { canonical: "/contact" },
 };
 
 const offices = [
   {
-    city: "Lahore (HQ)",
-    address: "Main Boulevard, Gulberg III, Lahore",
+    city: "Lodhran (Head Office)",
+    address: "Multan Road, near Railway Station, Lodhran",
     phone: "+92 308 2699997",
   },
   {
-    city: "Karachi",
-    address: "Shahrah-e-Faisal, near Aisha Bawany, Karachi",
+    city: "Multan",
+    address: "Bosan Road, near Chowk Kumharanwala, Multan",
     phone: "+92 308 2699997",
   },
   {
-    city: "Islamabad",
-    address: "Blue Area, F-7 Markaz, Islamabad",
+    city: "Bahawalpur",
+    address: "Circular Road, near Farid Gate, Bahawalpur",
     phone: "+92 308 2699997",
   },
 ];
@@ -187,9 +188,9 @@ export default function ContactPage() {
           <div className="bg-gradient-to-br from-brand-50 to-brand-100 rounded-2xl h-[280px] flex items-center justify-center text-center border border-brand-100">
             <div>
               <div className="text-5xl mb-3">🗺️</div>
-              <div className="font-bold text-brand">Visit our Lahore HQ</div>
+              <div className="font-bold text-brand">Visit our Lodhran Head Office</div>
               <div className="text-sm text-muted-foreground mt-1">
-                Main Boulevard, Gulberg III · Mon–Sat 10am–8pm
+                Multan Road, near Railway Station, Lodhran · Mon–Sat 10am–8pm
               </div>
             </div>
           </div>

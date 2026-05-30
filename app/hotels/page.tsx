@@ -8,7 +8,8 @@ import { hotelOptions } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Hotel Booking — Makkah, Madinah, Dubai & Worldwide",
   description:
-    "Discounted hotel bookings worldwide — Haram-view 5★ stays in Makkah & Madinah plus business and family hotels in Dubai, Istanbul and beyond.",
+    "Discounted hotel bookings by Nusarat Madina (Lodhran · Multan · Bahawalpur) — Haram-view 5★ stays in Makkah & Madinah plus family hotels in Dubai, Istanbul & beyond.",
+  alternates: { canonical: "/hotels" },
 };
 
 const whyUs = [

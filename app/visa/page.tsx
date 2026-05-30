@@ -14,7 +14,8 @@ import {
 export const metadata: Metadata = {
   title: "Visa Services — Saudi, UAE, Turkey, UK & More",
   description:
-    "Hassle-free visa processing for Saudi Arabia, UAE, Turkey, UK, USA, Canada and more. Documentation & application support.",
+    "Hassle-free visa processing in Lodhran, Multan & Bahawalpur for Saudi Arabia, UAE, Turkey, UK, USA, Canada & more. Documentation & application support.",
+  alternates: { canonical: "/visa" },
 };
 
 const visaSteps = [

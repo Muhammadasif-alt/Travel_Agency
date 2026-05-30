@@ -7,7 +7,8 @@ import { transportOptions } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Transport Services — Airport & Intercity Transfers",
   description:
-    "Comfortable AC transport in Saudi Arabia and Pakistan — airport transfers, Makkah–Madinah transfers and private cars, vans and coaches for groups of any size.",
+    "Comfortable AC transport in Saudi Arabia & Pakistan — airport transfers, Makkah–Madinah transfers, plus local pick-up from Lodhran, Multan & Bahawalpur. Cars, vans & coaches.",
+  alternates: { canonical: "/transport" },
 };
 
 const routes = [

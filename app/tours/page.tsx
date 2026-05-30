@@ -8,7 +8,8 @@ import { tourPackages } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Group & Leisure Tours — Dubai, Turkey, Malaysia & More",
   description:
-    "Guided ziyarat tours plus leisure holiday packages to Dubai, Turkey, Malaysia and Thailand — for families, friends and corporate groups, fully managed.",
+    "Guided ziyarat tours plus leisure holidays to Dubai, Turkey, Malaysia & Thailand for families & groups from Lodhran, Multan & Bahawalpur. Fully managed by Nusarat Madina.",
+  alternates: { canonical: "/tours" },
 };
 
 const tourTypes = [

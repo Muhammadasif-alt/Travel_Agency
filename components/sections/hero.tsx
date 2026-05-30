@@ -28,9 +28,9 @@ export function Hero() {
             <span className="text-brand-light">Nusarat Madina</span>
           </h1>
           <p className="text-base text-gray-600 leading-[1.7] mb-7">
-            Hajj, Umrah aur worldwide travel k liye Pakistan ki most trusted agency.
-            Affordable packages, hassle-free visa, aur 24/7 support — sab kuch ek hi
-            jaga.
+            Lodhran, Multan aur Bahawalpur ki most trusted Hajj, Umrah aur travel
+            agency. Affordable packages, hassle-free visa, aur 24/7 support — sab
+            kuch ek hi jaga.
           </p>
           <div className="flex flex-wrap gap-3.5 mb-[30px]">
             <Button size="lg" asChild>

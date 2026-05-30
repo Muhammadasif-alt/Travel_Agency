@@ -7,9 +7,10 @@ import { images } from "@/lib/images";
 import { flightDeals, airlines, flightsWhyUs, baggageInfo } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Flight Bookings — International & Domestic",
+  title: "Flight Bookings — International & Domestic (Multan & Pakistan)",
   description:
-    "Best airfare deals from Pakistan to Saudi Arabia, UAE, Turkey, UK and more. Compare airlines and book in minutes.",
+    "Best airfare deals from Multan, Lahore, Karachi & Islamabad to Saudi Arabia, UAE, Turkey, UK & more. Air tickets for Lodhran & Bahawalpur travellers — book in minutes.",
+  alternates: { canonical: "/flights" },
 };
 
 export default function FlightsPage() {
@@ -28,7 +29,7 @@ export default function FlightsPage() {
       <section className="px-[5%] -mt-10 relative z-10">
         <div className="max-w-[1100px] mx-auto bg-white rounded-2xl shadow-2xl p-7">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_auto] gap-3.5 items-end">
-            <Field label="From" value="Karachi (KHI)" />
+            <Field label="From" value="Multan (MUX)" />
             <Field label="To" value="Jeddah (JED)" />
             <Field label="Departure" value="15 Jun 2026" />
             <Field label="Travellers" value="2 Adults" />
