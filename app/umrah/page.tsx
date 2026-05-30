@@ -245,7 +245,7 @@ export default function UmrahPage() {
         title="Plan Your Umrah Today"
         subtitle="Free consultation, customized packages, group discounts available."
         primary={{ label: "Get a Quote", href: "/contact" }}
-        secondary={{ label: "WhatsApp Us", href: "https://wa.me/923001234567" }}
+        secondary={{ label: "WhatsApp Us", href: "https://wa.me/923082699997" }}
       />
     </>
   );

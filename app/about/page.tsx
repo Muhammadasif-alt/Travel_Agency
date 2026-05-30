@@ -10,7 +10,7 @@ import { milestones, certifications, team, timeline, coreValues } from "@/lib/si
 export const metadata: Metadata = {
   title: "About Us — 14 Years of Trusted Hajj & Umrah Service",
   description:
-    "Nusrat Travel & Tours has guided over 15,000 pilgrims since 2010. Ministry-licensed, IATA certified.",
+    "Nusarat Madina has guided over 15,000 pilgrims since 2010. Ministry-licensed, IATA certified.",
 };
 
 export default function AboutPage() {
@@ -19,7 +19,7 @@ export default function AboutPage() {
       <PageHero
         image={images.aboutBanner}
         imageAlt="Kaaba"
-        eyebrow="ABOUT NUSRAT"
+        eyebrow="ABOUT NUSARAT MADINA"
         title="14 Years of Trust. Thousands of Sacred Journeys."
         subtitle="A family-run travel agency on a mission to make Hajj, Umrah and worldwide travel simple, affordable and dignified."
         crumbs={[{ label: "Home", href: "/" }, { label: "About" }]}
@@ -31,7 +31,7 @@ export default function AboutPage() {
           <div className="relative h-[420px] rounded-2xl overflow-hidden shadow-xl">
             <Image
               src={images.team}
-              alt="Nusrat team"
+              alt="Nusarat Madina team"
               fill
               sizes="(max-width: 768px) 100vw, 500px"
               className="object-cover"
@@ -45,7 +45,7 @@ export default function AboutPage() {
               From a small office in Lahore to 15,000+ pilgrims served
             </h2>
             <p className="text-gray-600 text-[15px] leading-[1.8] mb-4">
-              Hafiz Nusrat Ali founded the agency in 2010 with one belief — that
+              Rao Shafeeq founded the agency in 2010 with one belief — that
               every Pakistani Muslim deserves a smooth, dignified path to Makkah &
               Madinah, without overpaying or getting lost in red tape.
             </p>

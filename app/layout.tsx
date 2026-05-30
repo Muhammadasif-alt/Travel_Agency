@@ -22,8 +22,8 @@ const amiri = Amiri({
 
 export const metadata: Metadata = {
   title: {
-    default: "Nusrat Travel & Tours — Hajj, Umrah & Worldwide Travel",
-    template: "%s | Nusrat Travel & Tours",
+    default: "Nusarat Madina — Hajj, Umrah & Worldwide Travel",
+    template: "%s | Nusarat Madina",
   },
   description:
     "Pakistan's most trusted Hajj, Umrah and worldwide travel agency since 2010. Affordable packages, hassle-free visa, and 24/7 support.",

@@ -224,7 +224,7 @@ export default function HajjPage() {
         title="Ready for Hajj 2026?"
         subtitle="Limited Ministry quotas — reserve your place with a small deposit and easy installments."
         primary={{ label: "Book a Free Consultation", href: "/contact" }}
-        secondary={{ label: "Call Expert", href: "tel:+923001234567" }}
+        secondary={{ label: "Call Expert", href: "tel:+923082699997" }}
       />
     </>
   );

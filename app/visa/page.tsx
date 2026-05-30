@@ -254,7 +254,7 @@ export default function VisaPage() {
         title="Not sure which visa you qualify for?"
         subtitle="Book a free 15-minute consultation with our visa expert."
         primary={{ label: "Book Consultation", href: "/contact" }}
-        secondary={{ label: "Call Now", href: "tel:+923001234567" }}
+        secondary={{ label: "Call Now", href: "tel:+923082699997" }}
       />
     </>
   );

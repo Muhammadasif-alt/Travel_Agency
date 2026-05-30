@@ -7,24 +7,24 @@ import { siteConfig, faqs, departments, businessHours } from "@/lib/site-data";
 export const metadata: Metadata = {
   title: "Contact Us — Get a Free Travel Quote",
   description:
-    "Reach Nusrat Travel & Tours by phone, WhatsApp or email. Offices in Lahore, Karachi & Islamabad.",
+    "Reach Nusarat Madina by phone, WhatsApp or email. Offices in Lahore, Karachi & Islamabad.",
 };
 
 const offices = [
   {
     city: "Lahore (HQ)",
     address: "Main Boulevard, Gulberg III, Lahore",
-    phone: "+92 300 1234567",
+    phone: "+92 308 2699997",
   },
   {
     city: "Karachi",
     address: "Shahrah-e-Faisal, near Aisha Bawany, Karachi",
-    phone: "+92 301 1234567",
+    phone: "+92 308 2699997",
   },
   {
     city: "Islamabad",
     address: "Blue Area, F-7 Markaz, Islamabad",
-    phone: "+92 302 1234567",
+    phone: "+92 308 2699997",
   },
 ];
 

@@ -1,6 +1,6 @@
-# Nusrat Travel & Tours — Next.js
+# Nusarat Madina — Next.js
 
-A modern Next.js 15 (App Router) site for Nusrat Travel & Tours built with:
+A modern Next.js 15 (App Router) site for Nusarat Madina (Hajj, Umrah & Travel — Owner: Rao Shafeeq) built with:
 
 - **Next.js 15** + React 19 + TypeScript
 - **Tailwind CSS** (with custom brand tokens)

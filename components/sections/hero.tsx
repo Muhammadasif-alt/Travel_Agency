@@ -1,6 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { images } from "@/lib/images";
+import { siteConfig } from "@/lib/site-data";
 
 export function Hero() {
   return (
@@ -22,7 +24,8 @@ export function Hero() {
           <h1 className="text-[32px] md:text-[46px] font-extrabold text-brand leading-[1.15] mb-4">
             Your Sacred Journey
             <br />
-            Starts With <span className="text-brand-light">Nusrat</span>
+            Starts With{" "}
+            <span className="text-brand-light">Nusarat Madina</span>
           </h1>
           <p className="text-base text-gray-600 leading-[1.7] mb-7">
             Hajj, Umrah aur worldwide travel k liye Pakistan ki most trusted agency.
@@ -30,9 +33,13 @@ export function Hero() {
             jaga.
           </p>
           <div className="flex flex-wrap gap-3.5 mb-[30px]">
-            <Button size="lg">Explore Packages →</Button>
-            <Button variant="outline" size="lg">
-              📞 Call Expert
+            <Button size="lg" asChild>
+              <Link href="/umrah">Explore Packages →</Link>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}>
+                📞 Call Expert
+              </a>
             </Button>
           </div>
           <div className="flex gap-[30px] pt-5 border-t border-gray-200">

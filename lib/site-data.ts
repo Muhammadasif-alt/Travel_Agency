@@ -1,13 +1,14 @@
 import { images } from "./images";
 
 export const siteConfig = {
-  name: "Nusrat Travel & Tours",
-  brand: "NUSRAT",
+  name: "Nusarat Madina",
+  brand: "NUSARAT MADINA",
   tagline: "TRAVEL & TOURS",
-  phone: "+92 300 1234567",
-  email: "info@nusrattravel.com",
-  address: "Main Boulevard, Lahore",
-  whatsapp: "+92 300 1234567",
+  owner: "Rao Shafeeq",
+  phone: "+92 308 2699997",
+  email: "info@nusaratmadina.com",
+  address: "Lahore, Pakistan",
+  whatsapp: "+92 308 2699997",
 };
 
 export const navLinks = [
@@ -23,21 +24,161 @@ export const navLinks = [
 /* ---------------------------------------------------------------- Services */
 
 export type Service = {
+  slug: string;
+  href: string;
   icon: string;
   title: string;
   desc: string;
+  long: string;
+  points: string[];
+  startingPrice?: string;
   isNew?: boolean;
 };
 
 export const services: Service[] = [
-  { icon: "🕌", title: "Hajj Packages", desc: "Economy to VIP options" },
-  { icon: "🕋", title: "Umrah Packages", desc: "Family & group deals" },
-  { icon: "✈️", title: "Int'l Tickets", desc: "Best airline deals" },
-  { icon: "🛫", title: "Domestic Tickets", desc: "Pakistan-wide routes" },
-  { icon: "📄", title: "Visa Services", desc: "All countries supported" },
-  { icon: "🏨", title: "Hotel Booking", desc: "Worldwide stays" },
-  { icon: "🚌", title: "Group Tours", desc: "Ziyarat & leisure", isNew: true },
-  { icon: "🛡️", title: "Travel Insurance", desc: "Peace of mind", isNew: true },
+  {
+    slug: "hajj",
+    href: "/hajj",
+    icon: "🕌",
+    title: "Hajj Packages",
+    desc: "Economy to VIP options",
+    long:
+      "Ministry-approved Hajj packages for every budget — Economy, Standard and VIP — with hand-picked hotels near the Haram, Mina/Arafat tents, full ground transport and an Urdu-speaking mualim throughout the journey.",
+    points: [
+      "Economy, Standard & VIP categories",
+      "Hotels within walking distance of Haram",
+      "AC tents in Mina & Arafat (Standard/VIP)",
+      "Easy 3–6 month installment plans",
+    ],
+    startingPrice: "PKR 9,50,000",
+  },
+  {
+    slug: "umrah",
+    href: "/umrah",
+    icon: "🕋",
+    title: "Umrah Packages",
+    desc: "Family & group deals",
+    long:
+      "Affordable, all-inclusive Umrah packages for families, couples and groups. Visa, return flights, Makkah & Madinah hotels, transport and ziyarat — quoted upfront with no hidden charges.",
+    points: [
+      "Economy, Family, VIP & Ramadan packages",
+      "Haram-view hotels available",
+      "Umrah visa ready in 5–10 days",
+      "Guided ziyarat in Makkah & Madinah",
+    ],
+    startingPrice: "PKR 2,02,500",
+  },
+  {
+    slug: "international-tickets",
+    href: "/flights",
+    icon: "✈️",
+    title: "International Tickets",
+    desc: "Best airline deals worldwide",
+    long:
+      "Wholesale consolidator fares to Saudi Arabia, UAE, Turkey, UK, Malaysia and beyond. We compare every airline to find you the lowest price, with flexible dates and 24/7 trip support.",
+    points: [
+      "Saudia, Emirates, Qatar, Turkish, PIA & more",
+      "Consolidator rates below public sites",
+      "Free 24-hour fare hold",
+      "Group fares for 10+ passengers",
+    ],
+    startingPrice: "PKR 95,000",
+  },
+  {
+    slug: "domestic-tickets",
+    href: "/flights",
+    icon: "🛫",
+    title: "Domestic Tickets",
+    desc: "Pakistan-wide routes",
+    long:
+      "Domestic flights across Pakistan — Karachi, Lahore, Islamabad, Peshawar, Quetta, Skardu and more. Instant booking on PIA, AirSial, SereneAir and Fly Jinnah at the best available fares.",
+    points: [
+      "All major Pakistani cities & airlines",
+      "Same-day & last-minute bookings",
+      "Corporate & family discounts",
+      "Instant e-ticket on WhatsApp",
+    ],
+    startingPrice: "PKR 12,000",
+  },
+  {
+    slug: "visa",
+    href: "/visa",
+    icon: "📄",
+    title: "Visa Services",
+    desc: "50+ countries supported",
+    long:
+      "End-to-end visa processing for 50+ countries — Saudi Arabia, UAE, Turkey, Malaysia, Thailand, UK, USA and Canada. Document review, appointment booking and full filing support with a 98% approval rate.",
+    points: [
+      "Tourist, visit, business & Umrah visas",
+      "Document pre-check to avoid rejection",
+      "Embassy appointment booking",
+      "98% approval rate",
+    ],
+    startingPrice: "PKR 18,000",
+  },
+  {
+    slug: "hotel-booking",
+    href: "/contact",
+    icon: "🏨",
+    title: "Hotel Booking",
+    desc: "Makkah, Madinah & worldwide",
+    long:
+      "Discounted hotel bookings worldwide — from Haram-view 5★ stays in Makkah & Madinah to business and family hotels in Dubai, Istanbul and beyond. Best rates locked in through our direct contracts.",
+    points: [
+      "Haram-view & walking-distance hotels",
+      "3★ to 5★ across every budget",
+      "Worldwide leisure & business stays",
+      "Group room blocks for families",
+    ],
+    startingPrice: "PKR 8,000 / night",
+  },
+  {
+    slug: "transport",
+    href: "/contact",
+    icon: "🚐",
+    title: "Transport Services",
+    desc: "Airport & intercity transfers",
+    long:
+      "Comfortable, air-conditioned transport in Saudi Arabia and Pakistan — airport pick-up & drop, Makkah–Madinah transfers and private cars for ziyarat. Sedans, vans and coaches for groups of any size.",
+    points: [
+      "Airport transfers (Jeddah, Madinah, Pakistan)",
+      "Makkah ↔ Madinah intercity transfers",
+      "Private cars, vans & 50-seat coaches",
+      "Professional, verified drivers",
+    ],
+  },
+  {
+    slug: "tours",
+    href: "/contact",
+    icon: "🚌",
+    title: "Group & Leisure Tours",
+    desc: "Ziyarat & holiday packages",
+    long:
+      "Guided ziyarat tours of the holy sites plus leisure holiday packages to Dubai, Turkey, Malaysia, Thailand and Azerbaijan — for families, friends and corporate groups, fully managed end-to-end.",
+    points: [
+      "Guided ziyarat in Makkah & Madinah",
+      "Dubai, Turkey, Malaysia & Thailand tours",
+      "Honeymoon & family holiday packages",
+      "Custom corporate group trips",
+    ],
+    isNew: true,
+  },
+  {
+    slug: "travel-insurance",
+    href: "/contact",
+    icon: "🛡️",
+    title: "Travel Insurance",
+    desc: "Peace of mind on every trip",
+    long:
+      "Affordable travel & medical insurance accepted for Schengen, UK and most visa applications. Covers medical emergencies, trip cancellation, lost baggage and delays — for individuals, families and groups.",
+    points: [
+      "Schengen & visa-accepted coverage",
+      "Medical emergency & evacuation",
+      "Trip cancellation & lost baggage",
+      "Family & group plans",
+    ],
+    isNew: true,
+  },
 ];
 
 /* ---------------------------------------------------------------- Packages */
@@ -282,6 +423,55 @@ export const flightDeals: FlightDeal[] = [
   },
 ];
 
+export const domesticFlightDeals: FlightDeal[] = [
+  {
+    id: "khi-lhe",
+    from: "Karachi",
+    to: "LHE",
+    city: "Lahore",
+    country: "Pakistan",
+    airline: "PIA",
+    type: "One-way",
+    price: "PKR 16,500",
+    image: images.airplane,
+  },
+  {
+    id: "isb-khi",
+    from: "Islamabad",
+    to: "KHI",
+    city: "Karachi",
+    country: "Pakistan",
+    airline: "AirSial",
+    type: "One-way",
+    price: "PKR 18,000",
+    image: images.airplaneWindow,
+  },
+  {
+    id: "lhe-skt",
+    from: "Lahore",
+    to: "KDU",
+    city: "Skardu",
+    country: "Pakistan",
+    airline: "PIA",
+    type: "One-way",
+    price: "PKR 22,500",
+    image: images.airplane,
+  },
+  {
+    id: "isb-uet",
+    from: "Islamabad",
+    to: "UET",
+    city: "Quetta",
+    country: "Pakistan",
+    airline: "Fly Jinnah",
+    type: "One-way",
+    price: "PKR 19,500",
+    image: images.airplaneWindow,
+  },
+];
+
+export const domesticAirlines = ["PIA", "AirSial", "SereneAir", "Fly Jinnah"];
+
 export const airlines = [
   "Saudia",
   "Emirates",
@@ -291,6 +481,135 @@ export const airlines = [
   "Flynas",
   "Etihad",
   "Malaysia Airlines",
+];
+
+/* ----------------------------------------------- Hotels / Transport / Tours */
+
+export type HotelOption = {
+  id: string;
+  name: string;
+  city: string;
+  stars: number;
+  distance: string;
+  startingPrice: string;
+  perks: string[];
+};
+
+export const hotelOptions: HotelOption[] = [
+  {
+    id: "makkah-5",
+    name: "Haram-View 5★ (Makkah)",
+    city: "Makkah",
+    stars: 5,
+    distance: "0m · Kaaba view",
+    startingPrice: "PKR 28,000 / night",
+    perks: ["Kaaba-view rooms", "Buffet meals", "Free shuttle"],
+  },
+  {
+    id: "makkah-4",
+    name: "Standard 4★ (Makkah)",
+    city: "Makkah",
+    stars: 4,
+    distance: "400m from Haram",
+    startingPrice: "PKR 14,000 / night",
+    perks: ["Walking distance", "Breakfast included", "Family rooms"],
+  },
+  {
+    id: "madinah-5",
+    name: "Markaziya 5★ (Madinah)",
+    city: "Madinah",
+    stars: 5,
+    distance: "Facing Masjid Nabawi",
+    startingPrice: "PKR 24,000 / night",
+    perks: ["Nabawi view", "Buffet meals", "24/7 concierge"],
+  },
+  {
+    id: "dubai-4",
+    name: "Business 4★ (Dubai)",
+    city: "Dubai",
+    stars: 4,
+    distance: "Near Burj Khalifa",
+    startingPrice: "PKR 18,000 / night",
+    perks: ["City centre", "Metro nearby", "Free WiFi"],
+  },
+];
+
+export type TransportOption = {
+  icon: string;
+  title: string;
+  desc: string;
+  capacity: string;
+};
+
+export const transportOptions: TransportOption[] = [
+  {
+    icon: "🚗",
+    title: "Private Sedan",
+    desc: "Airport pick-up/drop & city rides for couples and small families.",
+    capacity: "1–3 passengers",
+  },
+  {
+    icon: "🚐",
+    title: "Family Van (GMC/Hiace)",
+    desc: "Comfortable AC vans for families and Makkah–Madinah transfers.",
+    capacity: "4–11 passengers",
+  },
+  {
+    icon: "🚌",
+    title: "Group Coach",
+    desc: "Air-conditioned coaches for large groups, ziyarat tours & intercity travel.",
+    capacity: "Up to 50 passengers",
+  },
+  {
+    icon: "🛣️",
+    title: "Makkah ↔ Madinah Transfer",
+    desc: "Direct intercity transfer with experienced, verified drivers.",
+    capacity: "Any group size",
+  },
+];
+
+export type TourPackage = {
+  id: string;
+  destination: string;
+  flag: string;
+  nights: string;
+  startingPrice: string;
+  highlights: string;
+};
+
+export const tourPackages: TourPackage[] = [
+  {
+    id: "dubai",
+    destination: "Dubai",
+    flag: "🇦🇪",
+    nights: "4 nights / 5 days",
+    startingPrice: "PKR 165,000",
+    highlights: "Burj Khalifa, desert safari, Dubai Mall, Marina cruise.",
+  },
+  {
+    id: "turkey",
+    destination: "Turkey",
+    flag: "🇹🇷",
+    nights: "6 nights / 7 days",
+    startingPrice: "PKR 245,000",
+    highlights: "Istanbul, Bursa, Bosphorus cruise, historic mosques.",
+  },
+  {
+    id: "malaysia",
+    destination: "Malaysia",
+    flag: "🇲🇾",
+    nights: "5 nights / 6 days",
+    startingPrice: "PKR 210,000",
+    highlights: "Kuala Lumpur, Genting Highlands, Petronas Towers.",
+  },
+  {
+    id: "thailand",
+    destination: "Thailand",
+    flag: "🇹🇭",
+    nights: "5 nights / 6 days",
+    startingPrice: "PKR 195,000",
+    highlights: "Bangkok, Phuket, island hopping & city tours.",
+  },
 ];
 
 export type VisaCountry = {
@@ -461,13 +780,13 @@ export const testimonials: Testimonial[] = [
     initial: "A",
     name: "Ahmed Raza",
     meta: "Lahore · Umrah 2025",
-    text: "Nusrat Travel ne hamari family ka Umrah trip bohat smooth banaya. Hotel Haram k bilkul saamne tha, transport perfect, aur staff bohat helpful.",
+    text: "Nusarat Madina ne hamari family ka Umrah trip bohat smooth banaya. Hotel Haram k bilkul saamne tha, transport perfect, aur staff bohat helpful.",
   },
   {
     initial: "F",
     name: "Fatima Khan",
     meta: "Karachi · Hajj 2025",
-    text: "Hajj 2025 mein Nusrat k saath gaye. Pricing bohat reasonable thi aur sab kuch waqt par hua. Highly recommended for first-timers.",
+    text: "Hajj 2025 mein Nusarat Madina k saath gaye. Pricing bohat reasonable thi aur sab kuch waqt par hua. Highly recommended for first-timers.",
   },
   {
     initial: "M",
@@ -532,7 +851,7 @@ export type TeamMember = {
 };
 
 export const team: TeamMember[] = [
-  { name: "Hafiz Nusrat Ali", role: "Founder & CEO" },
+  { name: "Rao Shafeeq", role: "Owner & CEO" },
   { name: "Sana Iqbal", role: "Head of Operations" },
   { name: "Bilal Ahmed", role: "Umrah Operations Lead" },
   { name: "Maryam Sheikh", role: "Visa & Documentation" },
@@ -867,7 +1186,7 @@ export const timeline: TimelineEvent[] = [
   {
     year: "2010",
     title: "Founded in Lahore",
-    desc: "Hafiz Nusrat Ali opens a small Umrah office on Main Boulevard.",
+    desc: "Rao Shafeeq opens a small Umrah office on Main Boulevard.",
   },
   {
     year: "2013",
@@ -950,29 +1269,29 @@ export const departments: DepartmentContact[] = [
   {
     name: "Hajj & Umrah Sales",
     desc: "New bookings, group quotes, package upgrades.",
-    phone: "+92 300 1234567",
-    email: "umrah@nusrattravel.com",
+    phone: "+92 308 2699997",
+    email: "umrah@nusaratmadina.com",
     icon: "🕋",
   },
   {
     name: "Flights & Tickets",
     desc: "International & domestic airfare, rebookings.",
-    phone: "+92 300 1234568",
-    email: "flights@nusrattravel.com",
+    phone: "+92 308 2699997",
+    email: "flights@nusaratmadina.com",
     icon: "✈️",
   },
   {
     name: "Visa Department",
     desc: "Document checks, application status, appointments.",
-    phone: "+92 300 1234569",
-    email: "visa@nusrattravel.com",
+    phone: "+92 308 2699997",
+    email: "visa@nusaratmadina.com",
     icon: "📄",
   },
   {
     name: "Customer Support",
     desc: "Existing bookings, complaints, billing queries.",
-    phone: "+92 300 1234570",
-    email: "support@nusrattravel.com",
+    phone: "+92 308 2699997",
+    email: "support@nusaratmadina.com",
     icon: "🛟",
   },
 ];

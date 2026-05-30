@@ -241,7 +241,7 @@ export default function FlightsPage() {
         title="Need help finding the best fare?"
         subtitle="Our experts hunt across airlines and consolidator rates to get you the lowest price."
         primary={{ label: "Get a Custom Quote", href: "/contact" }}
-        secondary={{ label: "WhatsApp Now", href: "https://wa.me/923001234567" }}
+        secondary={{ label: "WhatsApp Now", href: "https://wa.me/923082699997" }}
       />
     </>
   );

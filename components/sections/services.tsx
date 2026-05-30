@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { services } from "@/lib/site-data";
 import { SectionHeader } from "./section-header";
 import { cn } from "@/lib/utils";
@@ -12,10 +13,11 @@ export function Services() {
       />
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {services.map((s, idx) => (
-          <div
+          <Link
             key={s.title}
+            href={s.href}
             className={cn(
-              "bg-white rounded-xl p-7 px-5 text-center shadow-sm border-t-4 transition-all hover:-translate-y-1 hover:shadow-lg relative",
+              "bg-white rounded-xl p-7 px-5 text-center shadow-sm border-t-4 transition-all hover:-translate-y-1 hover:shadow-lg relative block",
               idx % 2 === 0 ? "border-brand" : "border-brand-light"
             )}
           >
@@ -27,7 +29,12 @@ export function Services() {
             <div className="text-4xl mb-3">{s.icon}</div>
             <div className="font-bold text-brand mb-1.5">{s.title}</div>
             <div className="text-xs text-muted-foreground">{s.desc}</div>
-          </div>
+            {s.startingPrice && (
+              <div className="text-[11px] text-brand-light font-semibold mt-2">
+                From {s.startingPrice}
+              </div>
+            )}
+          </Link>
         ))}
       </div>
     </section>

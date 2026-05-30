@@ -14,13 +14,13 @@ export function About() {
       <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div>
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
-            ABOUT NUSRAT
+            ABOUT NUSARAT MADINA
           </div>
           <h2 className="text-2xl md:text-[34px] font-extrabold text-brand mb-4.5">
             14 Years of Trust, Thousands of Happy Pilgrims
           </h2>
           <p className="text-gray-600 text-[15px] leading-[1.8] mb-6">
-            Nusrat Travel & Tours 2010 se Pakistan ki most reliable Hajj & Umrah
+            Nusarat Madina 2010 se Pakistan ki most reliable Hajj & Umrah
             operators mein se ek hai. Ministry of Religious Affairs se licensed, IATA
             certified, aur thousands of satisfied pilgrims k saath — hum aap ki sacred
             journey ko memorable banate hain.
