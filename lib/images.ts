@@ -13,6 +13,9 @@ const u = (id: string, w = 1200, q = 80) =>
 //   1553697388-94e804e2f0f6   → Person holding passports
 //   1454496406107-dc34337da8d6 → Passport on white paper
 //   1572021335469-31706a17aaef → Coworkers smiling around laptop
+//   1618773928121-c32242e63f39 → Hotel bed with throw pillows
+//   1509749837427-ac94a2553d0e → Passengers riding a bus
+//   1512453979798-5ea266f8880c → Dubai skyline (aerial)
 
 export const images = {
   // Hero / Home
@@ -42,6 +45,11 @@ export const images = {
 
   // About / Team
   team: u("1572021335469-31706a17aaef", 1200, 80),
+
+  // Service card visuals
+  serviceHotel: u("1618773928121-c32242e63f39", 900, 80),
+  serviceTransport: u("1509749837427-ac94a2553d0e", 900, 80),
+  serviceTours: u("1512453979798-5ea266f8880c", 900, 80),
 };
 
 // Friendly avatar generator (no external photos required).

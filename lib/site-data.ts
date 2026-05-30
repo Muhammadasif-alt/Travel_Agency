@@ -27,6 +27,7 @@ export type Service = {
   slug: string;
   href: string;
   icon: string;
+  image: string;
   title: string;
   desc: string;
   long: string;
@@ -40,6 +41,7 @@ export const services: Service[] = [
     slug: "hajj",
     href: "/hajj",
     icon: "🕌",
+    image: images.packageHajj21,
     title: "Hajj Packages",
     desc: "Economy to VIP options",
     long:
@@ -56,6 +58,7 @@ export const services: Service[] = [
     slug: "umrah",
     href: "/umrah",
     icon: "🕋",
+    image: images.packageUmrah14,
     title: "Umrah Packages",
     desc: "Family & group deals",
     long:
@@ -72,6 +75,7 @@ export const services: Service[] = [
     slug: "international-tickets",
     href: "/flights",
     icon: "✈️",
+    image: images.airplane,
     title: "International Tickets",
     desc: "Best airline deals worldwide",
     long:
@@ -88,6 +92,7 @@ export const services: Service[] = [
     slug: "domestic-tickets",
     href: "/flights",
     icon: "🛫",
+    image: images.airplaneWindow,
     title: "Domestic Tickets",
     desc: "Pakistan-wide routes",
     long:
@@ -104,6 +109,7 @@ export const services: Service[] = [
     slug: "visa",
     href: "/visa",
     icon: "📄",
+    image: images.passport,
     title: "Visa Services",
     desc: "50+ countries supported",
     long:
@@ -120,6 +126,7 @@ export const services: Service[] = [
     slug: "hotel-booking",
     href: "/contact",
     icon: "🏨",
+    image: images.serviceHotel,
     title: "Hotel Booking",
     desc: "Makkah, Madinah & worldwide",
     long:
@@ -136,6 +143,7 @@ export const services: Service[] = [
     slug: "transport",
     href: "/contact",
     icon: "🚐",
+    image: images.serviceTransport,
     title: "Transport Services",
     desc: "Airport & intercity transfers",
     long:
@@ -151,6 +159,7 @@ export const services: Service[] = [
     slug: "tours",
     href: "/contact",
     icon: "🚌",
+    image: images.serviceTours,
     title: "Group & Leisure Tours",
     desc: "Ziyarat & holiday packages",
     long:
@@ -167,6 +176,7 @@ export const services: Service[] = [
     slug: "travel-insurance",
     href: "/contact",
     icon: "🛡️",
+    image: images.passportHand,
     title: "Travel Insurance",
     desc: "Peace of mind on every trip",
     long:

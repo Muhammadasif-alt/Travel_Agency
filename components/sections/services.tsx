@@ -1,7 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/lib/site-data";
 import { SectionHeader } from "./section-header";
-import { cn } from "@/lib/utils";
 
 export function Services() {
   return (
@@ -11,29 +11,58 @@ export function Services() {
         title="Everything You Need for Your Journey"
         description="From sacred pilgrimage to leisure travel — we handle it all"
       />
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-        {services.map((s, idx) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+        {services.map((s) => (
           <Link
             key={s.title}
             href={s.href}
-            className={cn(
-              "bg-white rounded-xl p-7 px-5 text-center shadow-sm border-t-4 transition-all hover:-translate-y-1 hover:shadow-lg relative block",
-              idx % 2 === 0 ? "border-brand" : "border-brand-light"
-            )}
+            className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col"
           >
-            {s.isNew && (
-              <span className="absolute top-2 right-2 bg-gold text-white px-2 py-0.5 rounded-full text-[9px] font-bold">
-                NEW
-              </span>
-            )}
-            <div className="text-4xl mb-3">{s.icon}</div>
-            <div className="font-bold text-brand mb-1.5">{s.title}</div>
-            <div className="text-xs text-muted-foreground">{s.desc}</div>
-            {s.startingPrice && (
-              <div className="text-[11px] text-brand-light font-semibold mt-2">
-                From {s.startingPrice}
+            {/* Image */}
+            <div className="relative h-48 overflow-hidden">
+              <Image
+                src={s.image}
+                alt={s.title}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+              {s.isNew && (
+                <span className="absolute top-3 right-3 bg-gold text-white px-2.5 py-1 rounded-full text-[10px] font-bold">
+                  NEW
+                </span>
+              )}
+              <div className="absolute -bottom-6 left-5 w-12 h-12 bg-white rounded-xl shadow-md flex items-center justify-center text-2xl">
+                {s.icon}
               </div>
-            )}
+            </div>
+
+            {/* Body */}
+            <div className="p-6 pt-9 flex flex-col flex-1">
+              <h3 className="font-extrabold text-brand text-lg">{s.title}</h3>
+              <p className="text-sm text-muted-foreground mt-2 leading-relaxed flex-1">
+                {s.long}
+              </p>
+
+              <div className="flex items-center justify-between mt-5 pt-4 border-t border-gray-100">
+                {s.startingPrice ? (
+                  <div>
+                    <div className="text-[11px] text-gray-400">Starting from</div>
+                    <div className="font-extrabold text-brand">
+                      {s.startingPrice}
+                    </div>
+                  </div>
+                ) : (
+                  <span className="text-sm text-muted-foreground">
+                    Custom quotes
+                  </span>
+                )}
+                <span className="text-brand-light font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                  Learn more →
+                </span>
+              </div>
+            </div>
           </Link>
         ))}
       </div>
