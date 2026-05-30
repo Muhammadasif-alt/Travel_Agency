@@ -1,53 +1,96 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig, navLinks } from "@/lib/site-data";
 import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+
+  const isActive = (href: string) =>
+    pathname === href || (href !== "/" && pathname.startsWith(href));
 
   return (
-    <nav className="bg-white px-[5%] py-4 flex justify-between items-center shadow-sm border-b-[3px] border-brand sticky top-0 z-50">
-      <Link href="/" className="flex items-center gap-3">
-        <div className="w-[50px] h-[50px] gradient-brand rounded-full flex items-center justify-center text-white font-bold text-[22px]">
-          N
-        </div>
-        <div>
-          <div className="text-[22px] font-extrabold text-brand tracking-wide leading-none">
-            {siteConfig.brand}
+    <nav className="bg-white px-[5%] py-4 shadow-sm border-b-[3px] border-brand sticky top-0 z-50">
+      <div className="flex justify-between items-center">
+        <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+          <div className="w-[46px] h-[46px] sm:w-[50px] sm:h-[50px] gradient-brand rounded-full flex items-center justify-center text-white font-bold text-[20px] sm:text-[22px] flex-shrink-0">
+            N
           </div>
-          <div className="text-[10px] text-muted-foreground tracking-[2px]">
-            {siteConfig.tagline}
+          <div>
+            <div className="text-[18px] sm:text-[22px] font-extrabold text-brand tracking-wide leading-none">
+              {siteConfig.brand}
+            </div>
+            <div className="text-[9px] sm:text-[10px] text-muted-foreground tracking-[2px]">
+              {siteConfig.tagline}
+            </div>
           </div>
-        </div>
-      </Link>
+        </Link>
 
-      <div className="hidden lg:flex gap-7 text-sm font-medium">
-        {navLinks.map((link) => {
-          const active =
-            pathname === link.href ||
-            (link.href !== "/" && pathname.startsWith(link.href));
-          return (
+        {/* Desktop links */}
+        <div className="hidden lg:flex gap-7 text-sm font-medium">
+          {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
                 "text-gray-700 pb-1 border-b-2 border-transparent transition-colors hover:text-brand hover:border-brand",
-                active && "text-brand border-brand"
+                isActive(link.href) && "text-brand border-brand"
               )}
             >
               {link.label}
             </Link>
-          );
-        })}
+          ))}
+        </div>
+
+        <div className="flex items-center gap-2">
+          <Button asChild className="hidden sm:inline-flex">
+            <Link href="/contact">Book Now</Link>
+          </Button>
+
+          {/* Hamburger (mobile/tablet) */}
+          <button
+            type="button"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+            className="lg:hidden w-11 h-11 flex items-center justify-center rounded-lg text-brand hover:bg-brand-50 transition-colors"
+          >
+            {open ? <X size={26} /> : <Menu size={26} />}
+          </button>
+        </div>
       </div>
 
-      <Button asChild>
-        <Link href="/contact">Book Now</Link>
-      </Button>
+      {/* Mobile dropdown */}
+      {open && (
+        <div className="lg:hidden mt-3 pt-3 border-t border-gray-100 flex flex-col gap-1">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className={cn(
+                "px-3 py-3 rounded-lg text-[15px] font-medium transition-colors",
+                isActive(link.href)
+                  ? "bg-brand-50 text-brand"
+                  : "text-gray-700 hover:bg-gray-50"
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Button asChild className="mt-2 w-full">
+            <Link href="/contact" onClick={() => setOpen(false)}>
+              Book Now
+            </Link>
+          </Button>
+        </div>
+      )}
     </nav>
   );
 }

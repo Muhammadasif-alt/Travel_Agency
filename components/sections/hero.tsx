@@ -42,7 +42,7 @@ export function Hero() {
               </a>
             </Button>
           </div>
-          <div className="flex gap-[30px] pt-5 border-t border-gray-200">
+          <div className="flex flex-wrap gap-6 sm:gap-[30px] pt-5 border-t border-gray-200">
             <Stat num="15K+" label="Happy Pilgrims" />
             <Stat num="14+" label="Years Experience" />
             <Stat num="4.9★" label="Customer Rating" />

@@ -36,7 +36,7 @@ export default function UmrahPage() {
       <section className="px-[5%] py-20 max-w-[1200px] mx-auto">
         <div className="mb-12 text-center">
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
-            WHY NUSRAT
+            WHY NUSARAT MADINA
           </div>
           <h2 className="text-2xl md:text-4xl font-extrabold text-brand">
             Four Reasons Families Trust Us
