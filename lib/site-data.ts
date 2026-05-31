@@ -1065,6 +1065,47 @@ export const ziyaratStops: ZiyaratStop[] = [
   },
 ];
 
+export type ZiyaratPlace = {
+  city: "Makkah" | "Madinah";
+  name: string;
+  desc: string;
+  image: string;
+};
+
+// Photographed highlights shown as image cards (only sites we have real photos of).
+export const ziyaratGallery: ZiyaratPlace[] = [
+  {
+    city: "Makkah",
+    name: "Ghar-e-Hira (Jabal al-Noor)",
+    desc: "The mountain cave where the first revelation of the Qur'an was received.",
+    image: images.jabalNoor,
+  },
+  {
+    city: "Makkah",
+    name: "Maidan-e-Arafat",
+    desc: "The standing place at Jabal al-Rahmah on the Day of Arafah.",
+    image: images.arafat,
+  },
+  {
+    city: "Makkah",
+    name: "Mina",
+    desc: "The valley of white tents where pilgrims stay during Hajj.",
+    image: images.mina,
+  },
+  {
+    city: "Madinah",
+    name: "Masjid Quba",
+    desc: "The first mosque ever built in Islam.",
+    image: images.masjidQuba,
+  },
+  {
+    city: "Madinah",
+    name: "Jabal Uhud",
+    desc: "Site of the historic Battle of Uhud and the martyrs of Uhud.",
+    image: images.jabalUhud,
+  },
+];
+
 export const umrahBestTimes = [
   {
     season: "Ramadan",

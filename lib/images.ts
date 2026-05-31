@@ -3,25 +3,26 @@
 
 export const images = {
   // Hero / Home
-  heroKaaba: "/images/kaaba-night.jpg",
+  heroKaaba: "/images/masjid-haram.jpg",
   heroMadinah: "/images/masjid-nabawi.jpg",
-  heroKaabaDay: "/images/kaaba-day.jpg",
+  heroHira: "/images/jabal-noor.jpg",
+  heroArafat: "/images/arafat.jpg",
 
   // Page banners
-  hajjBanner: "/images/masjid-nabawi.jpg",
-  umrahBanner: "/images/kaaba-night.jpg",
+  hajjBanner: "/images/arafat.jpg",
+  umrahBanner: "/images/masjid-haram.jpg",
   flightsBanner: "/images/airplane.jpg",
   visaBanner: "/images/passport.jpg",
-  aboutBanner: "/images/kaaba-day.jpg",
+  aboutBanner: "/images/masjid-nabawi.jpg",
   contactBanner: "/images/team.jpg",
 
   // About section visual
   aboutMosque: "/images/masjid-nabawi.jpg",
 
   // Package cover images
-  packageUmrah14: "/images/kaaba-night.jpg",
-  packageHajj21: "/images/masjid-nabawi.jpg",
-  packageUmrah10: "/images/kaaba-day.jpg",
+  packageUmrah14: "/images/masjid-haram.jpg",
+  packageHajj21: "/images/masjid-haram.jpg",
+  packageUmrah10: "/images/masjid-quba.jpg",
 
   // Flights / Visa supporting visuals
   airplane: "/images/airplane.jpg",
@@ -36,6 +37,14 @@ export const images = {
   serviceHotel: "/images/hotel.jpg",
   serviceTransport: "/images/bus.jpg",
   serviceTours: "/images/dubai.jpg",
+
+  // Ziyarat sites (Saudi Arabia)
+  masjidHaram: "/images/masjid-haram.jpg",
+  jabalNoor: "/images/jabal-noor.jpg",
+  masjidQuba: "/images/masjid-quba.jpg",
+  jabalUhud: "/images/jabal-uhud.jpg",
+  arafat: "/images/arafat.jpg",
+  mina: "/images/mina.jpg",
 };
 
 // Friendly avatar generator for team members (initials, no external photo needed).

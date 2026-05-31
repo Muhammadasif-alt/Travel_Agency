@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { PageHero } from "@/components/sections/page-hero";
 import { PackageCard } from "@/components/sections/package-card";
 import { CtaStrip } from "@/components/sections/cta-strip";
@@ -10,7 +11,7 @@ import {
   umrahWhyUs,
   umrahIncludes,
   umrahExcludes,
-  ziyaratStops,
+  ziyaratGallery,
   umrahBestTimes,
 } from "@/lib/site-data";
 
@@ -169,15 +170,32 @@ export default function UmrahPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <ZiyaratColumn
-              title="🕋 In Makkah"
-              stops={ziyaratStops.filter((s) => s.city === "Makkah")}
-            />
-            <ZiyaratColumn
-              title="🕌 In Madinah"
-              stops={ziyaratStops.filter((s) => s.city === "Madinah")}
-            />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {ziyaratGallery.map((z) => (
+              <div
+                key={z.name}
+                className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all"
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src={z.image}
+                    alt={z.name}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
+                    className="object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                  <span className="absolute top-3 left-3 bg-white/90 text-brand px-3 py-1 rounded-full text-[11px] font-bold">
+                    {z.city}
+                  </span>
+                </div>
+                <div className="p-5">
+                  <div className="font-extrabold text-brand">{z.name}</div>
+                  <div className="text-sm text-muted-foreground mt-1.5 leading-relaxed">
+                    {z.desc}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -249,30 +267,5 @@ export default function UmrahPage() {
         secondary={{ label: "WhatsApp Us", href: "https://wa.me/923082699997" }}
       />
     </>
-  );
-}
-
-function ZiyaratColumn({
-  title,
-  stops,
-}: {
-  title: string;
-  stops: { name: string; desc: string }[];
-}) {
-  return (
-    <div className="bg-white rounded-2xl p-7 shadow-sm">
-      <div className="font-extrabold text-brand text-lg mb-5">{title}</div>
-      <div className="space-y-4">
-        {stops.map((s) => (
-          <div key={s.name} className="flex gap-3 items-start">
-            <span className="w-2 h-2 bg-brand-light rounded-full mt-2 flex-shrink-0" />
-            <div>
-              <div className="font-bold text-gray-800 text-sm">{s.name}</div>
-              <div className="text-xs text-muted-foreground mt-0.5">{s.desc}</div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
   );
 }
