@@ -4,12 +4,12 @@ import path from "node:path";
 const nextConfig = {
   outputFileTracingRoot: path.resolve(),
   images: {
-    // Serve remote images directly. Next's image optimizer writes to
+    // Images are local (/public/images). Next's optimizer writes to
     // .next/cache/images, which fails on OneDrive (EINVAL readlink) and makes
-    // images appear blank. Unsplash URLs are already sized via the u() helper.
+    // images appear blank — so serve files directly.
     unoptimized: true,
     remotePatterns: [
-      { protocol: "https", hostname: "images.unsplash.com" },
+      // Only used for generated team-member initial avatars.
       { protocol: "https", hostname: "ui-avatars.com" },
     ],
   },
