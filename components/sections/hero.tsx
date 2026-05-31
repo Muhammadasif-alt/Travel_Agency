@@ -10,27 +10,21 @@ import { siteConfig } from "@/lib/site-data";
 const slides = [
   {
     image: images.heroKaaba,
-    alt: "Kaaba in Makkah at night",
-    title: "Your Sacred Umrah Journey Begins Here",
-    sub: "All-inclusive Umrah packages from Lodhran, Multan & Bahawalpur — visa, flights, hotels & guide.",
+    alt: "Kaaba in Masjid al-Haram, Makkah",
+    title: "Your Sacred Journey to Makkah",
+    sub: "Umrah & Hajj packages from Lodhran, Multan & Bahawalpur — Tawaf, Sa'i and ziyarat of Ghar-e-Hira, Mina & Arafat.",
   },
   {
     image: images.heroMadinah,
     alt: "Masjid an-Nabawi in Madinah",
-    title: "Visit the City of the Prophet ﷺ",
-    sub: "Madinah hotels just steps from Masjid an-Nabawi, with 24/7 on-ground support.",
-  },
-  {
-    image: images.heroAqsa,
-    alt: "Dome of the Rock, Al-Aqsa, Jerusalem",
-    title: "From Makkah to Masjid al-Aqsa",
-    sub: "Guided ziyarat tours to the most blessed lands in Islam.",
+    title: "Ziyarat of Madinah Munawwarah",
+    sub: "Masjid an-Nabawi, Masjid Quba, Jannat al-Baqi & Jabal Uhud — guided by an Urdu-speaking scholar.",
   },
   {
     image: images.heroKaabaDay,
     alt: "Kaaba in daylight",
     title: "Hajj 2026 — Reserve Your Place",
-    sub: "Ministry-approved Hajj packages with easy installment plans.",
+    sub: "Ministry-approved packages with hotels near the Haram and easy installment plans.",
   },
 ];
 
