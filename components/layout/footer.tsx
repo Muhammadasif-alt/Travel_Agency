@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Phone, Mail } from "lucide-react";
 import { siteConfig, blogPosts } from "@/lib/site-data";
@@ -51,7 +51,7 @@ const serviceLinks = [
 export function Footer() {
   return (
     <footer className="bg-gradient-to-br from-[#0f3d39] via-brand to-brand-dark text-white">
-      <div className="px-[5%] pt-16 pb-8 max-w-[1200px] mx-auto">
+      <div className="px-[5%] pt-16 pb-8 max-w-[1440px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.4fr] gap-10">
           {/* Get in touch */}
           <div>
@@ -123,7 +123,7 @@ export function Footer() {
                       {p.title}
                     </span>
                     <span className="block text-[11px] text-white/60 mt-1">
-                      🗓 {p.date}
+                      ðŸ—“ {p.date}
                     </span>
                   </span>
                 </Link>
@@ -135,7 +135,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="text-center py-5 text-xs text-white/60">
-          © 2026 {siteConfig.name}. All Rights Reserved.
+          Â© 2026 {siteConfig.name}. All Rights Reserved.
         </div>
       </div>
     </footer>

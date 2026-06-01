@@ -1,20 +1,20 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaStrip } from "@/components/sections/cta-strip";
 import { images } from "@/lib/images";
 import { transportOptions } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Transport Services — Airport & Intercity Transfers",
+  title: "Transport Services â€” Airport & Intercity Transfers",
   description:
-    "Comfortable AC transport in Saudi Arabia & Pakistan — airport transfers, Makkah–Madinah transfers, plus local pick-up from Lodhran, Multan & Bahawalpur. Cars, vans & coaches.",
+    "Comfortable AC transport in Saudi Arabia & Pakistan â€” airport transfers, Makkahâ€“Madinah transfers, plus local pick-up from Lodhran, Multan & Bahawalpur. Cars, vans & coaches.",
   alternates: { canonical: "/transport" },
 };
 
 const routes = [
-  { route: "Jeddah Airport → Makkah Hotel", time: "~1 hr 15 min" },
-  { route: "Makkah → Madinah (intercity)", time: "~4 hrs 30 min" },
-  { route: "Madinah Airport → Hotel", time: "~25 min" },
+  { route: "Jeddah Airport â†’ Makkah Hotel", time: "~1 hr 15 min" },
+  { route: "Makkah â†’ Madinah (intercity)", time: "~4 hrs 30 min" },
+  { route: "Madinah Airport â†’ Hotel", time: "~25 min" },
   { route: "Makkah Ziyarat Tour (half day)", time: "~3 hrs" },
 ];
 
@@ -26,12 +26,12 @@ export default function TransportPage() {
         imageAlt="Passenger bus"
         eyebrow="TRANSPORT"
         title="Comfortable, Reliable Transport on Every Leg"
-        subtitle="Airport pick-ups, Makkah–Madinah transfers and private rides — in clean, air-conditioned vehicles with verified drivers."
+        subtitle="Airport pick-ups, Makkahâ€“Madinah transfers and private rides â€” in clean, air-conditioned vehicles with verified drivers."
         crumbs={[{ label: "Home", href: "/" }, { label: "Transport" }]}
       />
 
       {/* Fleet */}
-      <section className="px-[5%] py-20 max-w-[1200px] mx-auto">
+      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
         <div className="mb-10 text-center">
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
             OUR FLEET
@@ -41,7 +41,7 @@ export default function TransportPage() {
           </h2>
           <p className="text-muted-foreground mt-3 text-[15px] max-w-2xl mx-auto">
             Whether you&apos;re a couple or a 50-strong group, we have the right
-            vehicle — booked as part of your package or on its own.
+            vehicle â€” booked as part of your package or on its own.
           </p>
         </div>
 
@@ -84,7 +84,7 @@ export default function TransportPage() {
                 className="flex items-center justify-between px-6 py-4 gap-4"
               >
                 <span className="font-medium text-gray-800 text-sm sm:text-base">
-                  🛣️ {r.route}
+                  ðŸ›£ï¸ {r.route}
                 </span>
                 <span className="text-brand-light font-semibold text-sm whitespace-nowrap">
                   {r.time}

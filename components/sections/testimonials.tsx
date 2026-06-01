@@ -1,11 +1,11 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { testimonials } from "@/lib/site-data";
 import { avatar } from "@/lib/images";
 
 export function Testimonials() {
   return (
     <section className="bg-brand px-[5%] py-20 text-white">
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-[1440px] mx-auto">
         <div className="text-center mb-10">
           <div className="text-brand-200 text-[13px] font-bold tracking-[2px] mb-2">
             TESTIMONIALS
@@ -21,7 +21,7 @@ export function Testimonials() {
               key={t.name}
               className="bg-white/10 rounded-xl p-7 backdrop-blur-sm"
             >
-              <div className="text-gold mb-3 text-base">★★★★★</div>
+              <div className="text-gold mb-3 text-base">â˜…â˜…â˜…â˜…â˜…</div>
               <p className="text-sm leading-[1.7] opacity-95">
                 &ldquo;{t.text}&rdquo;
               </p>

@@ -1,9 +1,9 @@
-import { milestones } from "@/lib/site-data";
+﻿import { milestones } from "@/lib/site-data";
 
 export function StatsBand() {
   return (
     <section className="bg-brand-light text-white">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-4">
+      <div className="max-w-[1440px] mx-auto grid grid-cols-2 md:grid-cols-4">
         {milestones.map((m, i) => (
           <div
             key={m.label}

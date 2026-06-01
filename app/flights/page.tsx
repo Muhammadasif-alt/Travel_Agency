@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CtaStrip } from "@/components/sections/cta-strip";
@@ -7,9 +7,9 @@ import { images } from "@/lib/images";
 import { flightDeals, airlines, flightsWhyUs, baggageInfo } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Flight Bookings — International & Domestic (Multan & Pakistan)",
+  title: "Flight Bookings â€” International & Domestic (Multan & Pakistan)",
   description:
-    "Best airfare deals from Multan, Lahore, Karachi & Islamabad to Saudi Arabia, UAE, Turkey, UK & more. Air tickets for Lodhran & Bahawalpur travellers — book in minutes.",
+    "Best airfare deals from Multan, Lahore, Karachi & Islamabad to Saudi Arabia, UAE, Turkey, UK & more. Air tickets for Lodhran & Bahawalpur travellers â€” book in minutes.",
   alternates: { canonical: "/flights" },
 };
 
@@ -59,7 +59,7 @@ export default function FlightsPage() {
       </section>
 
       {/* Popular deals */}
-      <section id="deals" className="px-[5%] py-20 max-w-[1200px] mx-auto">
+      <section id="deals" className="px-[5%] py-20 max-w-[1440px] mx-auto">
         <div className="mb-10 text-center">
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
             POPULAR DEALS
@@ -95,7 +95,7 @@ export default function FlightsPage() {
               <div className="p-5">
                 <div className="flex items-center justify-between text-sm mb-3">
                   <span className="font-semibold">{d.from}</span>
-                  <span className="text-brand-light">✈</span>
+                  <span className="text-brand-light">âœˆ</span>
                   <span className="font-semibold">{d.to}</span>
                 </div>
                 <div className="text-xs text-muted-foreground mb-3">
@@ -109,7 +109,7 @@ export default function FlightsPage() {
                     </div>
                   </div>
                   <Button variant="book" size="sm">
-                    Book →
+                    Book â†’
                   </Button>
                 </div>
               </div>
@@ -120,7 +120,7 @@ export default function FlightsPage() {
 
       {/* Why Book With Us */}
       <section className="bg-[#f7faf8] px-[5%] py-20">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-[1440px] mx-auto">
           <div className="mb-12 text-center">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
               WHY BOOK WITH NUSARAT MADINA
@@ -149,7 +149,7 @@ export default function FlightsPage() {
       </section>
 
       {/* Group bookings */}
-      <section className="px-[5%] py-20 max-w-[1200px] mx-auto">
+      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
         <div className="bg-gradient-to-br from-brand to-brand-light rounded-3xl px-8 md:px-12 py-14 text-white grid md:grid-cols-2 gap-8 items-center shadow-xl">
           <div>
             <div className="text-brand-200 text-[12px] font-bold tracking-[2px] mb-3">
@@ -159,7 +159,7 @@ export default function FlightsPage() {
               Travelling as a Group of 10 or More?
             </h3>
             <p className="opacity-90 text-[15px] leading-relaxed">
-              From corporate trips to extended family Umrah groups — we negotiate
+              From corporate trips to extended family Umrah groups â€” we negotiate
               wholesale fares directly with airlines and lock them in for you, even
               before the full passenger list is finalised.
             </p>
@@ -174,7 +174,7 @@ export default function FlightsPage() {
             ].map((b) => (
               <li key={b} className="flex gap-3 items-start text-sm">
                 <span className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-xs flex-shrink-0">
-                  ✓
+                  âœ“
                 </span>
                 <span>{b}</span>
               </li>
@@ -185,7 +185,7 @@ export default function FlightsPage() {
 
       {/* Baggage info */}
       <section className="bg-[#f7faf8] px-[5%] py-20">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1440px] mx-auto">
           <div className="mb-10 text-center">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
               GOOD TO KNOW
@@ -195,7 +195,7 @@ export default function FlightsPage() {
             </h2>
             <p className="text-muted-foreground mt-3 text-[15px]">
               Standard economy allowances on routes from Pakistan. Hajj/Umrah season may
-              have higher allowances — ask us.
+              have higher allowances â€” ask us.
             </p>
           </div>
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-x-auto">
@@ -215,7 +215,7 @@ export default function FlightsPage() {
                     className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}
                   >
                     <td className="px-6 py-3.5 font-semibold text-brand">
-                      ✈️ {b.airline}
+                      âœˆï¸ {b.airline}
                     </td>
                     <td className="text-center px-4 py-3.5 text-gray-700">
                       {b.checkIn}
@@ -236,7 +236,7 @@ export default function FlightsPage() {
 
       {/* Airline partners */}
       <section className="px-[5%] py-16">
-        <div className="max-w-[1200px] mx-auto text-center">
+        <div className="max-w-[1440px] mx-auto text-center">
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
             AIRLINE PARTNERS
           </div>
@@ -249,7 +249,7 @@ export default function FlightsPage() {
                 key={a}
                 className="bg-white px-5 py-3 rounded-xl shadow-sm font-semibold text-gray-700 border border-gray-100"
               >
-                ✈️ {a}
+                âœˆï¸ {a}
               </div>
             ))}
           </div>

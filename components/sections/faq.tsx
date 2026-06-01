@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -12,7 +12,7 @@ export function Faq() {
   const [openIdx, setOpenIdx] = useState(0);
 
   return (
-    <section className="px-[5%] py-20 max-w-[1200px] mx-auto">
+    <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Image + floating stat card */}
         <div className="relative">

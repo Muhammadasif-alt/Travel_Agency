@@ -1,16 +1,16 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { images } from "@/lib/images";
 
 const features = [
-  { icon: "✓", title: "Govt. Approved", sub: "Licensed operator" },
-  { icon: "🕓", title: "24/7 Support", sub: "On-call assistance" },
-  { icon: "💰", title: "Best Prices", sub: "No hidden charges" },
-  { icon: "🤝", title: "Personal Care", sub: "Expert guidance" },
+  { icon: "âœ“", title: "Govt. Approved", sub: "Licensed operator" },
+  { icon: "ðŸ•“", title: "24/7 Support", sub: "On-call assistance" },
+  { icon: "ðŸ’°", title: "Best Prices", sub: "No hidden charges" },
+  { icon: "ðŸ¤", title: "Personal Care", sub: "Expert guidance" },
 ];
 
 export function About() {
   return (
-    <section id="about" className="px-[5%] py-20 max-w-[1200px] mx-auto">
+    <section id="about" className="px-[5%] py-20 max-w-[1440px] mx-auto">
       <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div>
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
@@ -22,7 +22,7 @@ export function About() {
           <p className="text-gray-600 text-[15px] leading-[1.8] mb-6">
             Nusarat Madina 2010 se Pakistan ki most reliable Hajj & Umrah
             operators mein se ek hai. Ministry of Religious Affairs se licensed, IATA
-            certified, aur thousands of satisfied pilgrims k saath — hum aap ki sacred
+            certified, aur thousands of satisfied pilgrims k saath â€” hum aap ki sacred
             journey ko memorable banate hain.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4.5">
@@ -51,7 +51,7 @@ export function About() {
           <div className="absolute inset-0 bg-gradient-to-t from-brand/90 via-brand/30 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-8 text-center text-white">
             <div className="font-arabic text-[32px] font-bold drop-shadow-lg">
-              لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ
+              Ù„ÙŽØ¨ÙŽÙ‘ÙŠÙ’ÙƒÙŽ Ø§Ù„Ù„ÙŽÙ‘Ù‡ÙÙ…ÙŽÙ‘ Ù„ÙŽØ¨ÙŽÙ‘ÙŠÙ’ÙƒÙŽ
             </div>
             <div className="text-sm opacity-95 mt-2">
               Here I am, O Allah, here I am

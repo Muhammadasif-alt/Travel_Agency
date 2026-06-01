@@ -1,15 +1,15 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/lib/site-data";
 import { SectionHeader } from "./section-header";
 
 export function Services() {
   return (
-    <section className="px-[5%] py-20 max-w-[1200px] mx-auto">
+    <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
       <SectionHeader
         eyebrow="OUR SERVICES"
         title="Everything You Need for Your Journey"
-        description="From sacred pilgrimage to leisure travel — we handle it all"
+        description="From sacred pilgrimage to leisure travel â€” we handle it all"
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
         {services.map((s) => (
@@ -59,7 +59,7 @@ export function Services() {
                   </span>
                 )}
                 <span className="text-brand-light font-semibold text-sm group-hover:translate-x-1 transition-transform">
-                  Learn more →
+                  Learn more â†’
                 </span>
               </div>
             </div>

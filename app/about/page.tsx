@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHero } from "@/components/sections/page-hero";
 import { Testimonials } from "@/components/sections/testimonials";
@@ -8,7 +8,7 @@ import { avatar } from "@/lib/images";
 import { milestones, certifications, team, timeline, coreValues } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "About Us — 14 Years of Trusted Hajj & Umrah Service",
+  title: "About Us â€” 14 Years of Trusted Hajj & Umrah Service",
   description:
     "Nusarat Madina, founded by Rao Shafeeq in Lodhran, has guided 15,000+ pilgrims since 2010 across Multan & Bahawalpur. Ministry-licensed, IATA certified.",
   alternates: { canonical: "/about" },
@@ -27,7 +27,7 @@ export default function AboutPage() {
       />
 
       {/* Story */}
-      <section className="px-[5%] py-20 max-w-[1200px] mx-auto">
+      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative h-[420px] rounded-2xl overflow-hidden shadow-xl">
             <Image
@@ -46,13 +46,13 @@ export default function AboutPage() {
               From a small office in Lodhran to 15,000+ pilgrims served
             </h2>
             <p className="text-gray-600 text-[15px] leading-[1.8] mb-4">
-              Rao Shafeeq founded the agency in 2010 with one belief — that
+              Rao Shafeeq founded the agency in 2010 with one belief â€” that
               every Pakistani Muslim deserves a smooth, dignified path to Makkah &
               Madinah, without overpaying or getting lost in red tape.
             </p>
             <p className="text-gray-600 text-[15px] leading-[1.8]">
               Today, we&apos;re an IATA-certified, Ministry of Religious Affairs
-              licensed operator with offices in Lodhran, Multan, and Bahawalpur —
+              licensed operator with offices in Lodhran, Multan, and Bahawalpur â€”
               and on-ground support teams in Makkah & Madinah throughout the year.
             </p>
           </div>
@@ -61,7 +61,7 @@ export default function AboutPage() {
 
       {/* Milestones */}
       <section className="bg-brand px-[5%] py-16 text-white">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="max-w-[1440px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {milestones.map((m) => (
             <div key={m.label}>
               <div className="text-4xl md:text-5xl font-extrabold">{m.num}</div>
@@ -74,7 +74,7 @@ export default function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="px-[5%] py-20 max-w-[1200px] mx-auto">
+      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
         <div className="mb-12 text-center">
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
             CORE VALUES
@@ -103,7 +103,7 @@ export default function AboutPage() {
 
       {/* Timeline */}
       <section className="bg-gradient-to-br from-brand-50 to-white px-[5%] py-20">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1440px] mx-auto">
           <div className="mb-12 text-center">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
               OUR JOURNEY
@@ -135,7 +135,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission / Vision */}
-      <section className="px-[5%] py-20 max-w-[1200px] mx-auto">
+      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-white border-l-4 border-brand rounded-xl p-8 shadow-sm">
             <div className="text-brand-light text-[12px] font-bold tracking-[2px] mb-2">
@@ -145,7 +145,7 @@ export default function AboutPage() {
               Make sacred journeys accessible
             </h3>
             <p className="text-gray-600 text-[15px] leading-[1.8]">
-              Honest pricing. Clear paperwork. Empathetic guidance — so a first-time
+              Honest pricing. Clear paperwork. Empathetic guidance â€” so a first-time
               pilgrim feels as confident as someone going for the tenth time.
             </p>
           </div>
@@ -157,7 +157,7 @@ export default function AboutPage() {
               Pakistan&apos;s most loved travel partner
             </h3>
             <p className="text-gray-600 text-[15px] leading-[1.8]">
-              Beyond Hajj & Umrah — to be the trusted travel partner Pakistani
+              Beyond Hajj & Umrah â€” to be the trusted travel partner Pakistani
               families turn to for every meaningful journey.
             </p>
           </div>
@@ -166,7 +166,7 @@ export default function AboutPage() {
 
       {/* Certifications */}
       <section className="bg-[#f7faf8] px-[5%] py-20">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1440px] mx-auto">
           <div className="text-center mb-10">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
               CERTIFICATIONS
@@ -182,7 +182,7 @@ export default function AboutPage() {
                 className="flex gap-3 items-start bg-white rounded-xl p-5 shadow-sm border border-gray-100"
               >
                 <span className="w-8 h-8 rounded-full bg-brand-100 text-brand flex items-center justify-center flex-shrink-0">
-                  ✓
+                  âœ“
                 </span>
                 <span className="text-sm text-gray-700 leading-relaxed">{c}</span>
               </div>
@@ -192,7 +192,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="px-[5%] py-20 max-w-[1200px] mx-auto">
+      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
         <div className="text-center mb-12">
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
             OUR TEAM
@@ -227,7 +227,7 @@ export default function AboutPage() {
 
       <CtaStrip
         title="Plan your sacred journey with people who care"
-        subtitle="Talk to a real Hajj/Umrah expert — no bots, no scripts."
+        subtitle="Talk to a real Hajj/Umrah expert â€” no bots, no scripts."
         primary={{ label: "Get in Touch", href: "/contact" }}
       />
     </>

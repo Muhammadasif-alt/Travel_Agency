@@ -1,24 +1,24 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { Pill } from "./section-header";
 import { images } from "@/lib/images";
 
 const items = [
   {
-    icon: "📞",
+    icon: "ðŸ“ž",
     title: "Book Free Consultation",
-    desc: "Talk to a real Hajj & Umrah expert — no bots, no cost. We help you choose the right package.",
+    desc: "Talk to a real Hajj & Umrah expert â€” no bots, no cost. We help you choose the right package.",
     image: images.team,
   },
   {
-    icon: "💳",
+    icon: "ðŸ’³",
     title: "Easy Booking & Payment",
-    desc: "Flexible 3–6 month installment plans with secure, transparent pricing and zero hidden charges.",
+    desc: "Flexible 3â€“6 month installment plans with secure, transparent pricing and zero hidden charges.",
     image: images.serviceTours,
   },
   {
-    icon: "🕋",
+    icon: "ðŸ•‹",
     title: "Begin Your Sacred Journey",
-    desc: "Visa, flights, hotels and guided ziyarat — all arranged so you travel with complete peace of mind.",
+    desc: "Visa, flights, hotels and guided ziyarat â€” all arranged so you travel with complete peace of mind.",
     image: images.heroKaaba,
   },
 ];
@@ -30,10 +30,10 @@ export function WhyChooseUs() {
       <div className="pointer-events-none absolute -left-6 top-10 w-28 h-28 border border-white/10 rotate-12" />
       <div className="pointer-events-none absolute left-10 top-24 w-20 h-20 bg-brand-light/10 rotate-12" />
       <div className="pointer-events-none absolute right-10 top-1/3 text-brand-light/30 text-5xl font-bold select-none">
-        ✛ ✛
+        âœ› âœ›
       </div>
 
-      <div className="relative max-w-[1200px] mx-auto">
+      <div className="relative max-w-[1440px] mx-auto">
         <div className="text-center mb-14">
           <Pill>Why Choose Us</Pill>
           <h2 className="text-3xl md:text-[42px] font-extrabold mt-5">

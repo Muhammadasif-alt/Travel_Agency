@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { ContactForm } from "@/components/sections/contact-form";
@@ -14,7 +14,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 }
 
 export const metadata: Metadata = {
-  title: "Contact Us — Get a Free Travel Quote",
+  title: "Contact Us â€” Get a Free Travel Quote",
   description:
     "Reach Nusarat Madina by phone, WhatsApp or email. Hajj & Umrah offices in Lodhran, Multan & Bahawalpur, Pakistan.",
   alternates: { canonical: "/contact" },
@@ -52,7 +52,7 @@ export default function ContactPage() {
 
       {/* Quick contact tiles */}
       <section className="px-[5%] -mt-12 relative z-10">
-        <div className="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
           <Tile
             icon={<Phone className="w-6 h-6" />}
             label="Call Us"
@@ -76,7 +76,7 @@ export default function ContactPage() {
       </section>
 
       {/* Departments + Hours */}
-      <section className="px-[5%] py-20 max-w-[1200px] mx-auto">
+      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
         <div className="mb-12 text-center">
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
             REACH THE RIGHT TEAM
@@ -85,7 +85,7 @@ export default function ContactPage() {
             Department Direct Lines
           </h2>
           <p className="text-muted-foreground mt-3 text-[15px]">
-            Skip the queue — call or email the team handling your specific request.
+            Skip the queue â€” call or email the team handling your specific request.
           </p>
         </div>
 
@@ -154,7 +154,7 @@ export default function ContactPage() {
 
       {/* Inquiry form + offices */}
       <section className="px-[5%] py-20">
-        <div className="max-w-[1100px] mx-auto grid md:grid-cols-2 gap-10 items-start">
+        <div className="max-w-[1440px] mx-auto grid md:grid-cols-2 gap-10 items-start">
           <div>
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
               SEND A MESSAGE
@@ -194,14 +194,14 @@ export default function ContactPage() {
 
       {/* Map */}
       <section className="px-[5%] pb-20">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-[1440px] mx-auto">
           <div className="mb-4 flex items-center gap-2 text-brand font-bold">
             <MapPin size={18} className="text-brand-light" />
-            Visit our Lodhran Head Office — Multan Road, near Railway Station
+            Visit our Lodhran Head Office â€” Multan Road, near Railway Station
           </div>
           <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
             <iframe
-              title="Nusarat Madina — Lodhran office location"
+              title="Nusarat Madina â€” Lodhran office location"
               src="https://www.google.com/maps?q=Lodhran,+Punjab,+Pakistan&output=embed"
               width="100%"
               height="320"

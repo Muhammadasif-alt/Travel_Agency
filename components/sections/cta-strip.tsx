@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export function CtaStrip({
@@ -14,7 +14,7 @@ export function CtaStrip({
 }) {
   return (
     <section className="px-[5%] py-14">
-      <div className="max-w-[1200px] mx-auto gradient-brand rounded-2xl px-8 md:px-12 py-10 md:py-12 text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl">
+      <div className="max-w-[1440px] mx-auto gradient-brand rounded-2xl px-8 md:px-12 py-10 md:py-12 text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-xl">
         <div>
           <h3 className="text-2xl md:text-3xl font-extrabold">{title}</h3>
           {subtitle && (
@@ -25,7 +25,7 @@ export function CtaStrip({
         </div>
         <div className="flex flex-wrap gap-3">
           <Button asChild variant="secondary" size="lg" className="bg-white text-brand hover:bg-brand-50">
-            <Link href={primary.href}>{primary.label} →</Link>
+            <Link href={primary.href}>{primary.label} â†’</Link>
           </Button>
           {secondary && (
             <Button

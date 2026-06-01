@@ -1,11 +1,11 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { packages } from "@/lib/site-data";
 import { PackageCard } from "./package-card";
 
 export function Packages() {
   return (
     <section id="packages" className="bg-[#f7faf8] px-[5%] py-20">
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-10">
           <div>
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
@@ -19,7 +19,7 @@ export function Packages() {
             href="/umrah"
             className="text-brand font-semibold text-sm hover:text-brand-light transition-colors"
           >
-            View All Packages →
+            View All Packages â†’
           </Link>
         </div>
 

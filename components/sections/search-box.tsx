@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -9,7 +9,7 @@ export function SearchBox() {
   const [activeTab, setActiveTab] = useState(searchTabs[0].id);
 
   return (
-    <div className="max-w-[1100px] mx-auto -mt-10 bg-white rounded-2xl shadow-2xl p-7 relative z-10 mx-[5%] md:mx-auto">
+    <div className="max-w-[1440px] mx-auto -mt-10 bg-white rounded-2xl shadow-2xl p-7 relative z-10 mx-[5%] md:mx-auto">
       <div className="flex gap-2 mb-5 border-b border-gray-200 pb-4 flex-wrap">
         {searchTabs.map((tab) => (
           <button
@@ -32,7 +32,7 @@ export function SearchBox() {
         <SearchField label="To" value="Jeddah, KSA" />
         <SearchField label="Departure" value="15 Jun 2026" />
         <SearchField label="Travellers" value="2 Adults" />
-        <Button className="h-11">🔍 Search</Button>
+        <Button className="h-11">ðŸ” Search</Button>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 
 type Crumb = { label: string; href?: string };
@@ -30,7 +30,7 @@ export function PageHero({
       />
       <div className="absolute inset-0 bg-gradient-to-r from-brand/85 via-brand/60 to-brand/30" />
 
-      <div className="relative h-full max-w-[1200px] mx-auto px-[5%] flex flex-col justify-center text-white">
+      <div className="relative h-full max-w-[1440px] mx-auto px-[5%] flex flex-col justify-center text-white">
         {eyebrow && (
           <div className="inline-block self-start bg-white/15 backdrop-blur-sm border border-white/20 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide mb-4">
             {eyebrow}

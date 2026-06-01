@@ -1,10 +1,10 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { Pill } from "./section-header";
 import { blogPosts } from "@/lib/site-data";
 
 export function BlogNews() {
   return (
-    <section className="px-[5%] py-20 max-w-[1200px] mx-auto">
+    <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
       <div className="text-center mb-12">
         <Pill>News &amp; Blogs</Pill>
         <h2 className="text-3xl md:text-[40px] font-extrabold text-brand mt-5">
@@ -36,7 +36,7 @@ export function BlogNews() {
                 {p.excerpt}
               </p>
               <div className="flex items-center gap-2 text-xs text-white/80 mt-3">
-                <span>🕒</span>
+                <span>ðŸ•’</span>
                 {p.date}
               </div>
             </div>

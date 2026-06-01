@@ -1,4 +1,4 @@
-import { Phone, MapPin } from "lucide-react";
+﻿import { Phone, MapPin } from "lucide-react";
 import { ContactForm } from "./contact-form";
 import { siteConfig } from "@/lib/site-data";
 
@@ -13,7 +13,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 export function Contact() {
   return (
     <section id="contact" className="gradient-contact px-[5%] py-[70px]">
-      <div className="max-w-[1100px] mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-[1440px] mx-auto grid md:grid-cols-2 gap-12 items-center">
         <div>
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
             GET IN TOUCH
