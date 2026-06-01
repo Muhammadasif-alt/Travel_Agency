@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { siteConfig } from "@/lib/site-data";
+import { ArrowRight, Phone, Mail } from "lucide-react";
+import { siteConfig, blogPosts } from "@/lib/site-data";
 
 type IconProps = { className?: string };
 
@@ -11,7 +12,6 @@ function Facebook({ className }: IconProps) {
     </svg>
   );
 }
-
 function Instagram({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
@@ -19,7 +19,6 @@ function Instagram({ className }: IconProps) {
     </svg>
   );
 }
-
 function TikTok({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
@@ -34,105 +33,138 @@ const socials = [
   { name: "TikTok", href: "#", Icon: TikTok },
 ];
 
+const companyLinks = [
+  { label: "About Us", href: "/about" },
+  { label: "Contact", href: "/contact" },
+  { label: "Hajj Packages", href: "/hajj" },
+  { label: "Umrah Packages", href: "/umrah" },
+];
+
+const serviceLinks = [
+  { label: "Flights", href: "/flights" },
+  { label: "Visa", href: "/visa" },
+  { label: "Hotels", href: "/hotels" },
+  { label: "Transport", href: "/transport" },
+  { label: "Tours", href: "/tours" },
+];
+
 export function Footer() {
   return (
-    <footer className="bg-[#f7faf8] text-gray-700 border-t-4 border-brand">
-      <div className="px-[5%] pt-[50px] pb-6">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-10 pb-[30px] border-b border-gray-200">
-            <div>
-              <Image
-                src="/images/logo.png"
-                alt={siteConfig.name}
-                width={640}
-                height={199}
-                className="h-12 w-auto mb-3.5"
-              />
-              <p className="text-[13px] text-muted-foreground leading-[1.7] mt-3">
-                Lodhran, Multan aur Bahawalpur ki trusted Hajj, Umrah aur travel
-                partner since 2010. Sacred journeys, made simple.
-              </p>
-              <div className="flex gap-2.5 mt-4">
-                {socials.map(({ name, href, Icon }) => (
-                  <a
-                    key={name}
-                    href={href}
-                    aria-label={name}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-[36px] h-[36px] bg-brand-100 text-brand rounded-full flex items-center justify-center hover:bg-brand hover:text-white transition-colors"
-                  >
-                    <Icon className="w-[18px] h-[18px]" />
-                  </a>
-                ))}
-              </div>
+    <footer className="bg-gradient-to-br from-[#0f3d39] via-brand to-brand-dark text-white">
+      <div className="px-[5%] pt-16 pb-8 max-w-[1200px] mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.4fr] gap-10">
+          {/* Get in touch */}
+          <div>
+            <div className="text-2xl font-extrabold tracking-wide">
+              NUSARAT <span className="text-brand-light">MADINA</span>
             </div>
+            <p className="text-[13px] text-white/70 leading-[1.8] mt-4 max-w-xs">
+              Lodhran, Multan aur Bahawalpur ki trusted Hajj, Umrah aur travel
+              partner since 2010.
+            </p>
+            <a
+              href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
+              className="flex items-center gap-2.5 mt-5 font-bold text-lg hover:text-brand-light transition-colors"
+            >
+              <Phone size={18} className="text-brand-light" />
+              {siteConfig.phone}
+            </a>
+            <a
+              href={`mailto:${siteConfig.email}`}
+              className="flex items-center gap-2.5 mt-2 text-sm text-white/80 hover:text-white transition-colors"
+            >
+              <Mail size={16} className="text-brand-light" />
+              {siteConfig.email}
+            </a>
+            <div className="flex gap-2.5 mt-5">
+              {socials.map(({ name, href, Icon }) => (
+                <a
+                  key={name}
+                  href={href}
+                  aria-label={name}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-light transition-colors"
+                >
+                  <Icon className="w-4 h-4" />
+                </a>
+              ))}
+            </div>
+          </div>
 
-            <FooterCol
-              title="Quick Links"
-              links={[
-                { label: "About Us", href: "/about" },
-                { label: "Contact", href: "/contact" },
-                { label: "Hajj Packages", href: "/hajj" },
-                { label: "Umrah Packages", href: "/umrah" },
-              ]}
-            />
-            <FooterCol
-              title="Services"
-              links={[
-                { label: "Flights", href: "/flights" },
-                { label: "Visa", href: "/visa" },
-                { label: "Hotels", href: "/hotels" },
-                { label: "Transport", href: "/transport" },
-                { label: "Tours", href: "/tours" },
-              ]}
-            />
-            <FooterCol
-              title="Contact"
-              items={[
-                `📞 ${siteConfig.phone}`,
-                `✉️ ${siteConfig.email}`,
-                `📍 Lodhran · Multan · Bahawalpur`,
-              ]}
-            />
+          {/* Company info */}
+          <FooterLinks title="Company Info" links={companyLinks} />
+          {/* Services */}
+          <FooterLinks title="Useful Links" links={serviceLinks} />
+
+          {/* Recent posts */}
+          <div>
+            <h4 className="font-bold mb-5 uppercase tracking-wide text-sm">
+              Recent Posts
+            </h4>
+            <div className="space-y-4">
+              {blogPosts.slice(0, 2).map((p) => (
+                <Link
+                  key={p.title}
+                  href="#"
+                  className="flex gap-3 items-center group"
+                >
+                  <span className="relative w-14 h-14 rounded-lg overflow-hidden flex-shrink-0">
+                    <Image
+                      src={p.image}
+                      alt={p.title}
+                      fill
+                      sizes="56px"
+                      className="object-cover"
+                    />
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-[13px] font-semibold leading-snug line-clamp-2 group-hover:text-brand-light transition-colors">
+                      {p.title}
+                    </span>
+                    <span className="block text-[11px] text-white/60 mt-1">
+                      🗓 {p.date}
+                    </span>
+                  </span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Brand copyright bar (the "mixed" accent) */}
-      <div className="bg-brand text-white text-center py-4 px-[5%] text-xs">
-        © 2026 {siteConfig.name}. All Rights Reserved.
+      <div className="border-t border-white/10">
+        <div className="text-center py-5 text-xs text-white/60">
+          © 2026 {siteConfig.name}. All Rights Reserved.
+        </div>
       </div>
     </footer>
   );
 }
 
-function FooterCol({
+function FooterLinks({
   title,
-  items,
   links,
 }: {
   title: string;
-  items?: string[];
-  links?: { label: string; href: string }[];
+  links: { label: string; href: string }[];
 }) {
   return (
     <div>
-      <h4 className="font-bold mb-3.5 text-brand">{title}</h4>
-      <div className="flex flex-col gap-2">
-        {links?.map((link) => (
+      <h4 className="font-bold mb-5 uppercase tracking-wide text-sm">{title}</h4>
+      <div className="flex flex-col gap-3">
+        {links.map((link) => (
           <Link
             key={link.href}
             href={link.href}
-            className="text-[13px] text-muted-foreground hover:text-brand transition-colors"
+            className="flex items-center gap-2.5 text-[13px] text-white/80 hover:text-brand-light transition-colors group"
           >
+            <ArrowRight
+              size={14}
+              className="text-brand-light group-hover:translate-x-1 transition-transform"
+            />
             {link.label}
           </Link>
-        ))}
-        {items?.map((item) => (
-          <div key={item} className="text-[13px] text-muted-foreground">
-            {item}
-          </div>
         ))}
       </div>
     </div>

@@ -16,14 +16,16 @@ const SelectTrigger = React.forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      "flex h-11 w-full items-center justify-between rounded-lg border border-input bg-white px-3.5 py-2 text-sm placeholder:text-muted-foreground focus:outline-none focus:border-brand disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
+      "flex h-11 w-full items-center justify-between rounded-lg border-2 border-gray-200 bg-white pl-4 pr-1.5 py-2 text-sm font-medium text-gray-800 data-[placeholder]:text-muted-foreground focus:outline-none focus:border-brand-light data-[state=open]:border-brand-light transition-colors disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
       className
     )}
     {...props}
   >
     {children}
     <SelectPrimitive.Icon asChild>
-      <ChevronDown className="h-4 w-4 opacity-50" />
+      <span className="ml-2 flex h-7 w-7 items-center justify-center rounded-md bg-brand-light text-white">
+        <ChevronDown className="h-4 w-4" />
+      </span>
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ));
@@ -108,7 +110,7 @@ const SelectItem = React.forwardRef<
   <SelectPrimitive.Item
     ref={ref}
     className={cn(
-      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+      "relative flex w-full cursor-pointer select-none items-center rounded-md py-2 pl-8 pr-2 text-sm outline-none focus:bg-brand-50 focus:text-brand data-[state=checked]:font-semibold data-[state=checked]:text-brand data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       className
     )}
     {...props}

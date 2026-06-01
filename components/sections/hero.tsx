@@ -85,7 +85,7 @@ export function Hero() {
         </div>
 
         <div className="flex flex-wrap gap-3.5 mt-7">
-          <Button asChild size="lg" className="bg-white text-brand hover:bg-brand-50">
+          <Button asChild size="lg">
             <Link href="/umrah">Explore Packages →</Link>
           </Button>
           <Button

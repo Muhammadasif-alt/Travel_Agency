@@ -6,6 +6,7 @@ import { TopBar } from "@/components/layout/top-bar";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { WhatsAppFloat } from "@/components/layout/whatsapp-float";
+import { ScrollToTop } from "@/components/layout/scroll-to-top";
 import { siteConfig } from "@/lib/site-data";
 import { images } from "@/lib/images";
 
@@ -165,6 +166,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <WhatsAppFloat />
+        <ScrollToTop />
       </body>
     </html>
   );
