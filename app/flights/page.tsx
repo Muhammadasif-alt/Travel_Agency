@@ -36,7 +36,7 @@ export default function FlightsPage() {
           className="right-[6%] top-[44%]"
         />
 
-        <div className="relative z-10 max-w-3xl mx-auto px-[5%] text-center pt-14 md:pt-20 pb-6">
+        <div className="relative z-10 max-w-3xl mx-auto px-[5%] text-center pt-16 md:pt-24 pb-20 md:pb-28">
           <div className="text-brand-light text-[13px] font-bold tracking-[3px] mb-4">
             FLIGHT BOOKING
           </div>
@@ -56,38 +56,10 @@ export default function FlightsPage() {
             Get Ticket Now
           </Link>
         </div>
-
-        {/* Main airplane visual */}
-        <div className="relative h-[240px] md:h-[420px] -mt-2">
-          <Image
-            src={images.airplane}
-            alt="Airliner in flight"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
-        </div>
-      </section>
-
-      {/* Search panel */}
-      <section id="deals" className="px-[5%] -mt-12 relative z-20">
-        <div className="max-w-[1100px] mx-auto bg-white rounded-2xl shadow-2xl p-7">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_auto] gap-3.5 items-end">
-            <Field label="From" value="Multan (MUX)" />
-            <Field label="To" value="Jeddah (JED)" />
-            <Field label="Departure" value="15 Jun 2026" />
-            <Field label="Travellers" value="2 Adults" />
-            <Button size="lg" className="h-11">
-              🔍 Search Flights
-            </Button>
-          </div>
-        </div>
       </section>
 
       {/* Popular deals */}
-      <section className="px-[5%] py-20 max-w-[1200px] mx-auto">
+      <section id="deals" className="px-[5%] py-20 max-w-[1200px] mx-auto">
         <div className="mb-10 text-center">
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
             POPULAR DEALS
@@ -291,19 +263,6 @@ export default function FlightsPage() {
         secondary={{ label: "WhatsApp Now", href: "https://wa.me/923082699997" }}
       />
     </>
-  );
-}
-
-function Field({ label, value }: { label: string; value: string }) {
-  return (
-    <div>
-      <label className="text-[11px] text-gray-500 font-semibold uppercase">
-        {label}
-      </label>
-      <div className="border border-gray-300 px-3 py-2.5 rounded-lg mt-1 text-sm">
-        {value}
-      </div>
-    </div>
   );
 }
 
