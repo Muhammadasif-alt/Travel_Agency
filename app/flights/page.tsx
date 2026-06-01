@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { PageHero } from "@/components/sections/page-hero";
+import Link from "next/link";
 import { CtaStrip } from "@/components/sections/cta-strip";
 import { Button } from "@/components/ui/button";
 import { images } from "@/lib/images";
@@ -16,17 +16,63 @@ export const metadata: Metadata = {
 export default function FlightsPage() {
   return (
     <>
-      <PageHero
-        image={images.flightsBanner}
-        imageAlt="Airplane in flight"
-        eyebrow="FLIGHTS"
-        title="Best Airfare Deals, Anywhere You Fly"
-        subtitle="International & domestic tickets at unbeatable prices. Saudia, Emirates, Qatar, PIA and more."
-        crumbs={[{ label: "Home", href: "/" }, { label: "Flights" }]}
-      />
+      {/* Premium hero */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-brand-50 via-slate-50 to-white">
+        {/* Floating thumbnails (desktop) */}
+        <FloatThumb
+          src={images.airplaneWindow}
+          className="left-[6%] top-[42%]"
+        />
+        <FloatThumb
+          src={images.airplane}
+          className="left-[14%] top-[22%]"
+        />
+        <FloatThumb
+          src={images.serviceTours}
+          className="right-[14%] top-[24%]"
+        />
+        <FloatThumb
+          src={images.airplaneWindow}
+          className="right-[6%] top-[44%]"
+        />
+
+        <div className="relative z-10 max-w-3xl mx-auto px-[5%] text-center pt-14 md:pt-20 pb-6">
+          <div className="text-brand-light text-[13px] font-bold tracking-[3px] mb-4">
+            FLIGHT BOOKING
+          </div>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-brand leading-[1.05]">
+            Fly Smarter,
+            <br />
+            Explore Further.
+          </h1>
+          <p className="text-gray-600 text-[15px] md:text-base mt-5 max-w-xl mx-auto leading-relaxed">
+            Elevate your journey with intelligent travel that takes you farther,
+            faster, and with unmatched ease.
+          </p>
+          <Link
+            href="#deals"
+            className="inline-flex items-center mt-7 bg-white shadow-lg rounded-full px-8 py-4 font-semibold text-brand hover:bg-brand-light hover:text-white transition-colors"
+          >
+            Get Ticket Now
+          </Link>
+        </div>
+
+        {/* Main airplane visual */}
+        <div className="relative h-[240px] md:h-[420px] -mt-2">
+          <Image
+            src={images.airplane}
+            alt="Airliner in flight"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
+        </div>
+      </section>
 
       {/* Search panel */}
-      <section className="px-[5%] -mt-10 relative z-10">
+      <section id="deals" className="px-[5%] -mt-12 relative z-20">
         <div className="max-w-[1100px] mx-auto bg-white rounded-2xl shadow-2xl p-7">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_auto] gap-3.5 items-end">
             <Field label="From" value="Multan (MUX)" />
@@ -257,6 +303,16 @@ function Field({ label, value }: { label: string; value: string }) {
       <div className="border border-gray-300 px-3 py-2.5 rounded-lg mt-1 text-sm">
         {value}
       </div>
+    </div>
+  );
+}
+
+function FloatThumb({ src, className }: { src: string; className: string }) {
+  return (
+    <div
+      className={`hidden md:block absolute z-0 w-20 h-20 lg:w-24 lg:h-24 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5 ${className}`}
+    >
+      <Image src={src} alt="" fill sizes="96px" className="object-cover" />
     </div>
   );
 }

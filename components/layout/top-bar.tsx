@@ -2,7 +2,7 @@ import { siteConfig } from "@/lib/site-data";
 
 export function TopBar() {
   return (
-    <div className="bg-brand text-white px-[5%] py-2 text-[12px] sm:text-[13px] flex justify-between items-center gap-3">
+    <div className="bg-brand-light text-white px-[5%] py-2 text-[12px] sm:text-[13px] flex justify-between items-center gap-3">
       <div className="flex items-center gap-2 sm:gap-3 min-w-0">
         <a
           href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
