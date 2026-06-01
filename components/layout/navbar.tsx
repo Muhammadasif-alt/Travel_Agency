@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -18,18 +19,15 @@ export function Navbar() {
   return (
     <nav className="bg-white px-[5%] py-4 shadow-sm border-b-[3px] border-brand sticky top-0 z-50">
       <div className="flex justify-between items-center">
-        <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <div className="w-[46px] h-[46px] sm:w-[50px] sm:h-[50px] gradient-brand rounded-full flex items-center justify-center text-white font-bold text-[20px] sm:text-[22px] flex-shrink-0">
-            N
-          </div>
-          <div>
-            <div className="text-[18px] sm:text-[22px] font-extrabold text-brand tracking-wide leading-none">
-              {siteConfig.brand}
-            </div>
-            <div className="text-[9px] sm:text-[10px] text-muted-foreground tracking-[2px]">
-              {siteConfig.tagline}
-            </div>
-          </div>
+        <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
+          <Image
+            src="/images/logo.png"
+            alt={siteConfig.name}
+            width={640}
+            height={199}
+            priority
+            className="h-10 sm:h-12 w-auto"
+          />
         </Link>
 
         {/* Desktop links */}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/lib/site-data";
 
 type IconProps = { className?: string };
@@ -40,14 +41,13 @@ export function Footer() {
         <div className="max-w-[1200px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-10 pb-[30px] border-b border-gray-200">
             <div>
-              <div className="flex items-center gap-3 mb-3.5">
-                <div className="w-[50px] h-[50px] gradient-brand rounded-full flex items-center justify-center text-white font-bold text-[22px]">
-                  N
-                </div>
-                <div className="font-extrabold text-xl text-brand">
-                  {siteConfig.brand}
-                </div>
-              </div>
+              <Image
+                src="/images/logo.png"
+                alt={siteConfig.name}
+                width={640}
+                height={199}
+                className="h-12 w-auto mb-3.5"
+              />
               <p className="text-[13px] text-muted-foreground leading-[1.7] mt-3">
                 Lodhran, Multan aur Bahawalpur ki trusted Hajj, Umrah aur travel
                 partner since 2010. Sacred journeys, made simple.

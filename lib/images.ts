@@ -1,50 +1,57 @@
 // Local image paths. Files live in /public/images.
-// Swap any file in /public/images (keep the same name) to change site visuals.
+// Each on-page grid uses a DISTINCT file (no duplicate images per page).
 
 export const images = {
-  // Hero / Home
+  // Hero slideshow
   heroKaaba: "/images/masjid-haram.jpg",
   heroMadinah: "/images/masjid-nabawi.jpg",
   heroHira: "/images/jabal-noor.jpg",
   heroArafat: "/images/arafat.jpg",
 
   // Page banners
-  hajjBanner: "/images/arafat.jpg",
-  umrahBanner: "/images/masjid-haram.jpg",
+  hajjBanner: "/images/masjid-haram-2.jpg",
+  umrahBanner: "/images/masjid-haram-3.jpg",
   flightsBanner: "/images/airplane.jpg",
   visaBanner: "/images/passport.jpg",
-  aboutBanner: "/images/masjid-nabawi.jpg",
+  aboutBanner: "/images/masjid-nabawi-3.jpg",
   contactBanner: "/images/team.jpg",
 
   // About section visual
   aboutMosque: "/images/masjid-nabawi.jpg",
 
-  // Package cover images
-  packageUmrah14: "/images/masjid-haram.jpg",
-  packageHajj21: "/images/masjid-haram.jpg",
-  packageUmrah10: "/images/masjid-quba.jpg",
-
-  // Flights / Visa supporting visuals
+  // Home "Services" cards
+  serviceHajj: "/images/arafat-2.jpg",
+  serviceUmrah: "/images/masjid-quba-2.jpg",
   airplane: "/images/airplane.jpg",
   airplaneWindow: "/images/airplane-window.jpg",
-  passportHand: "/images/passport-hand.jpg",
   passport: "/images/passport.jpg",
-
-  // About / Team
-  team: "/images/team.jpg",
-
-  // Service card visuals
+  passportHand: "/images/passport-hand.jpg",
   serviceHotel: "/images/hotel.jpg",
   serviceTransport: "/images/bus.jpg",
   serviceTours: "/images/dubai.jpg",
 
-  // Ziyarat sites (Saudi Arabia)
-  masjidHaram: "/images/masjid-haram.jpg",
+  // About / Team
+  team: "/images/team.jpg",
+
+  // Ziyarat gallery (Umrah page) — Saudi sites
   jabalNoor: "/images/jabal-noor.jpg",
-  masjidQuba: "/images/masjid-quba.jpg",
-  jabalUhud: "/images/jabal-uhud.jpg",
   arafat: "/images/arafat.jpg",
   mina: "/images/mina.jpg",
+  masjidQuba: "/images/masjid-quba.jpg",
+  jabalUhud: "/images/jabal-uhud.jpg",
+
+  // Package covers — one distinct image each
+  pkgUmrah14: "/images/masjid-haram-2.jpg",
+  pkgUmrah10: "/images/masjid-nabawi-2.jpg",
+  pkgUmrah21: "/images/masjid-quba-2.jpg",
+  pkgUmrah7: "/images/jabal-noor-2.jpg",
+  pkgUmrahRamadan: "/images/mina-2.jpg",
+  pkgUmrahVip: "/images/jabal-uhud-2.jpg",
+  pkgHajj21: "/images/mina-2.jpg",
+  pkgHajjEconomy: "/images/masjid-haram.jpg",
+  pkgHajjStandard: "/images/arafat.jpg",
+  pkgHajjVip: "/images/masjid-nabawi.jpg",
+  pkgHajjShortcut: "/images/jabal-uhud-2.jpg",
 };
 
 // Friendly avatar generator for team members (initials, no external photo needed).
