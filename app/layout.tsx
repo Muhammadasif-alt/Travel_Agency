@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins, Amiri } from "next/font/google";
 import "./globals.css";
+import { Preloader } from "@/components/layout/preloader";
 import { TopBar } from "@/components/layout/top-bar";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
@@ -158,6 +159,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Preloader />
         <TopBar />
         <Navbar />
         <main>{children}</main>
