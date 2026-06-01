@@ -59,8 +59,8 @@ export function Footer() {
               NUSARAT <span className="text-brand-light">MADINA</span>
             </div>
             <p className="text-[13px] text-white/70 leading-[1.8] mt-4 max-w-xs">
-              Lodhran, Multan aur Bahawalpur ki trusted Hajj, Umrah aur travel
-              partner since 2010.
+              Your trusted Hajj, Umrah and travel partner in Lodhran, Multan and
+              Bahawalpur since 2010.
             </p>
             <a
               href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}

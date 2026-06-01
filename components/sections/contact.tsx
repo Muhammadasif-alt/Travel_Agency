@@ -22,8 +22,8 @@ export function Contact() {
             Ready to Begin Your Journey?
           </h2>
           <p className="text-gray-600 text-[15px] leading-[1.7]">
-            Hamare travel experts se aaj hi consult karein. Free consultation,
-            customized packages, aur best rates.
+            Talk to our travel experts today. Free consultation, customized
+            packages and the best rates, all in one call.
           </p>
 
           <div className="flex flex-col gap-3.5 mt-7">

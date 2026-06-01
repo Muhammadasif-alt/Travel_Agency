@@ -12,7 +12,7 @@ export function Packages() {
               FEATURED PACKAGES
             </div>
             <h2 className="text-2xl md:text-[34px] font-extrabold text-brand">
-              Popular Hajj & Umrah Deals
+              Our Most Popular Hajj &amp; Umrah Deals
             </h2>
           </div>
           <Link

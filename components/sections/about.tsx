@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import { images } from "@/lib/images";
 
 const features = [
@@ -20,10 +20,11 @@ export function About() {
             14 Years of Trust, Thousands of Happy Pilgrims
           </h2>
           <p className="text-gray-600 text-[15px] leading-[1.8] mb-6">
-            Nusarat Madina 2010 se Pakistan ki most reliable Hajj & Umrah
-            operators mein se ek hai. Ministry of Religious Affairs se licensed, IATA
-            certified, aur thousands of satisfied pilgrims k saath â€” hum aap ki sacred
-            journey ko memorable banate hain.
+            Since 2010, Nusarat Madina has been one of the most reliable Hajj
+            and Umrah operators in Pakistan. We are a licensed operator with the Ministry
+            of Religious Affairs, IATA certified, and trusted by thousands of
+            satisfied pilgrims. From your first inquiry to your safe return home,
+            our team is committed to making your sacred journey smooth, affordable and truly memorable.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4.5">
             {features.map((f) => (

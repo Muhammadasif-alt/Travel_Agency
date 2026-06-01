@@ -11,8 +11,8 @@ const slides = [
   {
     image: images.heroKaaba,
     alt: "Kaaba in Masjid al-Haram, Makkah",
-    title: "Your Sacred Journey to Makkah",
-    sub: "Umrah & Hajj packages from Lodhran, Multan & Bahawalpur â€” visa, flights, hotels & guide included.",
+    title: "Your Sacred Journey to Makkah, Made Simple",
+    sub: "Complete Hajj and Umrah packages from Lodhran, Multan and Bahawalpur. Visa, flights, hotels and an experienced guide, all arranged for you under one roof.",
   },
   {
     image: images.heroMadinah,
@@ -71,7 +71,7 @@ export function Hero() {
       {/* Content */}
       <div className="relative h-full max-w-[1440px] mx-auto px-[5%] flex flex-col justify-center">
         <div className="inline-block self-start bg-white/15 backdrop-blur-sm border border-white/25 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-5">
-          âœ¦ Trusted Since 2010 Â· Lodhran Â· Multan Â· Bahawalpur âœ¦
+          ✦ Trusted Since 2010 · Lodhran · Multan · Bahawalpur ✦
         </div>
 
         {/* Changing text (re-animates on slide change) */}
@@ -86,7 +86,7 @@ export function Hero() {
 
         <div className="flex flex-wrap gap-3.5 mt-7">
           <Button asChild size="lg">
-            <Link href="/umrah">Explore Packages â†’</Link>
+            <Link href="/umrah">Explore Packages →</Link>
           </Button>
           <Button
             asChild
@@ -94,7 +94,7 @@ export function Hero() {
             variant="outline"
             className="bg-transparent border-white text-white hover:bg-white/10"
           >
-            <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}>ðŸ“ž Call Expert</a>
+            <a href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}>Call an Expert</a>
           </Button>
         </div>
 
@@ -102,7 +102,7 @@ export function Hero() {
         <div className="flex flex-wrap gap-6 sm:gap-10 mt-9 pt-6 border-t border-white/20">
           <Stat num="15K+" label="Happy Pilgrims" />
           <Stat num="14+" label="Years Experience" />
-          <Stat num="4.9â˜…" label="Customer Rating" />
+          <Stat num="4.9★" label="Customer Rating" />
         </div>
       </div>
 

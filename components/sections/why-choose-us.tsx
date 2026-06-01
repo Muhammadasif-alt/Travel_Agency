@@ -4,21 +4,18 @@ import { images } from "@/lib/images";
 
 const items = [
   {
-    icon: "ðŸ“ž",
-    title: "Book Free Consultation",
-    desc: "Talk to a real Hajj & Umrah expert â€” no bots, no cost. We help you choose the right package.",
+    title: "Free Consultation",
+    desc: "Speak directly with a real Hajj and Umrah expert — no bots and no cost. We help you choose the package that fits your budget and your family.",
     image: images.team,
   },
   {
-    icon: "ðŸ’³",
     title: "Easy Booking & Payment",
-    desc: "Flexible 3â€“6 month installment plans with secure, transparent pricing and zero hidden charges.",
+    desc: "Flexible installment plans over 3 to 6 months, with secure and transparent pricing and zero hidden charges.",
     image: images.serviceTours,
   },
   {
-    icon: "ðŸ•‹",
-    title: "Begin Your Sacred Journey",
-    desc: "Visa, flights, hotels and guided ziyarat â€” all arranged so you travel with complete peace of mind.",
+    title: "Complete Peace of Mind",
+    desc: "Visa, flights, hotels and guided ziyarat are all arranged for you, so your only focus is your worship.",
     image: images.heroKaaba,
   },
 ];

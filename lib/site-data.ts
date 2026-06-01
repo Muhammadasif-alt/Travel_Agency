@@ -806,19 +806,19 @@ export const testimonials: Testimonial[] = [
     initial: "A",
     name: "Ahmed Raza",
     meta: "Multan · Umrah 2025",
-    text: "Nusarat Madina ne hamari family ka Umrah trip bohat smooth banaya. Hotel Haram k bilkul saamne tha, transport perfect, aur staff bohat helpful.",
+    text: "Nusarat Madina made our family Umrah trip completely stress-free. Our hotel was right in front of the Haram, the transport was on time, and the staff were genuinely helpful at every step.",
   },
   {
     initial: "F",
     name: "Fatima Khan",
     meta: "Bahawalpur · Hajj 2025",
-    text: "Hajj 2025 mein Nusarat Madina k saath gaye. Pricing bohat reasonable thi aur sab kuch waqt par hua. Highly recommended for first-timers.",
+    text: "We performed Hajj 2025 with Nusarat Madina. The pricing was very reasonable and everything happened exactly on schedule. I would highly recommend them, especially for first-time pilgrims.",
   },
   {
     initial: "M",
     name: "Muhammad Ali",
     meta: "Lodhran · Business Travel",
-    text: "International tickets bhi inse ki, Dubai aur Turkey ka. Best rates mile aur visa bhi inhone karwa diya. Trustworthy agency.",
+    text: "I also booked my international tickets to Dubai and Turkey through them. I got the best rates and they arranged my visa as well. A truly trustworthy agency.",
   },
 ];
 
@@ -826,24 +826,24 @@ export type FaqItem = { q: string; a: string };
 
 export const faqs: FaqItem[] = [
   {
-    q: "Umrah package mein kya kya included hota hai?",
-    a: "Hamare standard Umrah packages mein visa, return flight tickets, hotel accommodation (Makkah & Madinah), transport, aur ziyarat tour shamil hai. Premium packages mein meals bhi included hain.",
+    q: "What is included in an Umrah package?",
+    a: "Our standard Umrah packages include your visa, return flight tickets, hotel accommodation in both Makkah and Madinah, transport and a ziyarat tour. Premium packages also include meals.",
   },
   {
-    q: "Hajj k liye registration kab open hoti hai?",
-    a: "Hajj registration usually saal mein ek baar Ministry of Religious Affairs k notification k baad start hoti hai. Hamari team aap ko notify kar deti hai jaise hi schedule announce hota hai.",
+    q: "When does Hajj registration open?",
+    a: "Hajj registration usually opens once a year, following the official notification from the Ministry of Religious Affairs. Our team notifies you as soon as the schedule is announced.",
   },
   {
-    q: "Payment installments mein kar sakte hain?",
-    a: "Ji haan, hum 3 se 6 months tak ki easy installment plans offer karte hain selected packages par. Details k liye humse contact karein.",
+    q: "Can I pay in installments?",
+    a: "Yes. We offer easy installment plans of 3 to 6 months on selected packages. Contact us for the full details.",
   },
   {
-    q: "Visa processing mein kitna time lagta hai?",
-    a: "Umrah visa typically 5-10 working days mein process ho jata hai. Hajj visa ka time Ministry k schedule par depend karta hai.",
+    q: "How long does visa processing take?",
+    a: "An Umrah visa is typically processed within 5 to 10 working days. Hajj visa timing depends on the Ministry schedule.",
   },
   {
-    q: "Family discount available hai?",
-    a: "Ji haan, 4 ya us se zyada members par special family discount aur group rates available hain. Children k liye bhi alag pricing hoti hai.",
+    q: "Is a family discount available?",
+    a: "Yes. We offer special family discounts and group rates for 4 or more members, with separate pricing for children.",
   },
 ];
 
