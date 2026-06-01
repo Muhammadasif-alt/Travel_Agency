@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { ContactForm } from "@/components/sections/contact-form";
 import { images } from "@/lib/images";
@@ -107,15 +107,15 @@ export default function ContactPage() {
                   <div className="flex flex-wrap gap-x-5 gap-y-1 mt-3 text-sm">
                     <a
                       href={`tel:${d.phone.replace(/\s/g, "")}`}
-                      className="text-brand-light font-semibold"
+                      className="flex items-center gap-1.5 text-brand-light font-semibold"
                     >
-                      📞 {d.phone}
+                      <Phone size={14} /> {d.phone}
                     </a>
                     <a
                       href={`mailto:${d.email}`}
-                      className="text-brand-light font-semibold"
+                      className="flex items-center gap-1.5 text-brand-light font-semibold"
                     >
-                      ✉️ {d.email}
+                      <Mail size={14} /> {d.email}
                     </a>
                   </div>
                 </div>
@@ -173,14 +173,15 @@ export default function ContactPage() {
                   className="bg-white border border-gray-100 rounded-xl p-5 shadow-sm"
                 >
                   <div className="font-bold text-brand">{o.city}</div>
-                  <div className="text-sm text-muted-foreground mt-1">
-                    📍 {o.address}
+                  <div className="flex items-start gap-1.5 text-sm text-muted-foreground mt-1">
+                    <MapPin size={15} className="text-brand-light mt-0.5 flex-shrink-0" />
+                    {o.address}
                   </div>
                   <a
                     href={`tel:${o.phone.replace(/\s/g, "")}`}
-                    className="text-sm text-brand-light font-semibold mt-1 inline-block"
+                    className="flex items-center gap-1.5 text-sm text-brand-light font-semibold mt-1.5"
                   >
-                    📞 {o.phone}
+                    <Phone size={14} /> {o.phone}
                   </a>
                 </div>
               ))}
@@ -191,17 +192,23 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Map placeholder */}
+      {/* Map */}
       <section className="px-[5%] pb-20">
         <div className="max-w-[1100px] mx-auto">
-          <div className="bg-gradient-to-br from-brand-50 to-brand-100 rounded-2xl h-[280px] flex items-center justify-center text-center border border-brand-100">
-            <div>
-              <div className="text-5xl mb-3">🗺️</div>
-              <div className="font-bold text-brand">Visit our Lodhran Head Office</div>
-              <div className="text-sm text-muted-foreground mt-1">
-                Multan Road, near Railway Station, Lodhran · Mon–Sat 10am–8pm
-              </div>
-            </div>
+          <div className="mb-4 flex items-center gap-2 text-brand font-bold">
+            <MapPin size={18} className="text-brand-light" />
+            Visit our Lodhran Head Office — Multan Road, near Railway Station
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+            <iframe
+              title="Nusarat Madina — Lodhran office location"
+              src="https://www.google.com/maps?q=Lodhran,+Punjab,+Pakistan&output=embed"
+              width="100%"
+              height="320"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full grayscale-[15%]"
+            />
           </div>
         </div>
       </section>

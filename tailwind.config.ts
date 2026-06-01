@@ -70,13 +70,13 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
-        // Soft teal/navy-tinted shadows (no harsh black)
-        sm: "0 1px 3px 0 rgba(20, 184, 166, 0.10)",
-        DEFAULT: "0 2px 8px -1px rgba(20, 184, 166, 0.12)",
-        md: "0 8px 20px -6px rgba(20, 184, 166, 0.16)",
-        lg: "0 14px 30px -10px rgba(22, 36, 59, 0.16)",
-        xl: "0 22px 45px -14px rgba(22, 36, 59, 0.18)",
-        "2xl": "0 30px 60px -18px rgba(22, 36, 59, 0.22)",
+        // Soft teal (brand) tinted shadows — no harsh black
+        sm: "0 1px 3px 0 rgba(20, 184, 166, 0.12)",
+        DEFAULT: "0 2px 8px -1px rgba(20, 184, 166, 0.15)",
+        md: "0 8px 20px -6px rgba(20, 184, 166, 0.18)",
+        lg: "0 14px 30px -10px rgba(20, 184, 166, 0.20)",
+        xl: "0 22px 45px -14px rgba(20, 184, 166, 0.22)",
+        "2xl": "0 30px 60px -18px rgba(20, 184, 166, 0.25)",
       },
       keyframes: {
         pulseRing: {

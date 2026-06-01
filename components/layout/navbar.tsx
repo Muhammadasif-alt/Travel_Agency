@@ -17,7 +17,7 @@ export function Navbar() {
     pathname === href || (href !== "/" && pathname.startsWith(href));
 
   return (
-    <nav className="bg-white px-[5%] py-4 shadow-sm border-b-[3px] border-brand sticky top-0 z-50">
+    <nav className="bg-white px-[5%] py-4 shadow-sm border-b border-gray-100 sticky top-0 z-50">
       <div className="flex justify-between items-center">
         <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           <Image
