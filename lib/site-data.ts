@@ -874,12 +874,17 @@ export const certifications = [
 export type TeamMember = {
   name: string;
   role: string;
+  photo?: string;
 };
 
 export const team: TeamMember[] = [
-  { name: "Rao Shafeeq", role: "Owner & CEO" },
+  { name: "Rao Shafeeq", role: "Owner & CEO", photo: "/images/team-ceo.jpg" },
   { name: "Sana Iqbal", role: "Head of Operations" },
-  { name: "Bilal Ahmed", role: "Umrah Operations Lead" },
+  {
+    name: "Bilal Ahmed",
+    role: "Umrah Operations Lead",
+    photo: "/images/team-founder.jpg",
+  },
   { name: "Maryam Sheikh", role: "Visa & Documentation" },
 ];
 

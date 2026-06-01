@@ -49,19 +49,14 @@ export function WhyChooseUs() {
                 i < items.length - 1 ? "md:border-r md:border-dashed md:border-white/20" : ""
               }`}
             >
-              <div className="relative w-44 h-44 mx-auto mb-7">
-                <div className="relative w-full h-full rounded-full overflow-hidden ring-4 ring-white/10">
-                  <Image
-                    src={it.image}
-                    alt={it.title}
-                    fill
-                    sizes="176px"
-                    className="object-cover"
-                  />
-                </div>
-                <span className="absolute -top-2 left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-brand-light flex items-center justify-center text-2xl shadow-lg">
-                  {it.icon}
-                </span>
+              <div className="relative w-44 h-44 mx-auto mb-7 rounded-full overflow-hidden ring-4 ring-white/10">
+                <Image
+                  src={it.image}
+                  alt={it.title}
+                  fill
+                  sizes="176px"
+                  className="object-cover"
+                />
               </div>
               <h3 className="text-xl font-bold mb-3">{it.title}</h3>
               <p className="text-sm text-white/70 leading-relaxed max-w-xs mx-auto">

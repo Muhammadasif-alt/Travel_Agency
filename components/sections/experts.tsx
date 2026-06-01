@@ -20,13 +20,13 @@ export function Experts() {
               key={m.name}
               className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all"
             >
-              <div className="relative h-48 sm:h-56 bg-brand-50">
+              <div className="relative h-56 sm:h-64 bg-brand-50">
                 <Image
-                  src={avatar(m.name, { bg: "14b8a6", size: 400 })}
+                  src={m.photo ?? avatar(m.name, { bg: "14b8a6", size: 400 })}
                   alt={m.name}
                   fill
                   sizes="(max-width: 1024px) 50vw, 280px"
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
               <div className="p-5">

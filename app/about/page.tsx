@@ -209,11 +209,11 @@ export default function AboutPage() {
             >
               <div className="relative w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 ring-4 ring-brand-100">
                 <Image
-                  src={avatar(m.name, { bg: "171717" })}
+                  src={m.photo ?? avatar(m.name, { bg: "14b8a6" })}
                   alt={m.name}
                   fill
                   sizes="96px"
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
               <div className="font-bold text-brand">{m.name}</div>
