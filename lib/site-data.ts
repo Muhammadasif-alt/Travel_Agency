@@ -1411,3 +1411,40 @@ export const cityLandings: CityLanding[] = serviceCities.flatMap((c) =>
     airport: c.airport,
   }))
 );
+
+/* ----------------------------------------------------- News & Blog */
+
+export type BlogPost = {
+  title: string;
+  category: string;
+  date: string;
+  image: string;
+  excerpt: string;
+};
+
+export const blogPosts: BlogPost[] = [
+  {
+    title: "Hajj 2026: A Complete Step-by-Step Guide for Pakistani Pilgrims",
+    category: "Hajj",
+    date: "April 17, 2026",
+    image: images.arafat,
+    excerpt:
+      "From registration and documents to departure — everything you need to know to prepare for Hajj 2026.",
+  },
+  {
+    title: "Top 10 Tips for a Smooth & Affordable Umrah Trip",
+    category: "Umrah",
+    date: "April 10, 2026",
+    image: images.masjidQuba,
+    excerpt:
+      "Save money and travel stress-free with these expert tips on visa, hotels, transport and best timing.",
+  },
+  {
+    title: "Saudi Visa Rules 2026: What Has Changed for Travellers",
+    category: "Visa",
+    date: "March 28, 2026",
+    image: images.passport,
+    excerpt:
+      "A quick breakdown of the latest Saudi visa requirements and how to avoid common rejection reasons.",
+  },
+];
