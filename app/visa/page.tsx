@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaStrip } from "@/components/sections/cta-strip";
 import { Button } from "@/components/ui/button";
@@ -12,7 +12,7 @@ import {
 } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Visa Services â€” Saudi, UAE, Turkey, UK & More",
+  title: "Visa Services — Saudi, UAE, Turkey, UK & More",
   description:
     "Hassle-free visa processing in Lodhran, Multan & Bahawalpur for Saudi Arabia, UAE, Turkey, UK, USA, Canada & more. Documentation & application support.",
   alternates: { canonical: "/visa" },
@@ -23,25 +23,25 @@ const visaSteps = [
     step: 1,
     title: "Pick Destination",
     desc: "Choose the country & visa type you need.",
-    icon: "ðŸŒ",
+    icon: "🌍",
   },
   {
     step: 2,
     title: "Submit Documents",
     desc: "We review your file and pre-check for rejection risks.",
-    icon: "ðŸ“‹",
+    icon: "📋",
   },
   {
     step: 3,
     title: "Application Lodged",
     desc: "We submit to the embassy/consulate or e-visa portal.",
-    icon: "ðŸ›‚",
+    icon: "🛂",
   },
   {
     step: 4,
     title: "Receive Visa",
     desc: "Approved visa delivered to your inbox or office.",
-    icon: "âœ…",
+    icon: "✅",
   },
 ];
 
@@ -53,7 +53,7 @@ export default function VisaPage() {
         imageAlt="Passport on table"
         eyebrow="VISA SERVICES"
         title="Smooth Visa Processing for 50+ Countries"
-        subtitle="Document review, appointment booking and full filing support â€” by visa experts you can trust."
+        subtitle="Document review, appointment booking and full filing support — by visa experts you can trust."
         crumbs={[{ label: "Home", href: "/" }, { label: "Visa" }]}
       />
 
@@ -108,7 +108,7 @@ export default function VisaPage() {
               </div>
 
               <Button variant="outline" size="sm" className="w-full mt-4">
-                Apply Now â†’
+                Apply Now →
               </Button>
             </div>
           ))}
@@ -156,7 +156,7 @@ export default function VisaPage() {
             What You&apos;ll Typically Need
           </h2>
           <p className="text-muted-foreground mt-3 text-[15px] max-w-2xl mx-auto">
-            Requirements vary by country and visa type â€” this is the general checklist
+            Requirements vary by country and visa type — this is the general checklist
             for most tourist & visit visas.
           </p>
         </div>
@@ -174,7 +174,7 @@ export default function VisaPage() {
                 {cat.items.map((item) => (
                   <li key={item} className="flex gap-2.5 items-start text-sm">
                     <span className="w-5 h-5 bg-brand-100 text-brand rounded-full flex items-center justify-center text-[10px] flex-shrink-0 mt-0.5">
-                      âœ“
+                      ✓
                     </span>
                     <span className="text-gray-700">{item}</span>
                   </li>
@@ -235,14 +235,14 @@ export default function VisaPage() {
                 Minimum requirements
               </h3>
               <p className="text-gray-600 text-[15px] leading-[1.7]">
-                Bring these and we&apos;ll guide you through the rest â€” country-specific
+                Bring these and we&apos;ll guide you through the rest — country-specific
                 forms, photos, appointment booking, you name it.
               </p>
             </div>
             <ul className="space-y-2.5">
               {visaRequirements.map((r) => (
                 <li key={r} className="flex gap-3 items-start text-sm">
-                  <span className="text-brand-light text-base flex-shrink-0">â—</span>
+                  <span className="text-brand-light text-base flex-shrink-0">●</span>
                   <span className="text-gray-700">{r}</span>
                 </li>
               ))}

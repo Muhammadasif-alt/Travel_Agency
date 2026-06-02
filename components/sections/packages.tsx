@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { packages } from "@/lib/site-data";
 import { PackageCard } from "./package-card";
 
@@ -19,7 +19,7 @@ export function Packages() {
             href="/umrah"
             className="text-brand font-semibold text-sm hover:text-brand-light transition-colors"
           >
-            View All Packages â†’
+            View All Packages →
           </Link>
         </div>
 

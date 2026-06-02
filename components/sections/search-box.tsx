@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -32,7 +32,7 @@ export function SearchBox() {
         <SearchField label="To" value="Jeddah, KSA" />
         <SearchField label="Departure" value="15 Jun 2026" />
         <SearchField label="Travellers" value="2 Adults" />
-        <Button className="h-11">ðŸ” Search</Button>
+        <Button className="h-11">🔍 Search</Button>
       </div>
     </div>
   );

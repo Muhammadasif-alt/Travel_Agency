@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { CtaStrip } from "@/components/sections/cta-strip";
@@ -7,9 +7,9 @@ import { images } from "@/lib/images";
 import { flightDeals, airlines, flightsWhyUs, baggageInfo } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Flight Bookings â€” International & Domestic (Multan & Pakistan)",
+  title: "Flight Bookings — International & Domestic (Multan & Pakistan)",
   description:
-    "Best airfare deals from Multan, Lahore, Karachi & Islamabad to Saudi Arabia, UAE, Turkey, UK & more. Air tickets for Lodhran & Bahawalpur travellers â€” book in minutes.",
+    "Best airfare deals from Multan, Lahore, Karachi & Islamabad to Saudi Arabia, UAE, Turkey, UK & more. Air tickets for Lodhran & Bahawalpur travellers — book in minutes.",
   alternates: { canonical: "/flights" },
 };
 
@@ -95,7 +95,7 @@ export default function FlightsPage() {
               <div className="p-5">
                 <div className="flex items-center justify-between text-sm mb-3">
                   <span className="font-semibold">{d.from}</span>
-                  <span className="text-brand-light">âœˆ</span>
+                  <span className="text-brand-light">✈</span>
                   <span className="font-semibold">{d.to}</span>
                 </div>
                 <div className="text-xs text-muted-foreground mb-3">
@@ -109,7 +109,7 @@ export default function FlightsPage() {
                     </div>
                   </div>
                   <Button variant="book" size="sm">
-                    Book â†’
+                    Book →
                   </Button>
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default function FlightsPage() {
               Travelling as a Group of 10 or More?
             </h3>
             <p className="opacity-90 text-[15px] leading-relaxed">
-              From corporate trips to extended family Umrah groups â€” we negotiate
+              From corporate trips to extended family Umrah groups — we negotiate
               wholesale fares directly with airlines and lock them in for you, even
               before the full passenger list is finalised.
             </p>
@@ -174,7 +174,7 @@ export default function FlightsPage() {
             ].map((b) => (
               <li key={b} className="flex gap-3 items-start text-sm">
                 <span className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-xs flex-shrink-0">
-                  âœ“
+                  ✓
                 </span>
                 <span>{b}</span>
               </li>
@@ -195,7 +195,7 @@ export default function FlightsPage() {
             </h2>
             <p className="text-muted-foreground mt-3 text-[15px]">
               Standard economy allowances on routes from Pakistan. Hajj/Umrah season may
-              have higher allowances â€” ask us.
+              have higher allowances — ask us.
             </p>
           </div>
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-x-auto">
@@ -215,7 +215,7 @@ export default function FlightsPage() {
                     className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}
                   >
                     <td className="px-6 py-3.5 font-semibold text-brand">
-                      âœˆï¸ {b.airline}
+                      ✈️ {b.airline}
                     </td>
                     <td className="text-center px-4 py-3.5 text-gray-700">
                       {b.checkIn}
@@ -249,7 +249,7 @@ export default function FlightsPage() {
                 key={a}
                 className="bg-white px-5 py-3 rounded-xl shadow-sm font-semibold text-gray-700 border border-gray-100"
               >
-                âœˆï¸ {a}
+                ✈️ {a}
               </div>
             ))}
           </div>

@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/lib/site-data";
 import { SectionHeader } from "./section-header";
@@ -59,7 +59,7 @@ export function Services() {
                   </span>
                 )}
                 <span className="text-brand-light font-semibold text-sm group-hover:translate-x-1 transition-transform">
-                  Learn more â†’
+                  Learn more →
                 </span>
               </div>
             </div>

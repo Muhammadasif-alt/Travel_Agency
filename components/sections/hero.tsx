@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -29,7 +29,7 @@ const slides = [
   {
     image: images.heroArafat,
     alt: "Plain of Arafat on the day of Hajj",
-    title: "Hajj 2026 â€” Reserve Your Place",
+    title: "Hajj 2026 — Reserve Your Place",
     sub: "Ministry-approved packages with hotels near the Haram and easy installment plans.",
   },
 ];

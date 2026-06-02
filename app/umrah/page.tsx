@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHero } from "@/components/sections/page-hero";
 import { PackageCard } from "@/components/sections/package-card";
@@ -16,7 +16,7 @@ import {
 } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Umrah Packages â€” Lodhran, Multan & Bahawalpur",
+  title: "Umrah Packages — Lodhran, Multan & Bahawalpur",
   description:
     "Affordable Umrah packages from Lodhran, Multan & Bahawalpur. Family deals, Ramadan Umrah, Haram-view hotels & fast Umrah visa across Pakistan.",
   alternates: { canonical: "/umrah" },
@@ -30,7 +30,7 @@ export default function UmrahPage() {
         imageAlt="Kaaba in Makkah"
         eyebrow="UMRAH PACKAGES"
         title="Begin Your Umrah Journey with Confidence"
-        subtitle="Custom packages for families, couples and groups â€” Haram-view hotels and visa included."
+        subtitle="Custom packages for families, couples and groups — Haram-view hotels and visa included."
         crumbs={[{ label: "Home", href: "/" }, { label: "Umrah Packages" }]}
       />
 
@@ -109,7 +109,7 @@ export default function UmrahPage() {
             What&apos;s Included &amp; What&apos;s Not
           </h2>
           <p className="text-muted-foreground mt-3 text-[15px] max-w-2xl mx-auto">
-            We list everything upfront â€” what your package covers and what you should
+            We list everything upfront — what your package covers and what you should
             budget separately.
           </p>
         </div>
@@ -118,14 +118,14 @@ export default function UmrahPage() {
           <div className="bg-white rounded-2xl border-2 border-brand-light/30 p-7">
             <div className="font-extrabold text-brand text-lg mb-4 flex items-center gap-2">
               <span className="w-8 h-8 bg-brand text-white rounded-full flex items-center justify-center text-sm">
-                âœ“
+                ✓
               </span>
               What&apos;s Included
             </div>
             <ul className="space-y-2.5">
               {umrahIncludes.map((item) => (
                 <li key={item} className="flex gap-3 items-start text-sm">
-                  <span className="text-brand-light flex-shrink-0 mt-0.5">â—</span>
+                  <span className="text-brand-light flex-shrink-0 mt-0.5">●</span>
                   <span className="text-gray-700">{item}</span>
                 </li>
               ))}
@@ -135,14 +135,14 @@ export default function UmrahPage() {
           <div className="bg-white rounded-2xl border border-gray-200 p-7">
             <div className="font-extrabold text-gray-700 text-lg mb-4 flex items-center gap-2">
               <span className="w-8 h-8 bg-gray-200 text-gray-700 rounded-full flex items-center justify-center text-sm">
-                âœ•
+                ✕
               </span>
               Not Included
             </div>
             <ul className="space-y-2.5">
               {umrahExcludes.map((item) => (
                 <li key={item} className="flex gap-3 items-start text-sm">
-                  <span className="text-gray-400 flex-shrink-0 mt-0.5">â—‹</span>
+                  <span className="text-gray-400 flex-shrink-0 mt-0.5">○</span>
                   <span className="text-gray-700">{item}</span>
                 </li>
               ))}
@@ -166,7 +166,7 @@ export default function UmrahPage() {
               Historic Sites You&apos;ll Visit
             </h2>
             <p className="text-muted-foreground mt-3 text-[15px]">
-              Included in Standard & VIP packages â€” guided by an Urdu-speaking scholar.
+              Included in Standard & VIP packages — guided by an Urdu-speaking scholar.
             </p>
           </div>
 

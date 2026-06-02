@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import { Pill } from "./section-header";
 import { blogPosts } from "@/lib/site-data";
 
@@ -36,7 +36,7 @@ export function BlogNews() {
                 {p.excerpt}
               </p>
               <div className="flex items-center gap-2 text-xs text-white/80 mt-3">
-                <span>ðŸ•’</span>
+                <span>🕒</span>
                 {p.date}
               </div>
             </div>

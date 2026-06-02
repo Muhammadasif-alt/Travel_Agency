@@ -2,10 +2,10 @@ import Image from "next/image";
 import { images } from "@/lib/images";
 
 const features = [
-  { icon: "âœ“", title: "Govt. Approved", sub: "Licensed operator" },
-  { icon: "ðŸ•“", title: "24/7 Support", sub: "On-call assistance" },
-  { icon: "ðŸ’°", title: "Best Prices", sub: "No hidden charges" },
-  { icon: "ðŸ¤", title: "Personal Care", sub: "Expert guidance" },
+  { icon: "✓", title: "Govt. Approved", sub: "Licensed operator" },
+  { icon: "🕓", title: "24/7 Support", sub: "On-call assistance" },
+  { icon: "💰", title: "Best Prices", sub: "No hidden charges" },
+  { icon: "🤝", title: "Personal Care", sub: "Expert guidance" },
 ];
 
 export function About() {
@@ -52,7 +52,7 @@ export function About() {
           <div className="absolute inset-0 bg-gradient-to-t from-brand/90 via-brand/30 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-8 text-center text-white">
             <div className="font-arabic text-[32px] font-bold drop-shadow-lg">
-              Ù„ÙŽØ¨ÙŽÙ‘ÙŠÙ’ÙƒÙŽ Ø§Ù„Ù„ÙŽÙ‘Ù‡ÙÙ…ÙŽÙ‘ Ù„ÙŽØ¨ÙŽÙ‘ÙŠÙ’ÙƒÙŽ
+              لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ
             </div>
             <div className="text-sm opacity-95 mt-2">
               Here I am, O Allah, here I am

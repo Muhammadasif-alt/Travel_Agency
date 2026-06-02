@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Phone, Mail } from "lucide-react";
 import { siteConfig, blogPosts } from "@/lib/site-data";
@@ -123,7 +123,7 @@ export function Footer() {
                       {p.title}
                     </span>
                     <span className="block text-[11px] text-white/60 mt-1">
-                      ðŸ—“ {p.date}
+                      🗓 {p.date}
                     </span>
                   </span>
                 </Link>
@@ -135,7 +135,7 @@ export function Footer() {
 
       <div className="border-t border-white/10">
         <div className="text-center py-5 text-xs text-white/60">
-          Â© 2026 {siteConfig.name}. All Rights Reserved.
+          © 2026 {siteConfig.name}. All Rights Reserved.
         </div>
       </div>
     </footer>

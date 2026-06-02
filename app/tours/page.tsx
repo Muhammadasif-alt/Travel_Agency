@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaStrip } from "@/components/sections/cta-strip";
 import { Button } from "@/components/ui/button";
@@ -6,7 +6,7 @@ import { images } from "@/lib/images";
 import { tourPackages } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Group & Leisure Tours â€” Dubai, Turkey, Malaysia & More",
+  title: "Group & Leisure Tours — Dubai, Turkey, Malaysia & More",
   description:
     "Guided ziyarat tours plus leisure holidays to Dubai, Turkey, Malaysia & Thailand for families & groups from Lodhran, Multan & Bahawalpur. Fully managed by Nusarat Madina.",
   alternates: { canonical: "/tours" },
@@ -14,22 +14,22 @@ export const metadata: Metadata = {
 
 const tourTypes = [
   {
-    icon: "ðŸ•Œ",
+    icon: "🕌",
     title: "Ziyarat Tours",
     desc: "Guided visits to the historic sites of Makkah & Madinah with an Urdu-speaking scholar.",
   },
   {
-    icon: "ðŸ‘¨â€ðŸ‘©â€ðŸ‘§â€ðŸ‘¦",
+    icon: "👨‍👩‍👧‍👦",
     title: "Family Holidays",
     desc: "Kid-friendly itineraries with comfortable hotels and relaxed pacing.",
   },
   {
-    icon: "ðŸ’¼",
+    icon: "💼",
     title: "Corporate Groups",
     desc: "Incentive trips and team retreats with one consolidated invoice.",
   },
   {
-    icon: "ðŸ’",
+    icon: "💍",
     title: "Honeymoon Packages",
     desc: "Romantic getaways with premium stays and private transfers.",
   },
@@ -42,7 +42,7 @@ export default function ToursPage() {
         image={images.serviceTours}
         imageAlt="Dubai skyline"
         eyebrow="GROUP & LEISURE TOURS"
-        title="Beyond the Pilgrimage â€” See the World With Us"
+        title="Beyond the Pilgrimage — See the World With Us"
         subtitle="Guided ziyarat plus curated holidays to Dubai, Turkey, Malaysia and Thailand, fully managed end-to-end."
         crumbs={[{ label: "Home", href: "/" }, { label: "Tours" }]}
       />
@@ -57,7 +57,7 @@ export default function ToursPage() {
             Popular Tour Destinations
           </h2>
           <p className="text-muted-foreground mt-3 text-[15px] max-w-2xl mx-auto">
-            Sample packages below â€” every trip is customised to your dates,
+            Sample packages below — every trip is customised to your dates,
             budget and group size.
           </p>
         </div>
@@ -89,7 +89,7 @@ export default function ToursPage() {
                     </div>
                   </div>
                   <Button asChild variant="book" size="sm">
-                    <a href="/contact">Book â†’</a>
+                    <a href="/contact">Book →</a>
                   </Button>
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function ToursPage() {
 
       <CtaStrip
         title="Planning a group trip or holiday?"
-        subtitle="Tell us where you want to go â€” we'll build a custom itinerary and quote."
+        subtitle="Tell us where you want to go — we'll build a custom itinerary and quote."
         primary={{ label: "Plan My Tour", href: "/contact" }}
         secondary={{ label: "WhatsApp Us", href: "https://wa.me/923082699997" }}
       />

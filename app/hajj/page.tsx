@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { PackageCard } from "@/components/sections/package-card";
 import { CtaStrip } from "@/components/sections/cta-strip";
@@ -14,7 +14,7 @@ import {
 } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Hajj Packages 2026 â€” Lodhran, Multan & Bahawalpur",
+  title: "Hajj Packages 2026 — Lodhran, Multan & Bahawalpur",
   description:
     "Affordable & VIP Hajj 2026 packages for pilgrims from Lodhran, Multan, Bahawalpur & all Pakistan. Ministry-approved, IATA certified, easy installment plans.",
   alternates: { canonical: "/hajj" },
@@ -28,7 +28,7 @@ export default function HajjPage() {
         imageAlt="Masjid an-Nabawi Madinah"
         eyebrow="HAJJ 2026"
         title="Sacred Hajj Packages, Built for Every Family"
-        subtitle="Ministry of Religious Affairs approved Â· IATA certified Â· 24/7 on-ground support in KSA."
+        subtitle="Ministry of Religious Affairs approved · IATA certified · 24/7 on-ground support in KSA."
         crumbs={[{ label: "Home", href: "/" }, { label: "Hajj Packages" }]}
       />
 
@@ -42,7 +42,7 @@ export default function HajjPage() {
             What Makes Our Hajj Different
           </h2>
           <p className="text-muted-foreground mt-3 text-[15px] max-w-2xl mx-auto">
-            14 years of experience, direct Ministry quotas, Pakistani teams on the ground â€”
+            14 years of experience, direct Ministry quotas, Pakistani teams on the ground —
             and pricing you can trust.
           </p>
         </div>
@@ -75,7 +75,7 @@ export default function HajjPage() {
               All Hajj Packages
             </h2>
             <p className="text-muted-foreground mt-3 text-[15px]">
-              From economy to VIP â€” every package includes visa, flights & guidance.
+              From economy to VIP — every package includes visa, flights & guidance.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -104,7 +104,7 @@ export default function HajjPage() {
                 <th className="text-left px-6 py-4 font-semibold">Feature</th>
                 <th className="text-center px-4 py-4 font-semibold">Economy</th>
                 <th className="text-center px-4 py-4 font-semibold bg-brand-light">
-                  Standard â­
+                  Standard ⭐
                 </th>
                 <th className="text-center px-4 py-4 font-semibold">VIP</th>
               </tr>
@@ -223,7 +223,7 @@ export default function HajjPage() {
 
       <CtaStrip
         title="Ready for Hajj 2026?"
-        subtitle="Limited Ministry quotas â€” reserve your place with a small deposit and easy installments."
+        subtitle="Limited Ministry quotas — reserve your place with a small deposit and easy installments."
         primary={{ label: "Book a Free Consultation", href: "/contact" }}
         secondary={{ label: "Call Expert", href: "tel:+923082699997" }}
       />
@@ -246,9 +246,9 @@ function Cell({
     >
       {typeof value === "boolean" ? (
         value ? (
-          <span className="text-brand-light text-lg">âœ“</span>
+          <span className="text-brand-light text-lg">✓</span>
         ) : (
-          <span className="text-gray-300">â€”</span>
+          <span className="text-gray-300">—</span>
         )
       ) : (
         value

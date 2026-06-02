@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export function CtaStrip({
@@ -25,7 +25,7 @@ export function CtaStrip({
         </div>
         <div className="flex flex-wrap gap-3">
           <Button asChild variant="secondary" size="lg" className="bg-white text-brand hover:bg-brand-50">
-            <Link href={primary.href}>{primary.label} â†’</Link>
+            <Link href={primary.href}>{primary.label} →</Link>
           </Button>
           {secondary && (
             <Button

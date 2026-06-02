@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { PageHero } from "@/components/sections/page-hero";
 import { Testimonials } from "@/components/sections/testimonials";
@@ -8,7 +8,7 @@ import { avatar } from "@/lib/images";
 import { milestones, certifications, team, timeline, coreValues } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "About Us â€” 14 Years of Trusted Hajj & Umrah Service",
+  title: "About Us — 14 Years of Trusted Hajj & Umrah Service",
   description:
     "Nusarat Madina, founded by Rao Shafeeq in Lodhran, has guided 15,000+ pilgrims since 2010 across Multan & Bahawalpur. Ministry-licensed, IATA certified.",
   alternates: { canonical: "/about" },
@@ -46,13 +46,13 @@ export default function AboutPage() {
               From a small office in Lodhran to 15,000+ pilgrims served
             </h2>
             <p className="text-gray-600 text-[15px] leading-[1.8] mb-4">
-              Rao Shafeeq founded the agency in 2010 with one belief â€” that
+              Rao Shafeeq founded the agency in 2010 with one belief — that
               every Pakistani Muslim deserves a smooth, dignified path to Makkah &
               Madinah, without overpaying or getting lost in red tape.
             </p>
             <p className="text-gray-600 text-[15px] leading-[1.8]">
               Today, we&apos;re an IATA-certified, Ministry of Religious Affairs
-              licensed operator with offices in Lodhran, Multan, and Bahawalpur â€”
+              licensed operator with offices in Lodhran, Multan, and Bahawalpur —
               and on-ground support teams in Makkah & Madinah throughout the year.
             </p>
           </div>
@@ -145,7 +145,7 @@ export default function AboutPage() {
               Make sacred journeys accessible
             </h3>
             <p className="text-gray-600 text-[15px] leading-[1.8]">
-              Honest pricing. Clear paperwork. Empathetic guidance â€” so a first-time
+              Honest pricing. Clear paperwork. Empathetic guidance — so a first-time
               pilgrim feels as confident as someone going for the tenth time.
             </p>
           </div>
@@ -157,7 +157,7 @@ export default function AboutPage() {
               Pakistan&apos;s most loved travel partner
             </h3>
             <p className="text-gray-600 text-[15px] leading-[1.8]">
-              Beyond Hajj & Umrah â€” to be the trusted travel partner Pakistani
+              Beyond Hajj & Umrah — to be the trusted travel partner Pakistani
               families turn to for every meaningful journey.
             </p>
           </div>
@@ -182,7 +182,7 @@ export default function AboutPage() {
                 className="flex gap-3 items-start bg-white rounded-xl p-5 shadow-sm border border-gray-100"
               >
                 <span className="w-8 h-8 rounded-full bg-brand-100 text-brand flex items-center justify-center flex-shrink-0">
-                  âœ“
+                  ✓
                 </span>
                 <span className="text-sm text-gray-700 leading-relaxed">{c}</span>
               </div>
@@ -227,7 +227,7 @@ export default function AboutPage() {
 
       <CtaStrip
         title="Plan your sacred journey with people who care"
-        subtitle="Talk to a real Hajj/Umrah expert â€” no bots, no scripts."
+        subtitle="Talk to a real Hajj/Umrah expert — no bots, no scripts."
         primary={{ label: "Get in Touch", href: "/contact" }}
       />
     </>

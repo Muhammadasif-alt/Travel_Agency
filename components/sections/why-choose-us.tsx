@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import { Pill } from "./section-header";
 import { images } from "@/lib/images";
 
@@ -27,7 +27,7 @@ export function WhyChooseUs() {
       <div className="pointer-events-none absolute -left-6 top-10 w-28 h-28 border border-white/10 rotate-12" />
       <div className="pointer-events-none absolute left-10 top-24 w-20 h-20 bg-brand-light/10 rotate-12" />
       <div className="pointer-events-none absolute right-10 top-1/3 text-brand-light/30 text-5xl font-bold select-none">
-        âœ› âœ›
+        ✛ ✛
       </div>
 
       <div className="relative max-w-[1440px] mx-auto">

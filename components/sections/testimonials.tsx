@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import { testimonials } from "@/lib/site-data";
 import { avatar } from "@/lib/images";
 
@@ -21,7 +21,7 @@ export function Testimonials() {
               key={t.name}
               className="bg-white/10 rounded-xl p-7 backdrop-blur-sm"
             >
-              <div className="text-gold mb-3 text-base">â˜…â˜…â˜…â˜…â˜…</div>
+              <div className="text-gold mb-3 text-base">★★★★★</div>
               <p className="text-sm leading-[1.7] opacity-95">
                 &ldquo;{t.text}&rdquo;
               </p>
