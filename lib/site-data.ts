@@ -986,6 +986,86 @@ export const hajjPreparation = [
   },
 ];
 
+/* --------------------------------- Hajj season status (one-switch control) */
+/*
+ * Hajj is annual and booking closes months before departure. Flip ONE value
+ * here each cycle:
+ *   • "booking-open"      → current `year` is open for booking ("Book Now").
+ *   • "closed-next-open"  → current `year` is closed/departed; the page pivots
+ *                            to PRE-REGISTRATION for `nextYear`.
+ * When Hajj `nextYear` opens for booking: set status to "booking-open" and
+ * bump both years (e.g. year: 2027, nextYear: 2028). Nothing else to touch —
+ * the Hajj page, banner, CTAs, headings & metadata all adapt automatically.
+ */
+export type HajjSeasonStatus = "booking-open" | "closed-next-open";
+
+export const hajjSeason = {
+  status: "closed-next-open" as HajjSeasonStatus,
+  year: 2026, // most recent / current Hajj season
+  nextYear: 2027, // season now taking pre-registration
+};
+
+export type HajjSeasonContent = {
+  seasonYear: number;
+  eyebrow: string;
+  banner: string | null;
+  heroTitle: string;
+  heroSubtitle: string;
+  packagesHeading: string;
+  packagesNote: string;
+  datesAnnounced: boolean;
+  datesHeading: string;
+  datesPendingNote: string;
+  ctaTitle: string;
+  ctaSubtitle: string;
+  ctaPrimary: string;
+  metaTitle: string;
+  metaDescription: string;
+};
+
+const hajjSeasonContentMap: Record<HajjSeasonStatus, HajjSeasonContent> = {
+  "booking-open": {
+    seasonYear: hajjSeason.year,
+    eyebrow: `HAJJ ${hajjSeason.year}`,
+    banner: null,
+    heroTitle: "Sacred Hajj Packages, Built for Every Family",
+    heroSubtitle:
+      "Ministry of Religious Affairs approved · IATA certified · 24/7 on-ground support in KSA.",
+    packagesHeading: "All Hajj Packages",
+    packagesNote:
+      "From economy to VIP — every package includes visa, flights & guidance.",
+    datesAnnounced: true,
+    datesHeading: `Hajj ${hajjSeason.year} Calendar`,
+    datesPendingNote: "",
+    ctaTitle: `Ready for Hajj ${hajjSeason.year}?`,
+    ctaSubtitle:
+      "Limited Ministry quotas — reserve your place with a small deposit and easy installments.",
+    ctaPrimary: "Book a Free Consultation",
+    metaTitle: `Hajj Packages ${hajjSeason.year} — Lodhran, Multan & Bahawalpur`,
+    metaDescription: `Affordable & VIP Hajj ${hajjSeason.year} packages for pilgrims from Lodhran, Multan, Bahawalpur & all Pakistan. Ministry-approved, IATA certified, easy installment plans.`,
+  },
+  "closed-next-open": {
+    seasonYear: hajjSeason.nextYear,
+    eyebrow: `HAJJ ${hajjSeason.nextYear} · PRE-REGISTRATION OPEN`,
+    banner: `Hajj ${hajjSeason.year} bookings are now closed. Pre-registration for Hajj ${hajjSeason.nextYear} is open — secure your place early with a small refundable deposit before the Ministry quota fills.`,
+    heroTitle: `Pre-Register for Hajj ${hajjSeason.nextYear}`,
+    heroSubtitle: `Be first in line for Hajj ${hajjSeason.nextYear}. Ministry of Religious Affairs approved · IATA certified · easy installment plans.`,
+    packagesHeading: `Hajj ${hajjSeason.nextYear} Packages`,
+    packagesNote: `Indicative packages — final Hajj ${hajjSeason.nextYear} pricing is confirmed after the Ministry of Religious Affairs announcement. Pre-register now to lock an early-bird place.`,
+    datesAnnounced: false,
+    datesHeading: `Hajj ${hajjSeason.nextYear} Calendar`,
+    datesPendingNote: `Exact Hajj ${hajjSeason.nextYear} dates are announced after the Ministry of Religious Affairs notification (usually around January ${hajjSeason.nextYear}). Pre-register today and we'll notify you the moment dates and pricing are confirmed.`,
+    ctaTitle: `Reserve Your Hajj ${hajjSeason.nextYear} Place`,
+    ctaSubtitle: `Ministry quota is limited and fills early. Pre-register today with a small refundable deposit — we'll confirm your booking as soon as Hajj ${hajjSeason.nextYear} opens.`,
+    ctaPrimary: `Pre-Register for Hajj ${hajjSeason.nextYear}`,
+    metaTitle: `Hajj ${hajjSeason.nextYear} Pre-Registration — Lodhran, Multan & Bahawalpur`,
+    metaDescription: `Hajj ${hajjSeason.year} is closed — pre-register now for Hajj ${hajjSeason.nextYear} from Lodhran, Multan, Bahawalpur & all Pakistan. Ministry-approved, IATA certified, easy installment plans.`,
+  },
+};
+
+export const hajjStatus: HajjSeasonContent =
+  hajjSeasonContentMap[hajjSeason.status];
+
 /* ----------------------------------------------- Umrah page content */
 
 export const umrahWhyUs = [

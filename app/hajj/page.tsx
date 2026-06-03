@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHero } from "@/components/sections/page-hero";
 import { PackageCard } from "@/components/sections/package-card";
 import { CtaStrip } from "@/components/sections/cta-strip";
@@ -11,12 +12,12 @@ import {
   hajjInclusions,
   hajjDates2026,
   hajjPreparation,
+  hajjStatus,
 } from "@/lib/site-data";
 
 export const metadata: Metadata = {
-  title: "Hajj Packages 2026 — Lodhran, Multan & Bahawalpur",
-  description:
-    "Affordable & VIP Hajj 2026 packages for pilgrims from Lodhran, Multan, Bahawalpur & all Pakistan. Ministry-approved, IATA certified, easy installment plans.",
+  title: hajjStatus.metaTitle,
+  description: hajjStatus.metaDescription,
   alternates: { canonical: "/hajj" },
 };
 
@@ -26,11 +27,31 @@ export default function HajjPage() {
       <PageHero
         image={images.hajjBanner}
         imageAlt="Masjid an-Nabawi Madinah"
-        eyebrow="HAJJ 2026"
-        title="Sacred Hajj Packages, Built for Every Family"
-        subtitle="Ministry of Religious Affairs approved · IATA certified · 24/7 on-ground support in KSA."
+        eyebrow={hajjStatus.eyebrow}
+        title={hajjStatus.heroTitle}
+        subtitle={hajjStatus.heroSubtitle}
         crumbs={[{ label: "Home", href: "/" }, { label: "Hajj Packages" }]}
       />
+
+      {/* Season status banner */}
+      {hajjStatus.banner && (
+        <div className="bg-gold/15 border-y border-gold/40 px-[5%] py-4">
+          <div className="max-w-[1440px] mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-5">
+            <span className="inline-flex items-center gap-2 bg-gold text-brand text-[11px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full flex-shrink-0">
+              ⏳ Pre-Registration
+            </span>
+            <p className="text-sm text-brand font-medium leading-relaxed flex-1">
+              {hajjStatus.banner}
+            </p>
+            <Link
+              href="/contact"
+              className="flex-shrink-0 bg-brand-light text-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-brand transition-colors"
+            >
+              {hajjStatus.ctaPrimary} →
+            </Link>
+          </div>
+        </div>
+      )}
 
       {/* Why Us */}
       <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
@@ -72,10 +93,10 @@ export default function HajjPage() {
               CHOOSE YOUR PACKAGE
             </div>
             <h2 className="text-2xl md:text-4xl font-extrabold text-brand">
-              All Hajj Packages
+              {hajjStatus.packagesHeading}
             </h2>
-            <p className="text-muted-foreground mt-3 text-[15px]">
-              From economy to VIP — every package includes visa, flights & guidance.
+            <p className="text-muted-foreground mt-3 text-[15px] max-w-2xl mx-auto">
+              {hajjStatus.packagesNote}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -136,29 +157,44 @@ export default function HajjPage() {
               IMPORTANT DATES
             </div>
             <h2 className="text-2xl md:text-4xl font-extrabold text-brand">
-              Hajj 2026 Calendar
+              {hajjStatus.datesHeading}
             </h2>
             <p className="text-muted-foreground mt-3 text-[15px]">
               Subject to moon sighting & Ministry of Hajj announcements.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {hajjDates2026.map((d) => (
-              <div
-                key={d.label}
-                className="bg-white rounded-xl p-5 shadow-sm border-l-4 border-brand"
+          {hajjStatus.datesAnnounced ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {hajjDates2026.map((d) => (
+                <div
+                  key={d.label}
+                  className="bg-white rounded-xl p-5 shadow-sm border-l-4 border-brand"
+                >
+                  <div className="text-xs text-muted-foreground uppercase tracking-wide">
+                    {d.label}
+                  </div>
+                  <div className="font-extrabold text-brand text-xl mt-1">
+                    {d.date}
+                  </div>
+                  <div className="text-xs text-gray-500 mt-1">{d.note}</div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="max-w-2xl mx-auto bg-white rounded-2xl p-8 text-center shadow-sm border border-gray-100">
+              <div className="text-4xl mb-3">🗓️</div>
+              <p className="text-[15px] text-muted-foreground leading-relaxed">
+                {hajjStatus.datesPendingNote}
+              </p>
+              <Link
+                href="/contact"
+                className="inline-block mt-5 bg-brand-light text-white text-sm font-semibold px-6 py-3 rounded-lg hover:bg-brand transition-colors"
               >
-                <div className="text-xs text-muted-foreground uppercase tracking-wide">
-                  {d.label}
-                </div>
-                <div className="font-extrabold text-brand text-xl mt-1">
-                  {d.date}
-                </div>
-                <div className="text-xs text-gray-500 mt-1">{d.note}</div>
-              </div>
-            ))}
-          </div>
+                {hajjStatus.ctaPrimary} →
+              </Link>
+            </div>
+          )}
         </div>
       </section>
 
@@ -222,9 +258,9 @@ export default function HajjPage() {
       <Faq />
 
       <CtaStrip
-        title="Ready for Hajj 2026?"
-        subtitle="Limited Ministry quotas — reserve your place with a small deposit and easy installments."
-        primary={{ label: "Book a Free Consultation", href: "/contact" }}
+        title={hajjStatus.ctaTitle}
+        subtitle={hajjStatus.ctaSubtitle}
+        primary={{ label: hajjStatus.ctaPrimary, href: "/contact" }}
         secondary={{ label: "Call Expert", href: "tel:+923082699997" }}
       />
     </>
