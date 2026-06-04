@@ -5,7 +5,8 @@ import { Testimonials } from "@/components/sections/testimonials";
 import { CtaStrip } from "@/components/sections/cta-strip";
 import { images } from "@/lib/images";
 import { avatar } from "@/lib/images";
-import { milestones, certifications, team, timeline, coreValues } from "@/lib/site-data";
+import { milestones, certifications, timeline, coreValues } from "@/lib/site-data";
+import { getTeam } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "About Us — 14 Years of Trusted Hajj & Umrah Service",
@@ -14,7 +15,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/about" },
 };
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const team = await getTeam();
   return (
     <>
       <PageHero

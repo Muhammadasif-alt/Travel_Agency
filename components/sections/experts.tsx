@@ -1,9 +1,11 @@
 ﻿import Image from "next/image";
 import { Pill } from "./section-header";
-import { team } from "@/lib/site-data";
 import { avatar } from "@/lib/images";
+import { getTeam } from "@/lib/content";
 
-export function Experts() {
+export async function Experts() {
+  const team = await getTeam();
+  if (team.length === 0) return null;
   return (
     <section className="px-[5%] py-16">
       <div className="max-w-[1440px] mx-auto bg-gradient-to-br from-brand-50 via-sky-50 to-blue-50 rounded-3xl px-6 md:px-12 py-16">

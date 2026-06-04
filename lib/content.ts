@@ -40,3 +40,32 @@ export async function getPackagesByType(
   });
   return rows.map(mapPackage);
 }
+
+/* ----------------------------------------------------------------- Blog */
+export async function getBlogPosts(limit?: number) {
+  return prisma.blogPost.findMany({
+    where: { published: true },
+    orderBy: [{ sortOrder: "asc" }, { createdAt: "desc" }],
+    ...(limit ? { take: limit } : {}),
+  });
+}
+
+export async function getBlogPost(slug: string) {
+  return prisma.blogPost.findFirst({ where: { slug, published: true } });
+}
+
+/* ----------------------------------------------------------------- Testimonials */
+export async function getTestimonials() {
+  return prisma.testimonial.findMany({
+    where: { isActive: true },
+    orderBy: { sortOrder: "asc" },
+  });
+}
+
+/* ----------------------------------------------------------------- Team */
+export async function getTeam() {
+  return prisma.teamMember.findMany({
+    where: { isActive: true },
+    orderBy: { sortOrder: "asc" },
+  });
+}

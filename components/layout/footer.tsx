@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Phone, Mail } from "lucide-react";
-import { siteConfig, blogPosts } from "@/lib/site-data";
+import { siteConfig } from "@/lib/site-data";
+import { getBlogPosts } from "@/lib/content";
 
 type IconProps = { className?: string };
 
@@ -48,7 +49,8 @@ const serviceLinks = [
   { label: "Tours", href: "/tours" },
 ];
 
-export function Footer() {
+export async function Footer() {
+  const recentPosts = await getBlogPosts(2);
   return (
     <footer className="bg-gradient-to-br from-[#0f3d39] via-brand to-brand-dark text-white">
       <div className="px-[5%] pt-16 pb-8 max-w-[1440px] mx-auto">
@@ -103,10 +105,10 @@ export function Footer() {
               Recent Posts
             </h4>
             <div className="space-y-4">
-              {blogPosts.slice(0, 2).map((p) => (
+              {recentPosts.map((p) => (
                 <Link
-                  key={p.title}
-                  href="#"
+                  key={p.id}
+                  href={`/blog/${p.slug}`}
                   className="flex gap-3 items-center group"
                 >
                   <span className="relative w-14 h-14 rounded-lg overflow-hidden flex-shrink-0">

@@ -33,6 +33,7 @@ export const navLinks = [
   { label: "Umrah Packages", href: "/umrah" },
   { label: "Flights", href: "/flights" },
   { label: "Visa", href: "/visa" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];

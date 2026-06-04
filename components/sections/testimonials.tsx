@@ -1,8 +1,10 @@
 import Image from "next/image";
-import { testimonials } from "@/lib/site-data";
 import { avatar } from "@/lib/images";
+import { getTestimonials } from "@/lib/content";
 
-export function Testimonials() {
+export async function Testimonials() {
+  const testimonials = await getTestimonials();
+  if (testimonials.length === 0) return null;
   return (
     <section className="bg-brand px-[5%] py-20 text-white">
       <div className="max-w-[1440px] mx-auto">
@@ -28,7 +30,7 @@ export function Testimonials() {
               <div className="flex items-center gap-3 mt-5">
                 <div className="relative w-11 h-11 rounded-full overflow-hidden ring-2 ring-white/30 flex-shrink-0">
                   <Image
-                    src={avatar(t.name)}
+                    src={t.photo || avatar(t.name)}
                     alt={t.name}
                     fill
                     sizes="44px"

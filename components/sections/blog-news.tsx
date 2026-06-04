@@ -1,8 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Pill } from "./section-header";
-import { blogPosts } from "@/lib/site-data";
+import { getBlogPosts } from "@/lib/content";
 
-export function BlogNews() {
+export async function BlogNews() {
+  const blogPosts = await getBlogPosts(3);
+  if (blogPosts.length === 0) return null;
   return (
     <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
       <div className="text-center mb-12">
@@ -14,9 +17,10 @@ export function BlogNews() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {blogPosts.map((p) => (
-          <article
-            key={p.title}
-            className="group relative h-[340px] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all"
+          <Link
+            href={`/blog/${p.slug}`}
+            key={p.id}
+            className="group relative h-[340px] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all block"
           >
             <Image
               src={p.image}
@@ -40,7 +44,7 @@ export function BlogNews() {
                 {p.date}
               </div>
             </div>
-          </article>
+          </Link>
         ))}
       </div>
     </section>
