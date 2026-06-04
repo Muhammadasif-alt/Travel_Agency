@@ -4,7 +4,8 @@ import Link from "next/link";
 import { CtaStrip } from "@/components/sections/cta-strip";
 import { Button } from "@/components/ui/button";
 import { images } from "@/lib/images";
-import { flightDeals, airlines, flightsWhyUs, baggageInfo } from "@/lib/site-data";
+import { airlines, flightsWhyUs, baggageInfo } from "@/lib/site-data";
+import { getFlightDeals } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Flight Bookings — International & Domestic (Multan & Pakistan)",
@@ -13,7 +14,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/flights" },
 };
 
-export default function FlightsPage() {
+export default async function FlightsPage() {
+  const flightDeals = await getFlightDeals("INTERNATIONAL");
   return (
     <>
       {/* Premium hero */}

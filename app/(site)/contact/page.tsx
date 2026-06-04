@@ -3,7 +3,8 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { ContactForm } from "@/components/sections/contact-form";
 import { images } from "@/lib/images";
-import { siteConfig, faqs, departments, businessHours } from "@/lib/site-data";
+import { siteConfig, departments, businessHours } from "@/lib/site-data";
+import { getFaqs } from "@/lib/content";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -38,7 +39,8 @@ const offices = [
   },
 ];
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const faqs = await getFaqs();
   return (
     <>
       <PageHero
@@ -227,17 +229,17 @@ export default function ContactPage() {
           <div className="space-y-3">
             {faqs.slice(0, 3).map((f) => (
               <details
-                key={f.q}
+                key={f.id}
                 className="bg-white rounded-xl px-6 py-5 shadow-sm border-l-4 border-brand cursor-pointer group"
               >
                 <summary className="font-bold text-gray-900 cursor-pointer list-none flex justify-between items-center">
-                  {f.q}
+                  {f.question}
                   <span className="text-brand text-xl group-open:rotate-45 transition-transform">
                     +
                   </span>
                 </summary>
                 <p className="mt-3 text-sm text-muted-foreground leading-[1.7]">
-                  {f.a}
+                  {f.answer}
                 </p>
               </details>
             ))}

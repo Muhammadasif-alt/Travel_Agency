@@ -3,7 +3,7 @@ import { PageHero } from "@/components/sections/page-hero";
 import { CtaStrip } from "@/components/sections/cta-strip";
 import { Button } from "@/components/ui/button";
 import { images } from "@/lib/images";
-import { hotelOptions } from "@/lib/site-data";
+import { getHotels } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Hotel Booking — Makkah, Madinah, Dubai & Worldwide",
@@ -35,7 +35,8 @@ const whyUs = [
   },
 ];
 
-export default function HotelsPage() {
+export default async function HotelsPage() {
+  const hotelOptions = await getHotels();
   return (
     <>
       <PageHero

@@ -4,12 +4,12 @@ import { CtaStrip } from "@/components/sections/cta-strip";
 import { Button } from "@/components/ui/button";
 import { images } from "@/lib/images";
 import {
-  visaCountries,
   visaRequirements,
   visaStats,
   visaRejectionReasons,
   visaDocCategories,
 } from "@/lib/site-data";
+import { getVisaCountries } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Visa Services — Saudi, UAE, Turkey, UK & More",
@@ -45,7 +45,8 @@ const visaSteps = [
   },
 ];
 
-export default function VisaPage() {
+export default async function VisaPage() {
+  const visaCountries = await getVisaCountries();
   return (
     <>
       <PageHero

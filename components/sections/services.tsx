@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { services } from "@/lib/site-data";
 import { SectionHeader } from "./section-header";
+import { getServices } from "@/lib/content";
 
-export function Services() {
+export async function Services() {
+  const services = await getServices();
   return (
     <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
       <SectionHeader
