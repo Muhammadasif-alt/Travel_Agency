@@ -1,0 +1,195 @@
+// Nusarat Madina — database schema (MySQL / MariaDB)
+// One model per editable content type. Frontend reads these; admin panel writes them.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// ----------------------------------------------------------------- Admin users
+enum Role {
+  ADMIN // full access
+  EDITOR // content only (no user management / settings)
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  role         Role     @default(EDITOR)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+// ----------------------------------------------------------------- Packages
+enum PackageType {
+  UMRAH
+  HAJJ
+}
+
+model Package {
+  id          String      @id @default(cuid())
+  type        PackageType
+  title       String
+  image       String
+  imageAlt    String      @default("")
+  tag         String      @default("")
+  tagVariant  String      @default("default") // "default" | "popular"
+  discount    String?
+  meta        String      @default("")
+  features    Json        @default("[]") // string[]
+  oldPrice    String?
+  newPrice    String
+  priceLabel  String?
+  featured    Boolean     @default(false)
+  showOnHome  Boolean     @default(false)
+  sortOrder   Int         @default(0)
+  isActive    Boolean     @default(true)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+// ----------------------------------------------------------------- Services
+model Service {
+  id            String  @id @default(cuid())
+  slug          String  @unique
+  href          String
+  icon          String  @default("")
+  image         String
+  title         String
+  desc          String  @default("")
+  long          String  @db.Text
+  points        Json    @default("[]") // string[]
+  startingPrice String?
+  isNew         Boolean @default(false)
+  sortOrder     Int     @default(0)
+  isActive      Boolean @default(true)
+}
+
+// ----------------------------------------------------------------- Blog / News
+model BlogPost {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  title     String
+  category  String   @default("News")
+  date      String   @default("") // human label e.g. "April 17, 2026"
+  image     String
+  excerpt   String   @db.Text
+  content   String?  @db.LongText
+  published Boolean  @default(true)
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// ----------------------------------------------------------------- Testimonials / success stories
+model Testimonial {
+  id        String  @id @default(cuid())
+  name      String
+  meta      String  @default("") // e.g. "Multan · Umrah 2025"
+  photo     String?
+  text      String  @db.Text
+  rating    Int     @default(5)
+  sortOrder Int     @default(0)
+  isActive  Boolean @default(true)
+}
+
+// ----------------------------------------------------------------- Team
+model TeamMember {
+  id        String  @id @default(cuid())
+  name      String
+  role      String
+  photo     String?
+  sortOrder Int     @default(0)
+  isActive  Boolean @default(true)
+}
+
+// ----------------------------------------------------------------- Flights
+enum FlightScope {
+  INTERNATIONAL
+  DOMESTIC
+}
+
+model FlightDeal {
+  id        String      @id @default(cuid())
+  scope     FlightScope @default(INTERNATIONAL)
+  fromCity  String
+  toCode    String
+  city      String
+  country   String
+  airline   String
+  tripType  String      @default("Return") // "One-way" | "Return"
+  price     String
+  image     String
+  sortOrder Int         @default(0)
+  isActive  Boolean     @default(true)
+}
+
+// ----------------------------------------------------------------- Visa
+model VisaCountry {
+  id             String  @id @default(cuid())
+  country        String
+  flag           String  @default("")
+  visaType       String  @default("")
+  processingTime String  @default("")
+  startingPrice  String  @default("")
+  sortOrder      Int     @default(0)
+  isActive       Boolean @default(true)
+}
+
+// ----------------------------------------------------------------- Hotels
+model HotelOption {
+  id            String  @id @default(cuid())
+  name          String
+  city          String
+  stars         Int     @default(5)
+  distance      String  @default("")
+  startingPrice String  @default("")
+  perks         Json    @default("[]") // string[]
+  sortOrder     Int     @default(0)
+  isActive      Boolean @default(true)
+}
+
+// ----------------------------------------------------------------- Tours
+model TourPackage {
+  id            String  @id @default(cuid())
+  destination   String
+  flag          String  @default("")
+  nights        String  @default("")
+  startingPrice String  @default("")
+  highlights    String  @db.Text
+  sortOrder     Int     @default(0)
+  isActive      Boolean @default(true)
+}
+
+// ----------------------------------------------------------------- FAQ
+model Faq {
+  id        String  @id @default(cuid())
+  question  String
+  answer    String  @db.Text
+  sortOrder Int     @default(0)
+  isActive  Boolean @default(true)
+}
+
+// ----------------------------------------------------------------- Site settings (singleton)
+// A single row (id = "default") holding global config + Hajj season switch.
+model SiteSetting {
+  id            String  @id @default("default")
+  phone         String  @default("+92 308 2699997")
+  whatsapp      String  @default("+92 308 2699997")
+  email         String  @default("nusratemadina@gmail.com")
+  address       String  @default("Lodhran, South Punjab, Pakistan")
+  facebookUrl   String  @default("")
+  instagramUrl  String  @default("")
+  tiktokUrl     String  @default("")
+  // Hajj season switch: "booking-open" | "closed-next-open"
+  hajjStatus    String  @default("closed-next-open")
+  hajjYear      Int     @default(2026)
+  hajjNextYear  Int     @default(2027)
+  updatedAt     DateTime @updatedAt
+}
