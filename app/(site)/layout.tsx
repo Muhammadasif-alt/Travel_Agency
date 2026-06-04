@@ -6,6 +6,10 @@ import { WhatsAppFloat } from "@/components/layout/whatsapp-float";
 import { siteConfig } from "@/lib/site-data";
 import { images } from "@/lib/images";
 
+// All site pages read content/settings from the DB at request time — never
+// prerender them at build (so the build doesn't need a live DATABASE_URL).
+export const dynamic = "force-dynamic";
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "TravelAgency",
