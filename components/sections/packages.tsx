@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { packages } from "@/lib/site-data";
+import { getHomePackages } from "@/lib/content";
 import { PackageCard } from "./package-card";
 
-export function Packages() {
+export async function Packages() {
+  const packages = await getHomePackages();
   return (
     <section id="packages" className="bg-[#f7faf8] px-[5%] py-20">
       <div className="max-w-[1440px] mx-auto">

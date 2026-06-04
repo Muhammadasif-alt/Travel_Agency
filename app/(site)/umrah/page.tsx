@@ -6,7 +6,6 @@ import { CtaStrip } from "@/components/sections/cta-strip";
 import { Faq } from "@/components/sections/faq";
 import { images } from "@/lib/images";
 import {
-  umrahPackages,
   umrahProcess,
   umrahWhyUs,
   umrahIncludes,
@@ -14,6 +13,7 @@ import {
   ziyaratGallery,
   umrahBestTimes,
 } from "@/lib/site-data";
+import { getPackagesByType } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Umrah Packages — Lodhran, Multan & Bahawalpur",
@@ -22,7 +22,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/umrah" },
 };
 
-export default function UmrahPage() {
+export default async function UmrahPage() {
+  const umrahPackages = await getPackagesByType("UMRAH");
   return (
     <>
       <PageHero

@@ -6,7 +6,6 @@ import { CtaStrip } from "@/components/sections/cta-strip";
 import { Faq } from "@/components/sections/faq";
 import { images } from "@/lib/images";
 import {
-  hajjPackages,
   hajjProcess,
   hajjWhyUs,
   hajjInclusions,
@@ -14,6 +13,7 @@ import {
   hajjPreparation,
   hajjStatus,
 } from "@/lib/site-data";
+import { getPackagesByType } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: hajjStatus.metaTitle,
@@ -21,7 +21,8 @@ export const metadata: Metadata = {
   alternates: { canonical: "/hajj" },
 };
 
-export default function HajjPage() {
+export default async function HajjPage() {
+  const hajjPackages = await getPackagesByType("HAJJ");
   return (
     <>
       <PageHero
