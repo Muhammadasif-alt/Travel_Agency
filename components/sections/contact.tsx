@@ -1,6 +1,6 @@
 ﻿import { Phone, MapPin } from "lucide-react";
 import { ContactForm } from "./contact-form";
-import { siteConfig } from "@/lib/site-data";
+import { getSettings } from "@/lib/content";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -10,7 +10,8 @@ function WhatsAppIcon({ className }: { className?: string }) {
   );
 }
 
-export function Contact() {
+export async function Contact() {
+  const siteConfig = await getSettings();
   return (
     <section id="contact" className="gradient-contact px-[5%] py-[70px]">
       <div className="max-w-[1440px] mx-auto grid md:grid-cols-2 gap-12 items-center">

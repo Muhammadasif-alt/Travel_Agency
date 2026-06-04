@@ -11,18 +11,23 @@ import {
   hajjInclusions,
   hajjDates2026,
   hajjPreparation,
-  hajjStatus,
 } from "@/lib/site-data";
-import { getPackagesByType } from "@/lib/content";
+import { getPackagesByType, getHajjStatus } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: hajjStatus.metaTitle,
-  description: hajjStatus.metaDescription,
-  alternates: { canonical: "/hajj" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const hajjStatus = await getHajjStatus();
+  return {
+    title: hajjStatus.metaTitle,
+    description: hajjStatus.metaDescription,
+    alternates: { canonical: "/hajj" },
+  };
+}
 
 export default async function HajjPage() {
-  const hajjPackages = await getPackagesByType("HAJJ");
+  const [hajjPackages, hajjStatus] = await Promise.all([
+    getPackagesByType("HAJJ"),
+    getHajjStatus(),
+  ]);
   return (
     <>
       <PageHero

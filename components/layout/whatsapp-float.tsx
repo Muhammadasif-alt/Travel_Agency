@@ -1,7 +1,8 @@
-import { siteConfig } from "@/lib/site-data";
+import { getSettings } from "@/lib/content";
 
-export function WhatsAppFloat() {
-  const waLink = `https://wa.me/${siteConfig.whatsapp.replace(/[^0-9]/g, "")}`;
+export async function WhatsAppFloat() {
+  const s = await getSettings();
+  const waLink = `https://wa.me/${s.whatsapp.replace(/[^0-9]/g, "")}`;
   return (
     <a
       href={waLink}

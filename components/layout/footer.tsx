@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Phone, Mail } from "lucide-react";
 import { siteConfig } from "@/lib/site-data";
-import { getBlogPosts } from "@/lib/content";
+import { getBlogPosts, getSettings } from "@/lib/content";
 
 type IconProps = { className?: string };
 
@@ -28,12 +28,6 @@ function TikTok({ className }: IconProps) {
   );
 }
 
-const socials = [
-  { name: "Facebook", href: "#", Icon: Facebook },
-  { name: "Instagram", href: "#", Icon: Instagram },
-  { name: "TikTok", href: "#", Icon: TikTok },
-];
-
 const companyLinks = [
   { label: "About Us", href: "/about" },
   { label: "Contact", href: "/contact" },
@@ -50,7 +44,12 @@ const serviceLinks = [
 ];
 
 export async function Footer() {
-  const recentPosts = await getBlogPosts(2);
+  const [recentPosts, s] = await Promise.all([getBlogPosts(2), getSettings()]);
+  const socials = [
+    { name: "Facebook", href: s.facebookUrl, Icon: Facebook },
+    { name: "Instagram", href: s.instagramUrl, Icon: Instagram },
+    { name: "TikTok", href: s.tiktokUrl, Icon: TikTok },
+  ].filter((x) => x.href);
   return (
     <footer className="bg-gradient-to-br from-[#0f3d39] via-brand to-brand-dark text-white">
       <div className="px-[5%] pt-16 pb-8 max-w-[1440px] mx-auto">
@@ -65,18 +64,18 @@ export async function Footer() {
               Bahawalpur since 2010.
             </p>
             <a
-              href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
+              href={`tel:${s.phone.replace(/\s/g, "")}`}
               className="flex items-center gap-2.5 mt-5 font-bold text-lg hover:text-brand-light transition-colors"
             >
               <Phone size={18} className="text-brand-light" />
-              {siteConfig.phone}
+              {s.phone}
             </a>
             <a
-              href={`mailto:${siteConfig.email}`}
+              href={`mailto:${s.email}`}
               className="flex items-center gap-2.5 mt-2 text-sm text-white/80 hover:text-white transition-colors"
             >
               <Mail size={16} className="text-brand-light" />
-              {siteConfig.email}
+              {s.email}
             </a>
             <div className="flex gap-2.5 mt-5">
               {socials.map(({ name, href, Icon }) => (

@@ -3,8 +3,8 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { ContactForm } from "@/components/sections/contact-form";
 import { images } from "@/lib/images";
-import { siteConfig, departments, businessHours } from "@/lib/site-data";
-import { getFaqs } from "@/lib/content";
+import { departments, businessHours } from "@/lib/site-data";
+import { getFaqs, getSettings } from "@/lib/content";
 
 function WhatsAppIcon({ className }: { className?: string }) {
   return (
@@ -40,7 +40,7 @@ const offices = [
 ];
 
 export default async function ContactPage() {
-  const faqs = await getFaqs();
+  const [faqs, siteConfig] = await Promise.all([getFaqs(), getSettings()]);
   return (
     <>
       <PageHero
