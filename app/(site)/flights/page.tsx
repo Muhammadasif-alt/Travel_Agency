@@ -18,36 +18,31 @@ export default async function FlightsPage() {
   const flightDeals = await getFlightDeals("INTERNATIONAL");
   return (
     <>
-      {/* Premium hero */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-brand-50 via-slate-50 to-white">
-        {/* Floating thumbnails (desktop) */}
-        <FloatThumb
-          src={images.airplaneWindow}
-          className="left-[6%] top-[42%]"
-        />
-        <FloatThumb
-          src={images.airplane}
-          className="left-[14%] top-[22%]"
-        />
-        <FloatThumb
-          src={images.serviceTours}
-          className="right-[14%] top-[24%]"
-        />
-        <FloatThumb
-          src={images.airplaneWindow}
-          className="right-[6%] top-[44%]"
-        />
+      {/* Premium hero — full-bleed airplane background */}
+      <section className="relative overflow-hidden text-white">
+        <div className="absolute inset-0">
+          <Image
+            src={images.airplane}
+            alt="Airplane flying above the clouds"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          {/* navy-tinted overlay so the text stays readable */}
+          <div className="absolute inset-0 bg-gradient-to-b from-brand/85 via-brand/70 to-brand-dark/90" />
+        </div>
 
-        <div className="relative z-10 max-w-3xl mx-auto px-[5%] text-center pt-16 md:pt-24 pb-20 md:pb-28">
+        <div className="relative z-10 max-w-3xl mx-auto px-[5%] text-center pt-24 md:pt-32 pb-24 md:pb-32">
           <div className="text-brand-light text-[13px] font-bold tracking-[3px] mb-4">
             FLIGHT BOOKING
           </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-brand leading-[1.05]">
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-[1.05] drop-shadow-lg">
             Fly Smarter,
             <br />
             Explore Further.
           </h1>
-          <p className="text-gray-600 text-[15px] md:text-base mt-5 max-w-xl mx-auto leading-relaxed">
+          <p className="text-white/85 text-[15px] md:text-base mt-5 max-w-xl mx-auto leading-relaxed">
             Elevate your journey with intelligent travel that takes you farther,
             faster, and with unmatched ease.
           </p>
@@ -268,12 +263,3 @@ export default async function FlightsPage() {
   );
 }
 
-function FloatThumb({ src, className }: { src: string; className: string }) {
-  return (
-    <div
-      className={`hidden md:block absolute z-0 w-20 h-20 lg:w-24 lg:h-24 rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5 ${className}`}
-    >
-      <Image src={src} alt="" fill sizes="96px" className="object-cover" />
-    </div>
-  );
-}
