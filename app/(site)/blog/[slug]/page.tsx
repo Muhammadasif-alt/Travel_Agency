@@ -16,6 +16,19 @@ export async function generateMetadata({
     title: post.title,
     description: post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.excerpt,
+      url: `/blog/${post.slug}`,
+      images: [{ url: post.image }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [post.image],
+    },
   };
 }
 
@@ -30,8 +43,25 @@ export default async function BlogPostPage({
 
   const more = (await getBlogPosts(4)).filter((p) => p.slug !== post.slug).slice(0, 3);
 
+  const base = (process.env.NEXT_PUBLIC_SITE_URL ?? "").replace(/\/$/, "");
+  const articleLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    image: post.image.startsWith("http") ? post.image : `${base}${post.image}`,
+    articleSection: post.category,
+    author: { "@type": "Organization", name: "Nusarat Madina" },
+    publisher: { "@type": "Organization", name: "Nusarat Madina" },
+    mainEntityOfPage: `${base}/blog/${post.slug}`,
+  };
+
   return (
     <article className="pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
+      />
       <div className="relative h-[42vh] min-h-[300px] w-full">
         <Image src={post.image} alt={post.title} fill priority sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />

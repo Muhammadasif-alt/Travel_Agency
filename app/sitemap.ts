@@ -1,9 +1,10 @@
 import type { MetadataRoute } from "next";
 import { siteConfig, cityLandings } from "@/lib/site-data";
+import { prisma } from "@/lib/prisma";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const base = siteConfig.url.replace(/\/$/, "");
-  const lastModified = new Date("2026-05-30");
+  const lastModified = new Date();
 
   const routes = [
     { path: "/", priority: 1, freq: "weekly" as const },
@@ -14,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/hotels", priority: 0.7, freq: "monthly" as const },
     { path: "/transport", priority: 0.7, freq: "monthly" as const },
     { path: "/tours", priority: 0.7, freq: "monthly" as const },
+    { path: "/blog", priority: 0.7, freq: "weekly" as const },
     { path: "/about", priority: 0.6, freq: "monthly" as const },
     { path: "/contact", priority: 0.6, freq: "monthly" as const },
     // City landing pages (local SEO)
@@ -24,7 +26,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 
-  return routes.map((r) => ({
+  // Blog posts (from DB) — fall back gracefully if the DB is unreachable at build.
+  let blogRoutes: { path: string; priority: number; freq: "weekly" }[] = [];
+  try {
+    const posts = await prisma.blogPost.findMany({
+      where: { published: true },
+      select: { slug: true },
+    });
+    blogRoutes = posts.map((p) => ({
+      path: `/blog/${p.slug}`,
+      priority: 0.6,
+      freq: "weekly" as const,
+    }));
+  } catch {
+    blogRoutes = [];
+  }
+
+  return [...routes, ...blogRoutes].map((r) => ({
     url: `${base}${r.path}`,
     lastModified,
     changeFrequency: r.freq,
