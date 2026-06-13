@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { PageHero } from "@/components/sections/page-hero";
 import { PackageCard } from "@/components/sections/package-card";
 import { CtaStrip } from "@/components/sections/cta-strip";
@@ -220,7 +221,13 @@ export default async function HajjPage() {
               key={s.step}
               className="bg-white rounded-xl p-6 text-center shadow-sm border-t-4 border-brand"
             >
-              <div className="text-4xl mb-3">{s.icon}</div>
+              {s.image ? (
+                <div className="relative w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden ring-2 ring-brand-100">
+                  <Image src={s.image} alt={s.title} fill sizes="80px" className="object-cover" />
+                </div>
+              ) : (
+                <div className="text-4xl mb-3">{s.icon}</div>
+              )}
               <div className="text-xs text-brand-light font-bold mb-1">
                 STEP {s.step}
               </div>
@@ -250,7 +257,13 @@ export default async function HajjPage() {
                 key={p.title}
                 className="bg-white rounded-xl p-7 text-center shadow-sm"
               >
-                <div className="text-4xl mb-3">{p.icon}</div>
+                {p.image ? (
+                  <div className="relative w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden ring-2 ring-brand-100">
+                    <Image src={p.image} alt={p.title} fill sizes="80px" className="object-cover" />
+                  </div>
+                ) : (
+                  <div className="text-4xl mb-3">{p.icon}</div>
+                )}
                 <div className="font-bold text-brand mb-2">{p.title}</div>
                 <div className="text-sm text-muted-foreground leading-relaxed">
                   {p.desc}

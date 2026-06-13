@@ -731,6 +731,7 @@ export type ProcessStep = {
   icon: string;
   title: string;
   desc: string;
+  image?: string;
 };
 
 export const hajjProcess: ProcessStep[] = [
@@ -964,7 +965,12 @@ export const hajjDates2026 = [
   { label: "Return Flights", date: "Jul 10–20, 2026", note: "By group" },
 ];
 
-export const hajjPreparation = [
+export const hajjPreparation: {
+  icon: string;
+  title: string;
+  desc: string;
+  image?: string;
+}[] = [
   {
     icon: "📚",
     title: "Pre-Departure Workshop",
