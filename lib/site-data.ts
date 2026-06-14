@@ -740,30 +740,35 @@ export const hajjProcess: ProcessStep[] = [
     icon: "📞",
     title: "Free Consultation",
     desc: "Book a call with our Hajj expert to choose the right package.",
+    image: "/images/step-consultation.jpg",
   },
   {
     step: 2,
     icon: "📝",
     title: "Registration & Documents",
     desc: "We handle Ministry of Religious Affairs registration & paperwork.",
+    image: "/images/step-registration.jpg",
   },
   {
     step: 3,
     icon: "💳",
     title: "Easy Installment Plans",
     desc: "Pay in 3–6 monthly installments on selected packages.",
+    image: "/images/step-payment.jpg",
   },
   {
     step: 4,
     icon: "🛂",
     title: "Visa & Vaccination",
     desc: "Hajj visa, mandatory vaccinations and travel kit.",
+    image: "/images/step-visa.jpg",
   },
   {
     step: 5,
     icon: "✈️",
     title: "Departure & Guidance",
     desc: "On-ground Pakistani-speaking team & 24/7 hotline in KSA.",
+    image: "/images/step-departure.jpg",
   },
 ];
 
@@ -975,16 +980,19 @@ export const hajjPreparation: {
     icon: "📚",
     title: "Pre-Departure Workshop",
     desc: "Free in-person sessions in Lodhran, Multan & Bahawalpur covering rituals, do's & don'ts.",
+    image: "/images/prep-workshop.jpg",
   },
   {
     icon: "💉",
     title: "Vaccinations",
     desc: "Meningitis & seasonal flu shots arranged through our partner clinics.",
+    image: "/images/prep-vaccination.jpg",
   },
   {
     icon: "🧳",
     title: "Travel Kit",
     desc: "Ihram, prayer mat, ID lanyard, smart-card pouch & welcome bag included.",
+    image: "/images/prep-travelkit.jpg",
   },
   {
     icon: "📱",
