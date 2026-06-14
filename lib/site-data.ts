@@ -881,7 +881,7 @@ export const searchTabs = [
 
 export const milestones = [
   { num: "15K+", label: "Happy Pilgrims" },
-  { num: "14+", label: "Years Experience" },
+  { num: "16+", label: "Years Experience" },
   { num: "4.9★", label: "Customer Rating" },
   { num: "50+", label: "Countries Covered" },
 ];
@@ -1398,7 +1398,7 @@ export const timeline: TimelineEvent[] = [
   {
     year: "2026",
     title: "15,000+ & Counting",
-    desc: "Today serving 5,000+ pilgrims annually across Hajj, Umrah & global travel.",
+    desc: "Trusted by 15,000+ pilgrims and growing — across Hajj, Umrah & worldwide travel.",
   },
 ];
 

@@ -71,7 +71,7 @@ export default async function HajjPage() {
             What Makes Our Hajj Different
           </h2>
           <p className="text-muted-foreground mt-3 text-[15px] max-w-2xl mx-auto">
-            14 years of experience, direct Ministry quotas, Pakistani teams on the ground —
+            16 years of experience, direct Ministry quotas, Pakistani teams on the ground —
             and pricing you can trust.
           </p>
         </div>

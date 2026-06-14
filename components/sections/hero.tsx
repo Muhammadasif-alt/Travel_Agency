@@ -101,7 +101,7 @@ export function Hero() {
         {/* Stats */}
         <div className="flex flex-wrap gap-6 sm:gap-10 mt-9 pt-6 border-t border-white/20">
           <Stat num="15K+" label="Happy Pilgrims" />
-          <Stat num="14+" label="Years Experience" />
+          <Stat num="16+" label="Years Experience" />
           <Stat num="4.9★" label="Customer Rating" />
         </div>
       </div>

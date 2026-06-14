@@ -18,7 +18,7 @@ export function About() {
             ABOUT NUSARAT MADINA
           </div>
           <h2 className="text-2xl md:text-[34px] font-extrabold text-brand mb-4.5">
-            14 Years of Trust, Thousands of Happy Pilgrims
+            16 Years of Trust, Thousands of Happy Pilgrims
           </h2>
           <p className="text-gray-600 text-[15px] leading-[1.8] mb-6">
             Since 2010, Nusarat Madina has been one of the most reliable Hajj

@@ -10,7 +10,7 @@ import { milestones, certifications, timeline, coreValues } from "@/lib/site-dat
 import { getTeam } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "About Us — 14 Years of Trusted Hajj & Umrah Service",
+  title: "About Us — 16 Years of Trusted Hajj & Umrah Service",
   description:
     "Nusarat Madina, founded by Rao Shafeeq in Lodhran, has guided 15,000+ pilgrims since 2010 across Multan & Bahawalpur. Ministry-licensed, IATA certified.",
   alternates: { canonical: "/about" },
@@ -24,7 +24,7 @@ export default async function AboutPage() {
         image={images.aboutBanner}
         imageAlt="Kaaba"
         eyebrow="ABOUT NUSARAT MADINA"
-        title="14 Years of Trust. Thousands of Sacred Journeys."
+        title="16 Years of Trust. Thousands of Sacred Journeys."
         subtitle="A family-run travel agency on a mission to make Hajj, Umrah and worldwide travel simple, affordable and dignified."
         crumbs={[{ label: "Home", href: "/" }, { label: "About" }]}
       />
@@ -112,7 +112,7 @@ export default async function AboutPage() {
               OUR JOURNEY
             </div>
             <h2 className="text-2xl md:text-4xl font-extrabold text-brand">
-              14 Years in Numbers &amp; Moments
+              16 Years in Numbers &amp; Moments
             </h2>
           </div>
 

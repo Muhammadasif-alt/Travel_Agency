@@ -29,7 +29,7 @@ export default async function BlogIndex() {
       <section className="px-[5%] py-16 max-w-[1440px] mx-auto">
         {posts.length === 0 ? (
           <p className="text-center text-muted-foreground py-12">
-            Abhi koi post nahi. Jald hi naye articles aayenge.
+            No articles published yet — new posts are coming soon.
           </p>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
