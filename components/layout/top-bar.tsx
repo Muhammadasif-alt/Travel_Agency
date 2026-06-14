@@ -21,7 +21,6 @@ export async function TopBar() {
       </div>
       <div className="hidden md:flex gap-[18px] flex-shrink-0">
         <span>🕌 24/7 Hajj &amp; Umrah Helpline</span>
-        <span>🌍 EN | اردو</span>
       </div>
     </div>
   );
