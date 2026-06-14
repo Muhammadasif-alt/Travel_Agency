@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { images } from "@/lib/images";
+import { BrandIcon } from "@/components/ui/brand-icon";
 
 const features = [
   { icon: "✓", title: "Govt. Approved", sub: "Licensed operator" },
@@ -29,8 +30,8 @@ export function About() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4.5">
             {features.map((f) => (
               <div key={f.title} className="flex gap-3 items-start">
-                <div className="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center text-lg flex-shrink-0">
-                  {f.icon}
+                <div className="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center text-brand flex-shrink-0">
+                  <BrandIcon icon={f.icon} className="w-5 h-5" />
                 </div>
                 <div>
                   <div className="font-bold text-brand">{f.title}</div>

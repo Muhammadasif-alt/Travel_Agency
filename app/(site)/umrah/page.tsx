@@ -4,6 +4,7 @@ import { PageHero } from "@/components/sections/page-hero";
 import { PackageCard } from "@/components/sections/package-card";
 import { CtaStrip } from "@/components/sections/cta-strip";
 import { Faq } from "@/components/sections/faq";
+import { BrandIcon } from "@/components/ui/brand-icon";
 import { images } from "@/lib/images";
 import {
   umrahProcess,
@@ -51,8 +52,8 @@ export default async function UmrahPage() {
               key={w.title}
               className="bg-white rounded-xl p-7 shadow-sm border border-gray-100 hover:border-brand hover:shadow-md transition-all"
             >
-              <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-2xl mb-4">
-                {w.icon}
+              <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand mb-4">
+                <BrandIcon icon={w.icon} className="w-6 h-6" />
               </div>
               <div className="font-bold text-brand mb-2">{w.title}</div>
               <div className="text-sm text-muted-foreground leading-relaxed">
@@ -245,7 +246,9 @@ export default async function UmrahPage() {
                 key={s.step}
                 className="bg-white rounded-xl p-6 text-center shadow-sm border-t-4 border-brand-light"
               >
-                <div className="text-4xl mb-3">{s.icon}</div>
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-brand-100 flex items-center justify-center text-brand">
+                  <BrandIcon icon={s.icon} className="w-7 h-7" />
+                </div>
                 <div className="text-xs text-brand-light font-bold mb-1">
                   STEP {s.step}
                 </div>

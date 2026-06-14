@@ -3,6 +3,7 @@ import { PageHero } from "@/components/sections/page-hero";
 import { CtaStrip } from "@/components/sections/cta-strip";
 import { Button } from "@/components/ui/button";
 import { images } from "@/lib/images";
+import { BrandIcon } from "@/components/ui/brand-icon";
 import {
   visaRequirements,
   visaStats,
@@ -133,7 +134,9 @@ export default async function VisaPage() {
                 key={s.step}
                 className="bg-white rounded-xl p-6 text-center shadow-sm border-t-4 border-brand"
               >
-                <div className="text-4xl mb-3">{s.icon}</div>
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-brand-100 flex items-center justify-center text-brand">
+                  <BrandIcon icon={s.icon} className="w-7 h-7" />
+                </div>
                 <div className="text-xs text-brand-light font-bold mb-1">
                   STEP {s.step}
                 </div>
@@ -167,7 +170,9 @@ export default async function VisaPage() {
               key={cat.title}
               className="bg-white rounded-2xl border border-gray-100 shadow-sm p-7 hover:shadow-md transition-shadow"
             >
-              <div className="text-3xl mb-3">{cat.icon}</div>
+              <div className="w-12 h-12 mb-3 rounded-xl bg-brand-100 flex items-center justify-center text-brand">
+                <BrandIcon icon={cat.icon} className="w-6 h-6" />
+              </div>
               <div className="font-extrabold text-brand text-lg mb-4">
                 {cat.title}
               </div>

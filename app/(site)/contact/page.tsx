@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { PageHero } from "@/components/sections/page-hero";
 import { ContactForm } from "@/components/sections/contact-form";
+import { BrandIcon } from "@/components/ui/brand-icon";
 import { images } from "@/lib/images";
 import { departments, businessHours } from "@/lib/site-data";
 import { getFaqs, getSettings } from "@/lib/content";
@@ -98,8 +99,8 @@ export default async function ContactPage() {
               className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:border-brand hover:shadow-md transition-all"
             >
               <div className="flex gap-4 items-start">
-                <div className="w-14 h-14 bg-brand-100 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">
-                  {d.icon}
+                <div className="w-14 h-14 bg-brand-100 rounded-2xl flex items-center justify-center text-brand flex-shrink-0">
+                  <BrandIcon icon={d.icon} className="w-7 h-7" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="font-extrabold text-brand">{d.name}</div>

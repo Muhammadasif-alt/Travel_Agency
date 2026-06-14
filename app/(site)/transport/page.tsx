@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaStrip } from "@/components/sections/cta-strip";
 import { images } from "@/lib/images";
+import { BrandIcon } from "@/components/ui/brand-icon";
 import { transportOptions } from "@/lib/site-data";
 
 export const metadata: Metadata = {
@@ -51,8 +52,8 @@ export default function TransportPage() {
               key={t.title}
               className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:border-brand hover:shadow-md transition-all"
             >
-              <div className="w-14 h-14 bg-brand-100 rounded-2xl flex items-center justify-center text-3xl mb-4">
-                {t.icon}
+              <div className="w-14 h-14 bg-brand-100 rounded-2xl flex items-center justify-center text-brand mb-4">
+                <BrandIcon icon={t.icon} className="w-7 h-7" />
               </div>
               <div className="font-extrabold text-brand">{t.title}</div>
               <div className="text-xs text-brand-light font-semibold mt-1">

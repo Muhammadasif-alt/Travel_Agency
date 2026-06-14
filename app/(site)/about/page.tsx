@@ -3,6 +3,7 @@ import Image from "next/image";
 import { PageHero } from "@/components/sections/page-hero";
 import { Testimonials } from "@/components/sections/testimonials";
 import { CtaStrip } from "@/components/sections/cta-strip";
+import { BrandIcon } from "@/components/ui/brand-icon";
 import { images } from "@/lib/images";
 import { avatar } from "@/lib/images";
 import { milestones, certifications, timeline, coreValues } from "@/lib/site-data";
@@ -91,8 +92,8 @@ export default async function AboutPage() {
               key={v.title}
               className="bg-white rounded-2xl p-7 shadow-sm border border-gray-100 hover:border-brand hover:shadow-md transition-all"
             >
-              <div className="w-14 h-14 bg-brand-100 rounded-2xl flex items-center justify-center text-3xl mb-4">
-                {v.icon}
+              <div className="w-14 h-14 bg-brand-100 rounded-2xl flex items-center justify-center text-brand mb-4">
+                <BrandIcon icon={v.icon} className="w-7 h-7" />
               </div>
               <div className="font-extrabold text-brand mb-2">{v.title}</div>
               <div className="text-sm text-muted-foreground leading-relaxed">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { CtaStrip } from "@/components/sections/cta-strip";
 import { Button } from "@/components/ui/button";
+import { BrandIcon } from "@/components/ui/brand-icon";
 import { images } from "@/lib/images";
 import { getHotels } from "@/lib/content";
 
@@ -117,8 +118,8 @@ export default async function HotelsPage() {
                 key={w.title}
                 className="bg-white rounded-xl p-7 shadow-sm border border-gray-100 hover:border-brand hover:shadow-md transition-all"
               >
-                <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-2xl mb-4">
-                  {w.icon}
+                <div className="w-12 h-12 bg-brand-100 rounded-xl flex items-center justify-center text-brand mb-4">
+                  <BrandIcon icon={w.icon} className="w-6 h-6" />
                 </div>
                 <div className="font-bold text-brand mb-2">{w.title}</div>
                 <div className="text-sm text-muted-foreground leading-relaxed">

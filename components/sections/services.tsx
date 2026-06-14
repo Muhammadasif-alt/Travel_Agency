@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SectionHeader } from "./section-header";
+import { BrandIcon } from "@/components/ui/brand-icon";
 import { getServices } from "@/lib/content";
 
 export async function Services() {
@@ -34,8 +35,8 @@ export async function Services() {
                   NEW
                 </span>
               )}
-              <div className="absolute -bottom-6 left-5 w-12 h-12 bg-white rounded-xl shadow-md flex items-center justify-center text-2xl">
-                {s.icon}
+              <div className="absolute -bottom-6 left-5 w-12 h-12 bg-white rounded-xl shadow-md flex items-center justify-center text-brand-light">
+                <BrandIcon icon={s.icon} className="w-6 h-6" />
               </div>
             </div>
 
