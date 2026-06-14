@@ -28,7 +28,7 @@ export function SearchBox() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_auto] gap-3.5 items-end">
-        <SearchField label="From" value="Multan, Pakistan" />
+        <SearchField label="From" value="Lahore, Pakistan" />
         <SearchField label="To" value="Jeddah, KSA" />
         <SearchField label="Departure" value="15 Jun 2026" />
         <SearchField label="Travellers" value="2 Adults" />

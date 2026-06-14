@@ -9,11 +9,11 @@ export function AreasServed() {
           AREAS WE SERVE
         </div>
         <h2 className="text-2xl md:text-3xl font-extrabold text-brand mb-3">
-          Hajj &amp; Umrah Across South Punjab
+          Serving Pilgrims Across Pakistan
         </h2>
         <p className="text-muted-foreground text-[15px] max-w-2xl mx-auto mb-8">
-          Local Hajj &amp; Umrah packages for pilgrims in Lodhran, Multan,
-          Bahawalpur and nearby towns.
+          We arrange Hajj &amp; Umrah for families nationwide — with dedicated
+          local support in the cities below and beyond.
         </p>
         <div className="flex flex-wrap gap-3 justify-center">
           {cityLandings.map((l) => (

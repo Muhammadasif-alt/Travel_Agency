@@ -12,7 +12,7 @@ const slides = [
     image: images.heroKaaba,
     alt: "Kaaba in Masjid al-Haram, Makkah",
     title: "Your Sacred Journey to Makkah, Made Simple",
-    sub: "Complete Hajj and Umrah packages from Lodhran, Multan and Bahawalpur. Visa, flights, hotels and an experienced guide, all arranged for you under one roof.",
+    sub: "Complete, all-inclusive Hajj and Umrah packages for pilgrims across Pakistan. Visa, flights, Haram-view hotels and an experienced guide — all arranged for you under one roof.",
   },
   {
     image: images.heroMadinah,
@@ -71,7 +71,7 @@ export function Hero() {
       {/* Content */}
       <div className="relative h-full max-w-[1440px] mx-auto px-[5%] flex flex-col justify-center">
         <div className="inline-block self-start bg-white/15 backdrop-blur-sm border border-white/25 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-5">
-          ✦ Trusted Since 2010 · Lodhran · Multan · Bahawalpur ✦
+          ✦ Govt-Approved · IATA Certified · Trusted Since 2010 ✦
         </div>
 
         {/* Changing text (re-animates on slide change) */}

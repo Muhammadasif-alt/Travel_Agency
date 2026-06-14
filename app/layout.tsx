@@ -19,13 +19,13 @@ const amiri = Amiri({
 });
 
 const description =
-  "Nusarat Madina — trusted Hajj, Umrah, flights, visa, hotel & tour services in Lodhran, Multan & Bahawalpur, Pakistan. Affordable packages, easy installments & 24/7 support since 2010.";
+  "Nusarat Madina is a Govt-approved, IATA-certified Hajj & Umrah travel agency in Pakistan. Affordable all-inclusive packages — Umrah visa, flights, Haram-view hotels, ziyarat & 24/7 support since 2010. Easy installments.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default:
-      "Nusarat Madina — Hajj & Umrah Packages in Lodhran, Multan & Bahawalpur",
+      "Best Hajj & Umrah Packages in Pakistan — Nusarat Madina Travel & Tours",
     template: "%s | Nusarat Madina",
   },
   description,
@@ -33,22 +33,23 @@ export const metadata: Metadata = {
   keywords: [
     "Hajj packages Pakistan",
     "Umrah packages Pakistan",
-    "Hajj Umrah Lodhran",
-    "Umrah package Multan",
-    "Hajj package Bahawalpur",
-    "travel agency Lodhran",
-    "travel agency Multan",
-    "travel agency Bahawalpur",
+    "best Umrah packages Pakistan",
     "cheap Umrah package",
-    "Ramadan Umrah",
-    "air ticket Multan",
-    "international flights Pakistan",
+    "affordable Hajj package",
+    "Umrah packages 2026",
+    "Hajj 2026 Pakistan",
+    "Ramadan Umrah package",
+    "family Umrah package",
+    "Umrah visa Pakistan",
     "Saudi visa Pakistan",
-    "Dubai visa",
-    "hotel booking Makkah Madinah",
+    "international flights Pakistan",
+    "air ticket booking Pakistan",
+    "Makkah Madinah hotel booking",
+    "Haram view hotel",
+    "Hajj Umrah travel agency",
+    "IATA certified travel agency Pakistan",
     "Nusarat Madina",
-    "Rao Shafeeq travel",
-    ...siteConfig.cities.map((c) => `Umrah ${c}`),
+    ...siteConfig.cities.map((c) => `Umrah packages ${c}`),
   ],
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
@@ -59,21 +60,20 @@ export const metadata: Metadata = {
     locale: "en_PK",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title:
-      "Nusarat Madina — Hajj & Umrah Packages in Lodhran, Multan & Bahawalpur",
+    title: "Best Hajj & Umrah Packages in Pakistan — Nusarat Madina",
     description,
     images: [
       {
         url: images.heroKaaba,
         width: 1200,
         height: 630,
-        alt: "Nusarat Madina — Hajj & Umrah",
+        alt: "Nusarat Madina — Hajj & Umrah Packages in Pakistan",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nusarat Madina — Hajj, Umrah & Travel (Lodhran · Multan · Bahawalpur)",
+    title: "Best Hajj & Umrah Packages in Pakistan — Nusarat Madina",
     description,
     images: [images.heroKaaba],
   },

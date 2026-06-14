@@ -16,7 +16,7 @@ const jsonLd = {
   "@id": `${siteConfig.url}/#organization`,
   name: siteConfig.name,
   description:
-    "Nusarat Madina — trusted Hajj, Umrah, flights, visa, hotel & tour services in Lodhran, Multan & Bahawalpur, Pakistan.",
+    "Nusarat Madina — a Govt-approved, IATA-certified Hajj, Umrah, flights, visa, hotel & tour travel agency serving pilgrims across Pakistan since 2010.",
   url: siteConfig.url,
   telephone: siteConfig.phone,
   email: siteConfig.email,
