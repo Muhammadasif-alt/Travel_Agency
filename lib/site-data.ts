@@ -27,14 +27,29 @@ export const siteConfig = {
   ],
 };
 
-export const navLinks = [
+export type NavLink = {
+  label: string;
+  href: string;
+  children?: { label: string; href: string }[];
+};
+
+export const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
-  { label: "Hajj Packages", href: "/hajj" },
-  { label: "Umrah Packages", href: "/umrah" },
-  { label: "Flights", href: "/flights" },
-  { label: "Visa", href: "/visa" },
-  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
+  {
+    label: "Services",
+    href: "/umrah",
+    children: [
+      { label: "Umrah Packages", href: "/umrah" },
+      { label: "Hajj Packages", href: "/hajj" },
+      { label: "Flights", href: "/flights" },
+      { label: "Hotels", href: "/hotels" },
+      { label: "Visa Services", href: "/visa" },
+      { label: "Transport", href: "/transport" },
+      { label: "Tours", href: "/tours" },
+    ],
+  },
+  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 
