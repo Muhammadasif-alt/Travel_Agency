@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 export default function NewTourPage() {
   return (
     <div>
-      <PageHeader title="New Tour" subtitle="Tour package add karein." />
+      <PageHeader title="New Tour" subtitle="Add a tour package." />
       <TourForm action={createTour} />
     </div>
   );

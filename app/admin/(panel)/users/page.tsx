@@ -15,7 +15,7 @@ export default async function UsersAdmin() {
     <div>
       <PageHeader
         title="Users"
-        subtitle="Admin panel ke logins (owner + staff)."
+        subtitle="Admin panel logins (owner + staff)."
         action={
           <Link
             href="/admin/users/new"

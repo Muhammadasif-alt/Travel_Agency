@@ -62,7 +62,7 @@ export default async function AdminDashboard() {
         Assalam-o-Alaikum, {user.name.split(" ")[0]} 👋
       </h1>
       <p className="text-muted-foreground mt-1 text-sm">
-        Yahan se website ka saara content manage karein.
+        Manage all of your website content from here.
       </p>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-7">

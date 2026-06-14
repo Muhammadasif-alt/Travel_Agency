@@ -108,7 +108,7 @@ export function ImageField({
   const [preview, setPreview] = useState<string | null>(current ?? null);
 
   return (
-    <Field label={label} hint="Naya image upload karein (ya khali chhorein purana rakhne ke liye).">
+    <Field label={label} hint="Upload a new image (or leave empty to keep the current one).">
       <div className="flex items-center gap-4">
         <div className="relative w-24 h-24 rounded-lg overflow-hidden bg-gray-100 border border-gray-200 flex-shrink-0">
           {preview ? (
@@ -173,7 +173,7 @@ export function DeleteButton({
     <form
       action={action}
       onSubmit={(e) => {
-        if (!confirm("Pakka delete karna hai? Yeh wapas nahi hoga.")) {
+        if (!confirm("Delete this for good? This can’t be undone.")) {
           e.preventDefault();
         }
       }}

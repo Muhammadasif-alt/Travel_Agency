@@ -20,13 +20,13 @@ export async function createUser(
   const role = String(formData.get("role") ?? "EDITOR") as Role;
 
   if (!email || !name || !password) {
-    return { error: "Email, name aur password zaroori hain." };
+    return { error: "Email, name and password are required." };
   }
   if (password.length < 6) {
-    return { error: "Password kam se kam 6 characters ka ho." };
+    return { error: "Password must be at least 6 characters." };
   }
   const existing = await prisma.user.findUnique({ where: { email } });
-  if (existing) return { error: "Yeh email pehle se registered hai." };
+  if (existing) return { error: "This email is already registered." };
 
   await prisma.user.create({
     data: { email, name, role, passwordHash: await hashPassword(password) },
@@ -45,9 +45,9 @@ export async function updateUser(
   const role = String(formData.get("role") ?? "EDITOR") as Role;
   const password = String(formData.get("password") ?? "");
 
-  if (!name) return { error: "Name zaroori hai." };
+  if (!name) return { error: "Name is required." };
   if (password && password.length < 6) {
-    return { error: "Password kam se kam 6 characters ka ho." };
+    return { error: "Password must be at least 6 characters." };
   }
 
   await prisma.user.update({

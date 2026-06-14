@@ -60,13 +60,13 @@ export function BlogForm({
         </Field>
       </div>
 
-      <Field label="Slug (URL)" hint="Khali chhorein to title se khud ban jayega">
+      <Field label="Slug (URL)" hint="Leave empty to generate it from the title">
         <TextInput name="slug" defaultValue={d.slug} placeholder="hajj-2026-complete-guide" />
       </Field>
 
       <ImageField name="image" label="Cover image" current={d.image} />
 
-      <Field label="Excerpt" hint="Short summary (cards par dikhega)">
+      <Field label="Excerpt" hint="Short summary (shown on cards)">
         <TextArea name="excerpt" defaultValue={d.excerpt} rows={2} required />
       </Field>
 

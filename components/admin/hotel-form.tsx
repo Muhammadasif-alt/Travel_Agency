@@ -60,7 +60,7 @@ export function HotelForm({
       <Field label="Starting price">
         <TextInput name="startingPrice" defaultValue={d.startingPrice} placeholder="PKR 28,000 / night" />
       </Field>
-      <Field label="Perks" hint="Har perk nayi line par">
+      <Field label="Perks" hint="One perk per line">
         <TextArea name="perks" defaultValue={d.perks.join("\n")} rows={4} />
       </Field>
       <Checkbox name="isActive" label="Active (visible on site)" defaultChecked={d.isActive} />

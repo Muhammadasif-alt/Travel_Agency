@@ -79,11 +79,11 @@ export function ServiceForm({
         <TextArea name="long" defaultValue={d.long} rows={4} required />
       </Field>
 
-      <Field label="Bullet points" hint="Har point nayi line par">
+      <Field label="Bullet points" hint="One point per line">
         <TextArea name="points" defaultValue={d.points.join("\n")} rows={4} />
       </Field>
 
-      <Field label="Slug" hint="Khali chhorein to title se ban jayega">
+      <Field label="Slug" hint="Leave empty to generate it from the title">
         <TextInput name="slug" defaultValue={d.slug} placeholder="hajj" />
       </Field>
 

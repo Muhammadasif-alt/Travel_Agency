@@ -45,7 +45,7 @@ export default async function HotelsAdmin() {
         {items.length === 0 && (
           <tr>
             <td colSpan={6} className="px-4 py-8 text-center text-muted-foreground">
-              Koi hotel nahi.
+              No hotels yet.
             </td>
           </tr>
         )}

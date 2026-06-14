@@ -16,7 +16,7 @@ export default async function PackagesAdmin() {
     <div>
       <PageHeader
         title="Packages"
-        subtitle="Umrah aur Hajj packages — add, edit, delete."
+        subtitle="Umrah and Hajj packages — add, edit, delete."
         action={
           <Link
             href="/admin/packages/new"
@@ -62,7 +62,7 @@ export default async function PackagesAdmin() {
         {packages.length === 0 && (
           <tr>
             <td colSpan={7} className="px-4 py-8 text-center text-muted-foreground">
-              Koi package nahi. &ldquo;New Package&rdquo; se add karein.
+              No packages yet. Click &ldquo;New Package&rdquo; to add one.
             </td>
           </tr>
         )}

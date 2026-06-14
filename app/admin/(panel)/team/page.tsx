@@ -15,7 +15,7 @@ export default async function TeamAdmin() {
     <div>
       <PageHeader
         title="Team"
-        subtitle="Team members jo About / Home par dikhte hain."
+        subtitle="Team members shown on the About / Home pages."
         action={
           <Link
             href="/admin/team/new"
@@ -50,7 +50,7 @@ export default async function TeamAdmin() {
         {members.length === 0 && (
           <tr>
             <td colSpan={5} className="px-4 py-8 text-center text-muted-foreground">
-              Koi member nahi.
+              No members yet.
             </td>
           </tr>
         )}

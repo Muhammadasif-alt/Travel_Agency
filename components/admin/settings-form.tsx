@@ -75,8 +75,8 @@ export function SettingsForm({ settings }: { settings: Settings }) {
       <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 space-y-5">
         <h2 className="font-bold text-brand">Hajj season</h2>
         <p className="text-sm text-muted-foreground -mt-3">
-          Jab current saal ka Hajj band ho jaye, &ldquo;Closed — pre-register next year&rdquo;
-          choose karein. Hajj page khud pre-registration mode mein chala jayega.
+          When this year’s Hajj is closed, choose &ldquo;Closed — pre-register next year&rdquo;.
+          The Hajj page will automatically switch to pre-registration mode.
         </p>
         <Field label="Status">
           <Select name="hajjStatus" defaultValue={settings.hajjStatus}>

@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 export default function NewVisaPage() {
   return (
     <div>
-      <PageHeader title="New Country" subtitle="Visa country add karein." />
+      <PageHeader title="New Country" subtitle="Add a visa country." />
       <VisaForm action={createVisa} />
     </div>
   );

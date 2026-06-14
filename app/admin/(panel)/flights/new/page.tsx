@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 export default function NewFlightPage() {
   return (
     <div>
-      <PageHeader title="New Flight" subtitle="Naya flight deal add karein." />
+      <PageHeader title="New Flight" subtitle="Add a new flight deal." />
       <FlightForm action={createFlight} />
     </div>
   );

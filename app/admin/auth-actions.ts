@@ -15,12 +15,12 @@ export async function login(
   const from = String(formData.get("from") ?? "/admin");
 
   if (!email || !password) {
-    return { error: "Email aur password dono zaroori hain." };
+    return { error: "Both email and password are required." };
   }
 
   const user = await prisma.user.findUnique({ where: { email } });
   if (!user || !(await verifyPassword(password, user.passwordHash))) {
-    return { error: "Ghalat email ya password." };
+    return { error: "Incorrect email or password." };
   }
 
   await createSession({

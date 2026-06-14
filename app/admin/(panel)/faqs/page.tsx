@@ -42,7 +42,7 @@ export default async function FaqsAdmin() {
         {items.length === 0 && (
           <tr>
             <td colSpan={3} className="px-4 py-8 text-center text-muted-foreground">
-              Koi FAQ nahi.
+              No FAQs yet.
             </td>
           </tr>
         )}

@@ -16,7 +16,7 @@ export default async function BlogsAdmin() {
     <div>
       <PageHeader
         title="Blogs / News"
-        subtitle="Travel updates aur articles."
+        subtitle="Travel updates and articles."
         action={
           <Link
             href="/admin/blogs/new"
@@ -52,7 +52,7 @@ export default async function BlogsAdmin() {
         {posts.length === 0 && (
           <tr>
             <td colSpan={6} className="px-4 py-8 text-center text-muted-foreground">
-              Koi post nahi. &ldquo;New Post&rdquo; se add karein.
+              No posts yet. Click &ldquo;New Post&rdquo; to add one.
             </td>
           </tr>
         )}

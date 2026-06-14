@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 export default function NewHotelPage() {
   return (
     <div>
-      <PageHeader title="New Hotel" subtitle="Hotel option add karein." />
+      <PageHeader title="New Hotel" subtitle="Add a hotel option." />
       <HotelForm action={createHotel} />
     </div>
   );

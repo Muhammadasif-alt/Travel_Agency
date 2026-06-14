@@ -67,7 +67,7 @@ export function PackageForm({
             <option value="HAJJ">Hajj</option>
           </Select>
         </Field>
-        <Field label="Sort order" hint="Chhota number pehle dikhega">
+        <Field label="Sort order" hint="Lower numbers appear first">
           <TextInput type="number" name="sortOrder" defaultValue={d.sortOrder} />
         </Field>
       </div>
@@ -107,7 +107,7 @@ export function PackageForm({
         <TextInput name="meta" defaultValue={d.meta} />
       </Field>
 
-      <Field label="Features" hint="Har feature nayi line par (e.g. ✓ 4★ Hotel)">
+      <Field label="Features" hint="One feature per line (e.g. ✓ 4★ Hotel)">
         <TextArea name="features" defaultValue={d.features.join("\n")} rows={4} />
       </Field>
 

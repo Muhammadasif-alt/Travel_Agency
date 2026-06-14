@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 export default function NewBlogPage() {
   return (
     <div>
-      <PageHeader title="New Post" subtitle="Naya blog / news article." />
+      <PageHeader title="New Post" subtitle="A new blog / news article." />
       <BlogForm action={createBlog} />
     </div>
   );

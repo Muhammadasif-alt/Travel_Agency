@@ -9,7 +9,7 @@ export default async function NewUserPage() {
   await requireAdmin();
   return (
     <div>
-      <PageHeader title="New User" subtitle="Naya admin/editor login banayein." />
+      <PageHeader title="New User" subtitle="Create a new admin/editor login." />
       <UserForm action={createUser} />
     </div>
   );

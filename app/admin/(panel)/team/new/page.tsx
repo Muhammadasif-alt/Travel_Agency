@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 export default function NewTeamPage() {
   return (
     <div>
-      <PageHeader title="New Member" subtitle="Team member add karein." />
+      <PageHeader title="New Member" subtitle="Add a team member." />
       <TeamForm action={createTeam} />
     </div>
   );

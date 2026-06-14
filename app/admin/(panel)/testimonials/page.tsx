@@ -13,7 +13,7 @@ export default async function TestimonialsAdmin() {
     <div>
       <PageHeader
         title="Success Stories"
-        subtitle="Pilgrims ke reviews aur stories."
+        subtitle="Pilgrims' reviews and stories."
         action={
           <Link
             href="/admin/testimonials/new"
@@ -44,7 +44,7 @@ export default async function TestimonialsAdmin() {
         {items.length === 0 && (
           <tr>
             <td colSpan={5} className="px-4 py-8 text-center text-muted-foreground">
-              Koi story nahi.
+              No stories yet.
             </td>
           </tr>
         )}

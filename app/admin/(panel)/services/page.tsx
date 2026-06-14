@@ -13,7 +13,7 @@ export default async function ServicesAdmin() {
     <div>
       <PageHeader
         title="Services"
-        subtitle="Home page ke services cards."
+        subtitle="Home page services cards."
         action={
           <Link
             href="/admin/services/new"
@@ -45,7 +45,7 @@ export default async function ServicesAdmin() {
         {items.length === 0 && (
           <tr>
             <td colSpan={6} className="px-4 py-8 text-center text-muted-foreground">
-              Koi service nahi.
+              No services yet.
             </td>
           </tr>
         )}

@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 export default function NewTestimonialPage() {
   return (
     <div>
-      <PageHeader title="New Story" subtitle="Pilgrim ka review add karein." />
+      <PageHeader title="New Story" subtitle="Add a pilgrim's review." />
       <TestimonialForm action={createTestimonial} />
     </div>
   );

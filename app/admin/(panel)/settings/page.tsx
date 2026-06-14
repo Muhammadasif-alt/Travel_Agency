@@ -11,7 +11,7 @@ export default async function SettingsPage() {
 
   return (
     <div>
-      <PageHeader title="Settings" subtitle="Contact info, social links aur Hajj season." />
+      <PageHeader title="Settings" subtitle="Contact info, social links and Hajj season." />
       <SettingsForm
         settings={{
           phone: s.phone,

@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 export default function NewPackagePage() {
   return (
     <div>
-      <PageHeader title="New Package" subtitle="Naya Umrah ya Hajj package add karein." />
+      <PageHeader title="New Package" subtitle="Add a new Umrah or Hajj package." />
       <PackageForm action={createPackage} />
     </div>
   );

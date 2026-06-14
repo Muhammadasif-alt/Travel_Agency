@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 export default function NewServicePage() {
   return (
     <div>
-      <PageHeader title="New Service" subtitle="Naya service card add karein." />
+      <PageHeader title="New Service" subtitle="Add a new service card." />
       <ServiceForm action={createService} />
     </div>
   );

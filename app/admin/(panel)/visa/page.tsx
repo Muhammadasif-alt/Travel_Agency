@@ -46,7 +46,7 @@ export default async function VisaAdmin() {
         {items.length === 0 && (
           <tr>
             <td colSpan={7} className="px-4 py-8 text-center text-muted-foreground">
-              Koi country nahi.
+              No countries yet.
             </td>
           </tr>
         )}

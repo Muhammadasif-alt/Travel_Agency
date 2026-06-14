@@ -50,7 +50,7 @@ export default async function FlightsAdmin() {
         {items.length === 0 && (
           <tr>
             <td colSpan={7} className="px-4 py-8 text-center text-muted-foreground">
-              Koi flight nahi.
+              No flights yet.
             </td>
           </tr>
         )}

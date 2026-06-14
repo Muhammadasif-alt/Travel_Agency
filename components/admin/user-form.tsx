@@ -31,7 +31,7 @@ export function UserForm({
 
   return (
     <form action={formAction} className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 space-y-5 max-w-xl">
-      <Field label="Email" hint={isEdit ? "Email change nahi ho sakta" : undefined}>
+      <Field label="Email" hint={isEdit ? "Email can’t be changed" : undefined}>
         <TextInput
           name="email"
           type="email"
@@ -52,7 +52,7 @@ export function UserForm({
       </Field>
       <Field
         label={isEdit ? "New password" : "Password"}
-        hint={isEdit ? "Khali chhorein to password same rahega" : "Kam se kam 6 characters"}
+        hint={isEdit ? "Leave empty to keep the current password" : "At least 6 characters"}
       >
         <TextInput name="password" type="password" required={!isEdit} placeholder="••••••••" />
       </Field>

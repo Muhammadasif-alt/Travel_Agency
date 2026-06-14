@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 export default function NewFaqPage() {
   return (
     <div>
-      <PageHeader title="New FAQ" subtitle="Naya sawaal-jawab add karein." />
+      <PageHeader title="New FAQ" subtitle="Add a new question & answer." />
       <FaqForm action={createFaq} />
     </div>
   );
