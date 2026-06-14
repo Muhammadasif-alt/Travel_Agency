@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Phone, Mail } from "lucide-react";
-import { siteConfig } from "@/lib/site-data";
+import { siteConfig, cityLandings } from "@/lib/site-data";
 import { getBlogPosts, getSettings } from "@/lib/content";
 
 type IconProps = { className?: string };
@@ -60,8 +60,8 @@ export async function Footer() {
               NUSARAT <span className="text-brand-light">MADINA</span>
             </div>
             <p className="text-[13px] text-white/70 leading-[1.8] mt-4 max-w-xs">
-              Your trusted Hajj, Umrah and travel partner in Lodhran, Multan and
-              Bahawalpur since 2010.
+              Your trusted Hajj, Umrah and travel partner — serving pilgrims
+              across Pakistan since 2010.
             </p>
             <a
               href={`tel:${s.phone.replace(/\s/g, "")}`}
@@ -130,6 +130,26 @@ export async function Footer() {
                 </Link>
               ))}
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Popular city pages (kept discreet — for local SEO & internal linking) */}
+      <div className="border-t border-white/10">
+        <div className="px-[5%] py-5 max-w-[1440px] mx-auto">
+          <div className="text-[11px] uppercase tracking-[2px] text-white/50 mb-2.5 text-center">
+            Popular Areas
+          </div>
+          <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center">
+            {cityLandings.map((l) => (
+              <Link
+                key={l.slug}
+                href={`/${l.slug}`}
+                className="text-[12px] text-white/60 hover:text-brand-light transition-colors"
+              >
+                {l.serviceLabel} in {l.city}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
