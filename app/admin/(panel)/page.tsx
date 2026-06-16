@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {
+  Inbox,
   Package,
   Newspaper,
   Star,
@@ -30,6 +31,7 @@ export default async function AdminDashboard() {
     tours,
     team,
     faqs,
+    unreadInquiries,
   ] = await Promise.all([
     prisma.package.count(),
     prisma.blogPost.count(),
@@ -41,6 +43,7 @@ export default async function AdminDashboard() {
     prisma.tourPackage.count(),
     prisma.teamMember.count(),
     prisma.faq.count(),
+    prisma.inquiry.count({ where: { isRead: false } }),
   ]);
 
   const cards = [
@@ -64,6 +67,25 @@ export default async function AdminDashboard() {
       <p className="text-muted-foreground mt-1 text-sm">
         Manage all of your website content from here.
       </p>
+
+      {unreadInquiries > 0 && (
+        <Link
+          href="/admin/inquiries"
+          className="mt-6 flex items-center gap-4 bg-brand text-white rounded-2xl px-5 py-4 shadow-sm hover:bg-brand-light transition-colors"
+        >
+          <div className="w-11 h-11 rounded-xl bg-white/15 flex items-center justify-center flex-shrink-0">
+            <Inbox size={20} />
+          </div>
+          <div>
+            <div className="font-bold">
+              {unreadInquiries} new {unreadInquiries === 1 ? "inquiry" : "inquiries"}
+            </div>
+            <div className="text-sm text-white/80">
+              You have unread messages from the website contact form — click to view.
+            </div>
+          </div>
+        </Link>
+      )}
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-7">
         {cards.map(({ href, label, count, icon: Icon }) => (

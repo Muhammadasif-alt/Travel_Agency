@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import {
   LayoutDashboard,
+  Inbox,
   Package,
   Newspaper,
   Star,
@@ -29,6 +30,7 @@ type Item = { href: string; label: string; icon: typeof Package; adminOnly?: boo
 
 const items: Item[] = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard },
+  { href: "/admin/inquiries", label: "Inquiries", icon: Inbox },
   { href: "/admin/packages", label: "Packages", icon: Package },
   { href: "/admin/blogs", label: "Blogs / News", icon: Newspaper },
   { href: "/admin/testimonials", label: "Success Stories", icon: Star },

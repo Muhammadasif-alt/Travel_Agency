@@ -1,8 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { submitInquiry } from "@/app/(site)/contact/actions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -25,13 +27,15 @@ const inquirySchema = z.object({
 type InquiryValues = z.infer<typeof inquirySchema>;
 
 export function ContactForm() {
+  const [done, setDone] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const {
     register,
     handleSubmit,
     setValue,
     watch,
     reset,
-    formState: { errors, isSubmitting, isSubmitSuccessful },
+    formState: { errors, isSubmitting },
   } = useForm<InquiryValues>({
     resolver: zodResolver(inquirySchema),
     defaultValues: {
@@ -46,8 +50,14 @@ export function ContactForm() {
   const serviceValue = watch("service");
 
   const onSubmit = async (data: InquiryValues) => {
-    await new Promise((r) => setTimeout(r, 600));
-    console.log("Inquiry submitted:", data);
+    setSubmitError(null);
+    setDone(false);
+    const res = await submitInquiry(data);
+    if (!res.ok) {
+      setSubmitError(res.error);
+      return;
+    }
+    setDone(true);
     reset();
   };
 
@@ -100,10 +110,14 @@ export function ContactForm() {
           {isSubmitting ? "Sending..." : "Send Inquiry →"}
         </Button>
 
-        {isSubmitSuccessful && (
+        {done && (
           <p className="text-sm text-brand text-center mt-1">
-            ✓ Thank you! Our team will reach out shortly.
+            ✓ Thank you! Your inquiry has been received — our team will reach out
+            shortly.
           </p>
+        )}
+        {submitError && (
+          <p className="text-sm text-destructive text-center mt-1">{submitError}</p>
         )}
       </form>
     </div>

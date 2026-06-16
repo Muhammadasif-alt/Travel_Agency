@@ -176,6 +176,18 @@ model Faq {
   isActive  Boolean @default(true)
 }
 
+// ----------------------------------------------------------------- Contact inquiries (from the public contact form)
+model Inquiry {
+  id        String   @id @default(cuid())
+  name      String
+  phone     String
+  email     String
+  service   String   @default("") // "hajj" | "umrah" | "flight" | "visa" | ...
+  message   String   @db.Text
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
 // ----------------------------------------------------------------- Site settings (singleton)
 // A single row (id = "default") holding global config + Hajj season switch.
 model SiteSetting {
