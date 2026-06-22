@@ -5,7 +5,7 @@ import { PackageCard } from "./package-card";
 export async function Packages() {
   const packages = await getHomePackages();
   return (
-    <section id="packages" className="bg-[#f7faf8] px-[5%] py-20">
+    <section id="packages" className="bg-[#f5f8fc] px-[5%] py-20">
       <div className="max-w-[1440px] mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-10">
           <div>

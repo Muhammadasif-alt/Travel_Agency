@@ -1,9 +1,9 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { cityLandings } from "@/lib/site-data";
 
 export function AreasServed() {
   return (
-    <section className="px-[5%] py-16 bg-[#f7faf8] border-t border-gray-100">
+    <section className="px-[5%] py-16 bg-[#f5f8fc] border-t border-gray-100">
       <div className="max-w-[1440px] mx-auto text-center">
         <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
           AREAS WE SERVE

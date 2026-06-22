@@ -51,7 +51,7 @@ export async function Footer() {
     { name: "TikTok", href: s.tiktokUrl, Icon: TikTok },
   ].filter((x) => x.href);
   return (
-    <footer className="bg-gradient-to-br from-[#0f3d39] via-brand to-brand-dark text-white">
+    <footer className="bg-gradient-to-br from-[#1e3a6e] via-brand to-brand-dark text-white">
       <div className="px-[5%] pt-16 pb-8 max-w-[1440px] mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.4fr] gap-10">
           {/* Get in touch */}

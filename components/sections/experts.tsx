@@ -24,7 +24,7 @@ export async function Experts() {
             >
               <div className="relative h-56 sm:h-64 bg-brand-50">
                 <Image
-                  src={m.photo ?? avatar(m.name, { bg: "14b8a6", size: 400 })}
+                  src={m.photo ?? avatar(m.name, { bg: "2563eb", size: 400 })}
                   alt={m.name}
                   fill
                   sizes="(max-width: 1024px) 50vw, 280px"

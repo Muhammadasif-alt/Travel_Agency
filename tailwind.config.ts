@@ -20,12 +20,12 @@ const config: Config = {
       },
       colors: {
         brand: {
-          DEFAULT: "#16243b",
-          light: "#14b8a6",
-          dark: "#0e1726",
-          50: "#f0fdfa",
-          100: "#ccfbf1",
-          200: "#99f6e4",
+          DEFAULT: "#13294b", // deep royal navy
+          light: "#2563eb", // bright royal-blue accent
+          dark: "#0d1d38", // deepest navy (gradients/footer)
+          50: "#eff6ff",
+          100: "#dbeafe",
+          200: "#bfdbfe",
         },
         gold: "#ffc107",
         coral: "#ff6b35",
@@ -70,13 +70,13 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       boxShadow: {
-        // Soft teal (brand) tinted shadows — no harsh black
-        sm: "0 1px 3px 0 rgba(20, 184, 166, 0.12)",
-        DEFAULT: "0 2px 8px -1px rgba(20, 184, 166, 0.15)",
-        md: "0 8px 20px -6px rgba(20, 184, 166, 0.18)",
-        lg: "0 14px 30px -10px rgba(20, 184, 166, 0.20)",
-        xl: "0 22px 45px -14px rgba(20, 184, 166, 0.22)",
-        "2xl": "0 30px 60px -18px rgba(20, 184, 166, 0.25)",
+        // Soft royal-blue (brand) tinted shadows — no harsh black
+        sm: "0 1px 3px 0 rgba(37, 99, 235, 0.12)",
+        DEFAULT: "0 2px 8px -1px rgba(37, 99, 235, 0.15)",
+        md: "0 8px 20px -6px rgba(37, 99, 235, 0.18)",
+        lg: "0 14px 30px -10px rgba(37, 99, 235, 0.20)",
+        xl: "0 22px 45px -14px rgba(37, 99, 235, 0.22)",
+        "2xl": "0 30px 60px -18px rgba(37, 99, 235, 0.25)",
       },
       keyframes: {
         pulseRing: {

@@ -217,7 +217,7 @@ export default async function ContactPage() {
       </section>
 
       {/* Quick FAQs */}
-      <section className="bg-[#f7faf8] px-[5%] py-16">
+      <section className="bg-[#f5f8fc] px-[5%] py-16">
         <div className="max-w-[900px] mx-auto">
           <div className="text-center mb-8">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">

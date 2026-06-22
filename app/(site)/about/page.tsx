@@ -168,7 +168,7 @@ export default async function AboutPage() {
       </section>
 
       {/* Certifications */}
-      <section className="bg-[#f7faf8] px-[5%] py-20">
+      <section className="bg-[#f5f8fc] px-[5%] py-20">
         <div className="max-w-[1440px] mx-auto">
           <div className="text-center mb-10">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
@@ -212,7 +212,7 @@ export default async function AboutPage() {
             >
               <div className="relative w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 ring-4 ring-brand-100">
                 <Image
-                  src={m.photo ?? avatar(m.name, { bg: "14b8a6" })}
+                  src={m.photo ?? avatar(m.name, { bg: "2563eb" })}
                   alt={m.name}
                   fill
                   sizes="96px"

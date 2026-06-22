@@ -68,7 +68,7 @@ export default function TransportPage() {
       </section>
 
       {/* Popular routes */}
-      <section className="bg-[#f7faf8] px-[5%] py-20">
+      <section className="bg-[#f5f8fc] px-[5%] py-20">
         <div className="max-w-[900px] mx-auto">
           <div className="mb-10 text-center">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">

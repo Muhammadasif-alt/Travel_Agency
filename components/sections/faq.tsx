@@ -31,7 +31,7 @@ export async function Faq() {
                     key={n}
                     className="w-9 h-9 rounded-full ring-2 ring-white overflow-hidden"
                   >
-                    <Image src={avatar(n, { bg: "14b8a6" })} alt={n} width={36} height={36} />
+                    <Image src={avatar(n, { bg: "2563eb" })} alt={n} width={36} height={36} />
                   </span>
                 ))}
               </div>

@@ -117,7 +117,7 @@ export default async function FlightsPage() {
       </section>
 
       {/* Why Book With Us */}
-      <section className="bg-[#f7faf8] px-[5%] py-20">
+      <section className="bg-[#f5f8fc] px-[5%] py-20">
         <div className="max-w-[1440px] mx-auto">
           <div className="mb-12 text-center">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
@@ -182,7 +182,7 @@ export default async function FlightsPage() {
       </section>
 
       {/* Baggage info */}
-      <section className="bg-[#f7faf8] px-[5%] py-20">
+      <section className="bg-[#f5f8fc] px-[5%] py-20">
         <div className="max-w-[1440px] mx-auto">
           <div className="mb-10 text-center">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
