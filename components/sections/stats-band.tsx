@@ -2,7 +2,7 @@
 
 export function StatsBand() {
   return (
-    <section className="bg-brand-light text-white">
+    <section className="bg-gradient-to-r from-brand-dark via-brand to-[#1e3a6e] text-white">
       <div className="max-w-[1440px] mx-auto grid grid-cols-2 md:grid-cols-4">
         {milestones.map((m, i) => (
           <div
