@@ -50,7 +50,7 @@ export default async function HotelsPage() {
       />
 
       {/* Hotel options */}
-      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
+      <section className="px-[5%] py-24 max-w-[1440px] mx-auto">
         <div className="mb-10 text-center">
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
             FEATURED STAYS
@@ -102,7 +102,7 @@ export default async function HotelsPage() {
       </section>
 
       {/* Why us */}
-      <section className="bg-[#f5f8fc] px-[5%] py-20">
+      <section className="bg-[#f5f8fc] px-[5%] py-24">
         <div className="max-w-[1440px] mx-auto">
           <div className="mb-12 text-center">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">

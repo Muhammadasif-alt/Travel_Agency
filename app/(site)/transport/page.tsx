@@ -32,7 +32,7 @@ export default function TransportPage() {
       />
 
       {/* Fleet */}
-      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
+      <section className="px-[5%] py-24 max-w-[1440px] mx-auto">
         <div className="mb-10 text-center">
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
             OUR FLEET
@@ -68,8 +68,8 @@ export default function TransportPage() {
       </section>
 
       {/* Popular routes */}
-      <section className="bg-[#f5f8fc] px-[5%] py-20">
-        <div className="max-w-[900px] mx-auto">
+      <section className="bg-[#f5f8fc] px-[5%] py-24">
+        <div className="max-w-[1200px] mx-auto">
           <div className="mb-10 text-center">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
               POPULAR ROUTES

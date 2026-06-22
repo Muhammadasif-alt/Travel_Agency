@@ -30,9 +30,9 @@ export default async function AboutPage() {
       />
 
       {/* Story */}
-      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
+      <section className="px-[5%] py-24 max-w-[1440px] mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative h-[420px] rounded-2xl overflow-hidden shadow-xl">
+          <div className="relative h-[480px] rounded-2xl overflow-hidden shadow-xl">
             <Image
               src={images.team}
               alt="Nusarat Madina team"
@@ -77,7 +77,7 @@ export default async function AboutPage() {
       </section>
 
       {/* Core Values */}
-      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
+      <section className="px-[5%] py-24 max-w-[1440px] mx-auto">
         <div className="mb-12 text-center">
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
             CORE VALUES
@@ -105,7 +105,7 @@ export default async function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section className="bg-gradient-to-br from-brand-50 to-white px-[5%] py-20">
+      <section className="bg-gradient-to-br from-brand-50 to-white px-[5%] py-24">
         <div className="max-w-[1440px] mx-auto">
           <div className="mb-12 text-center">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
@@ -138,7 +138,7 @@ export default async function AboutPage() {
       </section>
 
       {/* Mission / Vision */}
-      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
+      <section className="px-[5%] py-24 max-w-[1440px] mx-auto">
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-white border-l-4 border-brand rounded-xl p-8 shadow-sm">
             <div className="text-brand-light text-[12px] font-bold tracking-[2px] mb-2">
@@ -168,7 +168,7 @@ export default async function AboutPage() {
       </section>
 
       {/* Certifications */}
-      <section className="bg-[#f5f8fc] px-[5%] py-20">
+      <section className="bg-[#f5f8fc] px-[5%] py-24">
         <div className="max-w-[1440px] mx-auto">
           <div className="text-center mb-10">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
@@ -195,7 +195,7 @@ export default async function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
+      <section className="px-[5%] py-24 max-w-[1440px] mx-auto">
         <div className="text-center mb-12">
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
             OUR TEAM

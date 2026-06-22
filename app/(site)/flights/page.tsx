@@ -57,7 +57,7 @@ export default async function FlightsPage() {
       </section>
 
       {/* Popular deals */}
-      <section id="deals" className="px-[5%] py-20 max-w-[1440px] mx-auto">
+      <section id="deals" className="px-[5%] py-24 max-w-[1440px] mx-auto">
         <div className="mb-10 text-center">
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
             POPULAR DEALS
@@ -73,7 +73,7 @@ export default async function FlightsPage() {
               key={d.id}
               className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-1 transition-all"
             >
-              <div className="relative h-[180px]">
+              <div className="relative h-[210px]">
                 <Image
                   src={d.image}
                   alt={d.city}
@@ -117,7 +117,7 @@ export default async function FlightsPage() {
       </section>
 
       {/* Why Book With Us */}
-      <section className="bg-[#f5f8fc] px-[5%] py-20">
+      <section className="bg-[#f5f8fc] px-[5%] py-24">
         <div className="max-w-[1440px] mx-auto">
           <div className="mb-12 text-center">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
@@ -147,7 +147,7 @@ export default async function FlightsPage() {
       </section>
 
       {/* Group bookings */}
-      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
+      <section className="px-[5%] py-24 max-w-[1440px] mx-auto">
         <div className="bg-gradient-to-br from-brand to-brand-light rounded-3xl px-8 md:px-12 py-14 text-white grid md:grid-cols-2 gap-8 items-center shadow-xl">
           <div>
             <div className="text-brand-200 text-[12px] font-bold tracking-[2px] mb-3">
@@ -182,7 +182,7 @@ export default async function FlightsPage() {
       </section>
 
       {/* Baggage info */}
-      <section className="bg-[#f5f8fc] px-[5%] py-20">
+      <section className="bg-[#f5f8fc] px-[5%] py-24">
         <div className="max-w-[1440px] mx-auto">
           <div className="mb-10 text-center">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">

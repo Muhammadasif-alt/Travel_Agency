@@ -39,7 +39,7 @@ export default async function BlogIndex() {
                 href={`/blog/${p.slug}`}
                 className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col"
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-56 overflow-hidden">
                   <Image
                     src={p.image}
                     alt={p.title}

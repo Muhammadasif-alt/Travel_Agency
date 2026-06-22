@@ -37,7 +37,7 @@ export default async function UmrahPage() {
       />
 
       {/* Why Us */}
-      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
+      <section className="px-[5%] py-24 max-w-[1440px] mx-auto">
         <div className="mb-12 text-center">
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
             WHY NUSARAT MADINA
@@ -65,7 +65,7 @@ export default async function UmrahPage() {
       </section>
 
       {/* Filter chips + Packages */}
-      <section className="bg-[#f5f8fc] px-[5%] py-20">
+      <section className="bg-[#f5f8fc] px-[5%] py-24">
         <div className="max-w-[1440px] mx-auto">
           <div className="mb-8 text-center">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
@@ -102,7 +102,7 @@ export default async function UmrahPage() {
       </section>
 
       {/* What's Included / Excluded */}
-      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
+      <section className="px-[5%] py-24 max-w-[1440px] mx-auto">
         <div className="mb-10 text-center">
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
             HONEST PRICING
@@ -158,7 +158,7 @@ export default async function UmrahPage() {
       </section>
 
       {/* Ziyarat */}
-      <section className="bg-[#f5f8fc] px-[5%] py-20">
+      <section className="bg-[#f5f8fc] px-[5%] py-24">
         <div className="max-w-[1440px] mx-auto">
           <div className="mb-10 text-center">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
@@ -178,7 +178,7 @@ export default async function UmrahPage() {
                 key={z.name}
                 className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all"
               >
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-56 overflow-hidden">
                   <Image
                     src={z.image}
                     alt={z.name}
@@ -203,7 +203,7 @@ export default async function UmrahPage() {
       </section>
 
       {/* Best Time */}
-      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
+      <section className="px-[5%] py-24 max-w-[1440px] mx-auto">
         <div className="mb-10 text-center">
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
             PLAN YOUR TRIP
@@ -230,7 +230,7 @@ export default async function UmrahPage() {
       </section>
 
       {/* Process */}
-      <section className="bg-[#f5f8fc] px-[5%] py-20">
+      <section className="bg-[#f5f8fc] px-[5%] py-24">
         <div className="max-w-[1440px] mx-auto">
           <div className="mb-12 text-center">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">

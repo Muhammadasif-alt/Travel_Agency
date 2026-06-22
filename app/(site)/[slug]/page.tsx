@@ -87,7 +87,7 @@ export default async function CityLandingPage({
       />
 
       {/* Intro */}
-      <section className="px-[5%] py-16 max-w-[900px] mx-auto">
+      <section className="px-[5%] py-16 max-w-[1200px] mx-auto">
         <h2 className="text-2xl md:text-3xl font-extrabold text-brand mb-4">
           {l.serviceLabel} from {l.city}, Made Simple
         </h2>
@@ -107,7 +107,7 @@ export default async function CityLandingPage({
       </section>
 
       {/* Packages */}
-      <section className="bg-[#f5f8fc] px-[5%] py-20">
+      <section className="bg-[#f5f8fc] px-[5%] py-24">
         <div className="max-w-[1440px] mx-auto">
           <div className="mb-10 text-center">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
@@ -130,7 +130,7 @@ export default async function CityLandingPage({
       </section>
 
       {/* Why us */}
-      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
+      <section className="px-[5%] py-24 max-w-[1440px] mx-auto">
         <div className="mb-12 text-center">
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
             WHY {l.city.toUpperCase()} CHOOSES NUSARAT MADINA

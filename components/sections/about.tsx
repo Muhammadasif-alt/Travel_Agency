@@ -11,7 +11,7 @@ const features = [
 
 export function About() {
   return (
-    <section id="about" className="px-[5%] py-20 max-w-[1440px] mx-auto">
+    <section id="about" className="px-[5%] py-24 max-w-[1440px] mx-auto">
       <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
         <div>
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
@@ -42,7 +42,7 @@ export function About() {
           </div>
         </div>
 
-        <div className="relative rounded-2xl overflow-hidden h-[420px] shadow-xl">
+        <div className="relative rounded-2xl overflow-hidden h-[480px] shadow-xl">
           <Image
             src={images.aboutMosque}
             alt="Mosque interior architecture"

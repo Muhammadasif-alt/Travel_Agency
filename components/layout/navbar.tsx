@@ -23,7 +23,7 @@ export function Navbar() {
       : isActive(link.href);
 
   return (
-    <nav className="bg-white px-[5%] py-4 shadow-sm border-b border-gray-100 sticky top-0 z-50">
+    <nav className="bg-white px-[5%] py-5 shadow-sm border-b border-gray-100 sticky top-0 z-50">
       <div className="flex justify-between items-center">
         <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
           <Image
@@ -32,12 +32,12 @@ export function Navbar() {
             width={640}
             height={199}
             priority
-            className="h-10 sm:h-12 w-auto"
+            className="h-11 sm:h-14 w-auto"
           />
         </Link>
 
         {/* Desktop links */}
-        <div className="hidden lg:flex gap-7 text-sm font-medium">
+        <div className="hidden lg:flex gap-9 text-[15px] font-semibold">
           {navLinks.map((link) =>
             link.children ? (
               <div key={link.label} className="relative group">

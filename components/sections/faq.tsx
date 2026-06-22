@@ -9,11 +9,11 @@ export async function Faq() {
   if (faqs.length === 0) return null;
 
   return (
-    <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
+    <section className="px-[5%] py-24 max-w-[1440px] mx-auto">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Image + floating stat card */}
         <div className="relative">
-          <div className="relative h-[420px] rounded-2xl overflow-hidden shadow-lg">
+          <div className="relative h-[480px] rounded-2xl overflow-hidden shadow-lg">
             <Image
               src={images.aboutMosque}
               alt="Pilgrims at the mosque"

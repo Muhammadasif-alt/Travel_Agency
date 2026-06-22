@@ -6,7 +6,7 @@ export async function Testimonials() {
   const testimonials = await getTestimonials();
   if (testimonials.length === 0) return null;
   return (
-    <section className="bg-brand px-[5%] py-20 text-white">
+    <section className="bg-brand px-[5%] py-24 text-white">
       <div className="max-w-[1440px] mx-auto">
         <div className="text-center mb-10">
           <div className="text-brand-200 text-[13px] font-bold tracking-[2px] mb-2">

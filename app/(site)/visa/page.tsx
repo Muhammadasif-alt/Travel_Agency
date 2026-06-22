@@ -76,7 +76,7 @@ export default async function VisaPage() {
       </section>
 
       {/* Countries */}
-      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
+      <section className="px-[5%] py-24 max-w-[1440px] mx-auto">
         <div className="mb-10 text-center">
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
             DESTINATIONS WE COVER
@@ -118,7 +118,7 @@ export default async function VisaPage() {
       </section>
 
       {/* Process */}
-      <section className="bg-[#f5f8fc] px-[5%] py-20">
+      <section className="bg-[#f5f8fc] px-[5%] py-24">
         <div className="max-w-[1440px] mx-auto">
           <div className="mb-12 text-center">
             <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
@@ -151,7 +151,7 @@ export default async function VisaPage() {
       </section>
 
       {/* Document categories */}
-      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
+      <section className="px-[5%] py-24 max-w-[1440px] mx-auto">
         <div className="mb-10 text-center">
           <div className="text-brand-light text-[13px] font-bold tracking-[2px] mb-2">
             DOCUMENT CHECKLIST
@@ -192,7 +192,7 @@ export default async function VisaPage() {
       </section>
 
       {/* Rejection Reasons */}
-      <section className="bg-[#f5f8fc] px-[5%] py-20">
+      <section className="bg-[#f5f8fc] px-[5%] py-24">
         <div className="max-w-[1440px] mx-auto">
           <div className="mb-10 text-center">
             <div className="text-coral text-[13px] font-bold tracking-[2px] mb-2">
@@ -230,7 +230,7 @@ export default async function VisaPage() {
       </section>
 
       {/* Quick requirements summary */}
-      <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
+      <section className="px-[5%] py-24 max-w-[1440px] mx-auto">
         <div className="bg-gradient-to-br from-brand-50 to-white rounded-2xl border border-brand-100 p-8 md:p-10">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>

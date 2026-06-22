@@ -22,7 +22,7 @@ const items = [
 
 export function WhyChooseUs() {
   return (
-    <section className="relative overflow-hidden bg-brand px-[5%] py-20 text-white">
+    <section className="relative overflow-hidden bg-brand px-[5%] py-24 text-white">
       {/* decorative squares */}
       <div className="pointer-events-none absolute -left-6 top-10 w-28 h-28 border border-white/10 rotate-12" />
       <div className="pointer-events-none absolute left-10 top-24 w-20 h-20 bg-brand-light/10 rotate-12" />
@@ -46,7 +46,7 @@ export function WhyChooseUs() {
                 i < items.length - 1 ? "md:border-r md:border-dashed md:border-white/20" : ""
               }`}
             >
-              <div className="relative w-44 h-44 mx-auto mb-7 rounded-full overflow-hidden ring-4 ring-white/10">
+              <div className="relative w-52 h-52 mx-auto mb-7 rounded-full overflow-hidden ring-4 ring-white/10">
                 <Image
                   src={it.image}
                   alt={it.title}

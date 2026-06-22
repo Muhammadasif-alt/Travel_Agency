@@ -11,7 +11,7 @@ export function PackageCard({ pkg }: { pkg: Package }) {
         pkg.featured && "border-2 border-brand-light shadow-xl"
       )}
     >
-      <div className="relative h-[200px] overflow-hidden">
+      <div className="relative h-[230px] overflow-hidden">
         <Image
           src={pkg.image}
           alt={pkg.imageAlt}

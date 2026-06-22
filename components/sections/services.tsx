@@ -7,7 +7,7 @@ import { getServices } from "@/lib/content";
 export async function Services() {
   const services = await getServices();
   return (
-    <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
+    <section className="px-[5%] py-24 max-w-[1440px] mx-auto">
       <SectionHeader
         eyebrow="OUR SERVICES"
         title="Everything You Need for One Complete Journey"
@@ -21,7 +21,7 @@ export async function Services() {
             className="group bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col"
           >
             {/* Image */}
-            <div className="relative h-48 overflow-hidden">
+            <div className="relative h-56 overflow-hidden">
               <Image
                 src={s.image}
                 alt={s.title}

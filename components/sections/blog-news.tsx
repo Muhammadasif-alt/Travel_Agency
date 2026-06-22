@@ -7,7 +7,7 @@ export async function BlogNews() {
   const blogPosts = await getBlogPosts(3);
   if (blogPosts.length === 0) return null;
   return (
-    <section className="px-[5%] py-20 max-w-[1440px] mx-auto">
+    <section className="px-[5%] py-24 max-w-[1440px] mx-auto">
       <div className="text-center mb-12">
         <Pill>News &amp; Blogs</Pill>
         <h2 className="text-3xl md:text-[40px] font-extrabold text-brand mt-5">
@@ -20,7 +20,7 @@ export async function BlogNews() {
           <Link
             href={`/blog/${p.slug}`}
             key={p.id}
-            className="group relative h-[340px] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all block"
+            className="group relative h-[380px] rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all block"
           >
             <Image
               src={p.image}

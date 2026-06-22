@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 
 type Crumb = { label: string; href?: string };
@@ -19,7 +19,7 @@ export function PageHero({
   crumbs?: Crumb[];
 }) {
   return (
-    <section className="relative h-[360px] md:h-[420px] overflow-hidden">
+    <section className="relative h-[480px] md:h-[520px] overflow-hidden">
       <Image
         src={image}
         alt={imageAlt}

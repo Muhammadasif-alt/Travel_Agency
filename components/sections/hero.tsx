@@ -45,7 +45,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[600px] md:h-[660px] overflow-hidden text-white">
+    <section className="relative h-[680px] md:h-[780px] overflow-hidden text-white">
       {/* Background slideshow */}
       {slides.map((s, i) => (
         <div
@@ -76,10 +76,10 @@ export function Hero() {
 
         {/* Changing text (re-animates on slide change) */}
         <div key={current} className="animate-in fade-in slide-in-from-bottom-4 duration-700 max-w-2xl">
-          <h1 className="text-[34px] md:text-[52px] font-extrabold leading-[1.1] drop-shadow-lg">
+          <h1 className="text-[40px] md:text-[60px] font-extrabold leading-[1.08] drop-shadow-lg">
             {slides[current].title}
           </h1>
-          <p className="text-base md:text-lg mt-4 opacity-95 max-w-xl">
+          <p className="text-lg md:text-xl mt-5 opacity-95 max-w-2xl">
             {slides[current].sub}
           </p>
         </div>

@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import { Pill } from "./section-header";
 import { avatar } from "@/lib/images";
 import { getTeam } from "@/lib/content";
@@ -22,7 +22,7 @@ export async function Experts() {
               key={m.name}
               className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all"
             >
-              <div className="relative h-56 sm:h-64 bg-brand-50">
+              <div className="relative h-64 sm:h-72 bg-brand-50">
                 <Image
                   src={m.photo ?? avatar(m.name, { bg: "2563eb", size: 400 })}
                   alt={m.name}
