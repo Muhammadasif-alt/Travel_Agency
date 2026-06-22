@@ -7,7 +7,8 @@ import { getServices } from "@/lib/content";
 export async function Services() {
   const services = await getServices();
   return (
-    <section className="px-[5%] py-24 max-w-[1440px] mx-auto">
+    <section className="px-[5%] py-24">
+      <div className="max-w-[1440px] mx-auto">
       <SectionHeader
         eyebrow="OUR SERVICES"
         title="Everything You Need for One Complete Journey"
@@ -67,6 +68,7 @@ export async function Services() {
             </div>
           </Link>
         ))}
+      </div>
       </div>
     </section>
   );
